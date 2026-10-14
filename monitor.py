@@ -16,31 +16,17 @@ PLAATSEN = [
 ]
 # {plaats} wordt ingevuld. 'pattern' = regex waaraan een woninglink moet voldoen (alleen het pad).
 SITES = {
-    "Huurwoningen.nl": {
-        "url": "https://www.huurwoningen.nl/in/{plaats}/?price=0-{max}",
-        "pattern": r"^/huren/[^/]+/[^/]+/[^/]+",
-    },
-    "Huurportaal": {
-        "url": "https://www.huurportaal.nl/huurwoningen/{plaats}?maxPrice={max}",
-        "pattern": r"^/huurwoningen/[^/]+/[^/]+/[^/]+",
-    },
-    "Ikwilhuren.nu": {
-        "url": "https://ikwilhuren.nu/huurwoningen/{plaats}/",
-        "pattern": r"^/(object|huurwoning)[^/]*/",
-    },
-    "Rentola": {
-        "url": "https://rentola.nl/te-huur/{plaats}",
-        "pattern": r"^/(te-huur|listings?)/[^/]+/[^/]+",
-    },
-    "Huurstunt": {
-        "url": "https://www.huurstunt.nl/huren/{plaats}/",
-        "pattern": r"^/huren/[^/]+/[^/]+/[^/]+",
-    },
+    "Huurwoningen.nl": {"url": "https://www.huurwoningen.nl/in/{plaats}/?price=0-{max}"},
+    "Huurportaal": {"url": "https://www.huurportaal.nl/huurwoningen/{plaats}?maxPrice={max}"},
+    "Ikwilhuren.nu": {"url": "https://ikwilhuren.nu/huurwoningen/{plaats}/"},
+    "Rentola": {"url": "https://rentola.nl/te-huur/{plaats}"},
+    "Huurstunt": {"url": "https://www.huurstunt.nl/huren/{plaats}/"},
 }
 MAX_MELDINGEN_PER_RUN = 15
 # ----------------------------------------------
 
 STATE_FILE = "state.json"
+STATE_VERSION = 2
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
@@ -90,47 +76,86 @@ def notify(titel, bericht, link=None):
     telegram(f"{titel}\n{bericht}" + (f"\n{link}" if link else ""))
 
 
-def parse_prijs(tekst):
-    """Geeft de laagste plausibele maandprijs in de tekst, of None."""
-    prijzen = []
+def alle_prijzen(tekst):
+    out = []
     for m in PRIJS_RE.findall(tekst):
         cijfer = m.replace(".", "")
         if cijfer.isdigit() and 200 <= int(cijfer) <= 20000:
-            prijzen.append(int(cijfer))
+            out.append(int(cijfer))
+    return out
+
+
+def parse_prijs(tekst):
+    """Geeft de laagste plausibele maandprijs in de tekst, of None."""
+    prijzen = alle_prijzen(tekst)
     return min(prijzen) if prijzen else None
 
 
+def segmenten(pad):
+    return [p for p in pad.split("/") if p]
+
+
+def mooie_titel(a, kaart, pad):
+    t = a.get_text(" ", strip=True)
+    if len(t) >= 4:
+        return t[:100]
+    if kaart is not None:
+        h = kaart.find(["h1", "h2", "h3", "h4"])
+        if h and len(h.get_text(strip=True)) >= 4:
+            return h.get_text(" ", strip=True)[:100]
+    segs = segmenten(pad)
+    kand = [x for x in segs if "-" in x] or segs
+    return kand[-1].replace("-", " ")[:100]
+
+
 def scrape(site, cfg, plaats):
+    """Herkent woningen aan: interne link + een prijs (EUR) in dezelfde kaart."""
     url = cfg["url"].format(plaats=plaats, max=MAX_PRIJS)
     r = requests.get(url, headers=HEADERS, timeout=25)
     if r.status_code != 200:
         raise RuntimeError(f"HTTP {r.status_code}")
     soup = BeautifulSoup(r.text, "html.parser")
-    pat = re.compile(cfg["pattern"])
-    found = {}
+    basis = urlsplit(r.url)
+    host = basis.netloc.replace("www.", "")
+    pagina_pad = basis.path.rstrip("/")
+    found, interne = {}, 0
     for a in soup.find_all("a", href=True):
-        full = urljoin(url, a["href"])
-        parts = urlsplit(full)
-        if parts.netloc != urlsplit(url).netloc:
+        parts = urlsplit(urljoin(r.url, a["href"]))
+        if parts.netloc.replace("www.", "") != host:
             continue
-        if not pat.search(parts.path):
+        p = parts.path.rstrip("/")
+        s = segmenten(p)
+        if len(s) < 2 or p == pagina_pad:
             continue
-        key = f"{parts.scheme}://{parts.netloc}{parts.path}".rstrip("/")
-        # zoek prijs in de omliggende kaart (tot 4 niveaus omhoog)
-        node, tekst = a, a.get_text(" ", strip=True)
-        for _ in range(4):
-            if node.parent is None:
+        interne += 1
+        key = f"{parts.scheme}://{parts.netloc}{p}"
+        if key in found:
+            continue
+        # klim omhoog tot de kaart met 1-2 prijzen (meer = meerdere woningen = geen kaart)
+        node, kaart, prijs = a, None, None
+        for _ in range(6):
+            parent = node.parent
+            if parent is None:
                 break
-            node = node.parent
-            t = node.get_text(" ", strip=True)
-            if len(t) > 600:
+            t = parent.get_text(" ", strip=True)
+            if len(t) > 700:
                 break
-            tekst = t
-        prijs = parse_prijs(tekst)
-        titel = a.get_text(" ", strip=True) or parts.path.strip("/").split("/")[-1].replace("-", " ")
-        if key not in found or (found[key]["prijs"] is None and prijs):
-            found[key] = {"url": key, "titel": titel[:100], "prijs": prijs,
-                          "plaats": plaats, "site": site}
+            node = parent
+            aantal = len(alle_prijzen(t))
+            if aantal == 0:
+                continue
+            if aantal <= 2:
+                kaart, prijs = parent, parse_prijs(t)
+            break
+        if prijs is None:
+            continue
+        found[key] = {"url": key, "titel": mooie_titel(a, kaart, p), "prijs": prijs,
+                      "plaats": plaats, "site": site}
+    if not found:
+        titel = soup.title.get_text(strip=True)[:60] if soup.title else "-"
+        js = " (JS-site?)" if ("__NEXT_DATA__" in r.text or "id=\"__nuxt\"" in r.text) else ""
+        print(f"   debug: pagina {len(r.text)//1000}kB, titel '{titel}', "
+              f"{interne} interne links, 0 met prijs{js}")
     return list(found.values())
 
 
@@ -145,8 +170,10 @@ def schrijf_website(state):
 def main():
     test = "--test" in sys.argv
     state = load_state()
+    if state is not None and state.get("v") != STATE_VERSION:
+        state = None  # nieuwe scraper: opnieuw beginnen
     eerste_run = state is None
-    state = state or {}
+    state = state or {"v": STATE_VERSION}
     state.setdefault("seen", {})
     state.setdefault("health", {})
     state.setdefault("listings", {})
@@ -163,6 +190,8 @@ def main():
                 items = []
                 print(f"[{site}/{plaats}] fout: {e}")
             print(f"[{site}/{plaats}] {len(items)} woningen")
+            for it in items[:2]:
+                print(f"   voorbeeld: EUR {it['prijs']} | {it['titel']} | {it['url']}")
             for it in items:
                 gezien_nu += 1
                 if it["prijs"] is not None and it["prijs"] > MAX_PRIJS:
