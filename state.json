@@ -1,0 +1,133 @@
+{
+ "health": {
+  "Huurportaal": 1,
+  "Huurstunt": 1,
+  "Huurwoningen.nl": 1,
+  "Ikwilhuren.nu": 0,
+  "Rentola": 1
+ },
+ "listings": {
+  "https://ikwilhuren.nu/huurwoningen/alblasserdam": {
+   "first_seen": 1791979592,
+   "plaats": "alblasserdam",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/alblasserdam"
+  },
+  "https://ikwilhuren.nu/huurwoningen/barendrecht": {
+   "first_seen": 1791979592,
+   "plaats": "barendrecht",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/barendrecht"
+  },
+  "https://ikwilhuren.nu/huurwoningen/dordrecht": {
+   "first_seen": 1791979592,
+   "plaats": "dordrecht",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/dordrecht"
+  },
+  "https://ikwilhuren.nu/huurwoningen/heerjansdam": {
+   "first_seen": 1791979592,
+   "plaats": "heerjansdam",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/heerjansdam"
+  },
+  "https://ikwilhuren.nu/huurwoningen/hendrik-ido-ambacht": {
+   "first_seen": 1791979592,
+   "plaats": "hendrik-ido-ambacht",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/hendrik-ido-ambacht"
+  },
+  "https://ikwilhuren.nu/huurwoningen/oud-beijerland": {
+   "first_seen": 1791979592,
+   "plaats": "oud-beijerland",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/oud-beijerland"
+  },
+  "https://ikwilhuren.nu/huurwoningen/papendrecht": {
+   "first_seen": 1791979592,
+   "plaats": "papendrecht",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/papendrecht"
+  },
+  "https://ikwilhuren.nu/huurwoningen/poortugaal": {
+   "first_seen": 1791979592,
+   "plaats": "poortugaal",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/poortugaal"
+  },
+  "https://ikwilhuren.nu/huurwoningen/puttershoek": {
+   "first_seen": 1791979592,
+   "plaats": "puttershoek",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/puttershoek"
+  },
+  "https://ikwilhuren.nu/huurwoningen/rhoon": {
+   "first_seen": 1791979592,
+   "plaats": "rhoon",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/rhoon"
+  },
+  "https://ikwilhuren.nu/huurwoningen/ridderkerk": {
+   "first_seen": 1791979592,
+   "plaats": "ridderkerk",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/ridderkerk"
+  },
+  "https://ikwilhuren.nu/huurwoningen/zwijndrecht": {
+   "first_seen": 1791979592,
+   "plaats": "zwijndrecht",
+   "prijs": null,
+   "seed": true,
+   "site": "Ikwilhuren.nu",
+   "titel": "nl",
+   "url": "https://ikwilhuren.nu/huurwoningen/zwijndrecht"
+  }
+ },
+ "seen": {
+  "https://ikwilhuren.nu/huurwoningen/alblasserdam": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/barendrecht": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/dordrecht": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/heerjansdam": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/hendrik-ido-ambacht": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/oud-beijerland": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/papendrecht": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/poortugaal": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/puttershoek": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/rhoon": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/ridderkerk": 1791979592,
+  "https://ikwilhuren.nu/huurwoningen/zwijndrecht": 1791979592
+ }
+}
