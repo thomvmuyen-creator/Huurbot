@@ -1,0 +1,213 @@
+#!/usr/bin/env python3
+"""Huurmonitor: checkt huursites op nieuwe woningen en stuurt een Telegram-melding."""
+import json, os, re, sys, time
+from datetime import datetime, timezone
+from urllib.parse import urljoin, urlsplit
+
+import requests
+from bs4 import BeautifulSoup
+
+# ---------------- INSTELLINGEN ----------------
+MAX_PRIJS = 1600
+PLAATSEN = [
+    "ridderkerk", "hendrik-ido-ambacht", "papendrecht", "zwijndrecht",
+    "barendrecht", "oud-beijerland", "puttershoek", "poortugaal", "rhoon",
+    "heerjansdam", "alblasserdam", "dordrecht",
+]
+# {plaats} wordt ingevuld. 'pattern' = regex waaraan een woninglink moet voldoen (alleen het pad).
+SITES = {
+    "Huurwoningen.nl": {
+        "url": "https://www.huurwoningen.nl/in/{plaats}/?price=0-{max}",
+        "pattern": r"^/huren/[^/]+/[^/]+/[^/]+",
+    },
+    "Huurportaal": {
+        "url": "https://www.huurportaal.nl/huurwoningen/{plaats}?maxPrice={max}",
+        "pattern": r"^/huurwoningen/[^/]+/[^/]+/[^/]+",
+    },
+    "Ikwilhuren.nu": {
+        "url": "https://ikwilhuren.nu/huurwoningen/{plaats}/",
+        "pattern": r"^/(object|huurwoning)[^/]*/",
+    },
+    "Rentola": {
+        "url": "https://rentola.nl/te-huur/{plaats}",
+        "pattern": r"^/(te-huur|listings?)/[^/]+/[^/]+",
+    },
+    "Huurstunt": {
+        "url": "https://www.huurstunt.nl/huren/{plaats}/",
+        "pattern": r"^/huren/[^/]+/[^/]+/[^/]+",
+    },
+}
+MAX_MELDINGEN_PER_RUN = 15
+# ----------------------------------------------
+
+STATE_FILE = "state.json"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "Accept-Language": "nl-NL,nl;q=0.9",
+}
+PRIJS_RE = re.compile(r"€\s*([\d\.]{3,7})")
+
+
+def load_state():
+    if os.path.exists(STATE_FILE):
+        with open(STATE_FILE) as f:
+            return json.load(f)
+    return None
+
+
+def save_state(state):
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f, indent=1, sort_keys=True)
+
+
+def telegram(text):
+    token, chat = os.environ.get("TELEGRAM_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
+    if not token or not chat:
+        return
+    r = requests.post(
+        f"https://api.telegram.org/bot{token}/sendMessage",
+        data={"chat_id": chat, "text": text}, timeout=20)
+    if not r.ok:
+        print("Telegram fout:", r.status_code, r.text)
+
+
+def notify(titel, bericht, link=None):
+    """Pushmelding via ntfy (en optioneel Telegram). Zonder NTFY_TOPIC alleen printen."""
+    topic = os.environ.get("NTFY_TOPIC")
+    if topic:
+        payload = {"topic": topic, "title": titel, "message": bericht, "tags": ["house"]}
+        if link:
+            payload["click"] = link
+        try:
+            r = requests.post("https://ntfy.sh", json=payload, timeout=20)
+            if not r.ok:
+                print("ntfy fout:", r.status_code, r.text)
+        except Exception as e:
+            print("ntfy fout:", e)
+    else:
+        print("[ntfy uit]", titel, bericht)
+    telegram(f"{titel}\n{bericht}" + (f"\n{link}" if link else ""))
+
+
+def parse_prijs(tekst):
+    """Geeft de laagste plausibele maandprijs in de tekst, of None."""
+    prijzen = []
+    for m in PRIJS_RE.findall(tekst):
+        cijfer = m.replace(".", "")
+        if cijfer.isdigit() and 200 <= int(cijfer) <= 20000:
+            prijzen.append(int(cijfer))
+    return min(prijzen) if prijzen else None
+
+
+def scrape(site, cfg, plaats):
+    url = cfg["url"].format(plaats=plaats, max=MAX_PRIJS)
+    r = requests.get(url, headers=HEADERS, timeout=25)
+    if r.status_code != 200:
+        raise RuntimeError(f"HTTP {r.status_code}")
+    soup = BeautifulSoup(r.text, "html.parser")
+    pat = re.compile(cfg["pattern"])
+    found = {}
+    for a in soup.find_all("a", href=True):
+        full = urljoin(url, a["href"])
+        parts = urlsplit(full)
+        if parts.netloc != urlsplit(url).netloc:
+            continue
+        if not pat.search(parts.path):
+            continue
+        key = f"{parts.scheme}://{parts.netloc}{parts.path}".rstrip("/")
+        # zoek prijs in de omliggende kaart (tot 4 niveaus omhoog)
+        node, tekst = a, a.get_text(" ", strip=True)
+        for _ in range(4):
+            if node.parent is None:
+                break
+            node = node.parent
+            t = node.get_text(" ", strip=True)
+            if len(t) > 600:
+                break
+            tekst = t
+        prijs = parse_prijs(tekst)
+        titel = a.get_text(" ", strip=True) or parts.path.strip("/").split("/")[-1].replace("-", " ")
+        if key not in found or (found[key]["prijs"] is None and prijs):
+            found[key] = {"url": key, "titel": titel[:100], "prijs": prijs,
+                          "plaats": plaats, "site": site}
+    return list(found.values())
+
+
+def schrijf_website(state):
+    os.makedirs("docs", exist_ok=True)
+    items = sorted(state["listings"].values(), key=lambda x: x["first_seen"], reverse=True)
+    data = {"updated": int(time.time()), "max_prijs": MAX_PRIJS, "listings": items}
+    with open("docs/listings.json", "w") as f:
+        json.dump(data, f, ensure_ascii=False)
+
+
+def main():
+    test = "--test" in sys.argv
+    state = load_state()
+    eerste_run = state is None
+    state = state or {}
+    state.setdefault("seen", {})
+    state.setdefault("health", {})
+    state.setdefault("listings", {})
+    nieuw, gezien_nu = [], 0
+    nu = int(time.time())
+
+    for site, cfg in SITES.items():
+        totaal = 0
+        for plaats in PLAATSEN:
+            try:
+                items = scrape(site, cfg, plaats)
+                totaal += len(items)
+            except Exception as e:
+                items = []
+                print(f"[{site}/{plaats}] fout: {e}")
+            print(f"[{site}/{plaats}] {len(items)} woningen")
+            for it in items:
+                gezien_nu += 1
+                if it["prijs"] is not None and it["prijs"] > MAX_PRIJS:
+                    continue
+                if it["url"] not in state["seen"]:
+                    state["seen"][it["url"]] = nu
+                    it["first_seen"] = nu
+                    it["seed"] = eerste_run
+                    state["listings"][it["url"]] = it
+                    nieuw.append(it)
+            time.sleep(1.5)
+        h = state["health"].get(site, 0)
+        h = h + 1 if totaal == 0 else 0
+        state["health"][site] = h
+        if h == 3 and not test:
+            notify("Huurbot waarschuwing",
+                   f"{site} levert al 3 runs geen woningen op (site aangepast of blokkeert de bot?).")
+
+    if test:
+        print(f"\nTest klaar: {gezien_nu} woningen gezien, {len(nieuw)} nieuw.")
+        return
+
+    if eerste_run:
+        notify("Huurbot actief",
+               f"Startpunt vastgelegd met {len(nieuw)} bestaande woningen. "
+               f"Vanaf nu krijg je alleen nieuwe woningen (max €{MAX_PRIJS}).")
+    else:
+        for it in nieuw[:MAX_MELDINGEN_PER_RUN]:
+            prijs = f"€{it['prijs']}" if it["prijs"] else "prijs onbekend"
+            plaats = it["plaats"].replace("-", " ").title()
+            notify(f"{plaats} · {prijs}", f"{it['titel']}\n{it['site']}", it["url"])
+            time.sleep(0.5)
+        if len(nieuw) > MAX_MELDINGEN_PER_RUN:
+            notify("Huurbot", f"...en nog {len(nieuw) - MAX_MELDINGEN_PER_RUN} nieuwe woningen. Zie de website.")
+
+    # opschonen: website toont max 30 dagen, 'seen' max 5000
+    grens = nu - 30 * 86400
+    state["listings"] = {k: v for k, v in state["listings"].items() if v["first_seen"] >= grens}
+    if len(state["seen"]) > 5000:
+        oud = sorted(state["seen"].items(), key=lambda x: x[1])[:-5000]
+        for k, _ in oud:
+            del state["seen"][k]
+    save_state(state)
+    schrijf_website(state)
+
+
+if __name__ == "__main__":
+    main()

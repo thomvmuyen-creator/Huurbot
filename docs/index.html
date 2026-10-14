@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Huurwoningen Rijnmond</title>
+<meta name="theme-color" content="#1d2b2a">
+<style>
+:root{
+  --bg:#eef1f0; --surface:#ffffff; --ink:#1d2b2a; --muted:#5d6b69; --line:#d3dad8;
+  --brick:#b4452c; --brick-soft:#f6e4de; --chip:#dfe6e4; --chip-on:#1d2b2a; --chip-on-ink:#ffffff;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121918; --surface:#1a2322; --ink:#e8efed; --muted:#93a3a0; --line:#2b3836;
+    --brick:#e0755a; --brick-soft:#3a2420; --chip:#243130; --chip-on:#e8efed; --chip-on-ink:#121918;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);
+  font:16px/1.45 "Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;
+  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+main{max-width:760px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:1.6rem;line-height:1.2;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 18px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 14px;margin:0 -16px;padding-left:16px;padding-right:16px;
+  scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:0;background:var(--chip);color:var(--ink);font:inherit;font-size:.88rem;
+  padding:7px 13px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink)}
+.chip:focus-visible,a:focus-visible{outline:3px solid var(--brick);outline-offset:2px}
+.list{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.row{display:block;text-decoration:none;color:inherit;padding:14px 16px 14px 13px;border-left:4px solid transparent;
+  border-top:1px solid var(--line)}
+.list li:first-child .row{border-top:0}
+.row.nieuw{border-left-color:var(--brick);background:var(--brick-soft)}
+.row:hover{background:var(--chip)}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.prijs{font-size:1.25rem;font-weight:700;font-variant-numeric:tabular-nums}
+.prijs small{font-size:.8rem;font-weight:400;color:var(--muted)}
+.wanneer{font-size:.82rem;color:var(--muted);white-space:nowrap}
+.nieuw .wanneer{color:var(--brick);font-weight:600}
+.titel{margin:2px 0 0;overflow-wrap:anywhere}
+.meta{color:var(--muted);font-size:.85rem;margin-top:2px}
+.leeg{padding:28px 16px;text-align:center;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Nieuwe huurwoningen</h1>
+  <p class="sub" id="sub">Laden…</p>
+  <div class="chips" id="chips" role="group" aria-label="Filter op plaats"></div>
+  <ul class="list" id="list"></ul>
+</main>
+<script>
+(function(){
+  var listEl=document.getElementById('list'), chipsEl=document.getElementById('chips'), subEl=document.getElementById('sub');
+  var data=null, filter='alle', lastVisit=0;
+  try{ lastVisit=parseInt(localStorage.getItem('lastVisit')||'0',10); }catch(e){}
+
+  function titelCase(s){return s.replace(/-/g,' ').replace(/\b\w/g,function(c){return c.toUpperCase();});}
+  function ago(ts){
+    var m=Math.round((Date.now()/1000-ts)/60);
+    if(m<2) return 'zojuist';
+    if(m<60) return m+' min geleden';
+    var h=Math.round(m/60); if(h<24) return h+' uur geleden';
+    var d=Math.round(h/24); return d+(d===1?' dag':' dagen')+' geleden';
+  }
+  function safeUrl(u){return /^https?:\/\//i.test(u)?u:'#';}
+  function el(tag,cls,text){var e=document.createElement(tag); if(cls)e.className=cls; if(text!=null)e.textContent=text; return e;}
+
+  function renderChips(){
+    chipsEl.textContent='';
+    var counts={}; data.listings.forEach(function(l){counts[l.plaats]=(counts[l.plaats]||0)+1;});
+    var names=['alle'].concat(Object.keys(counts).sort());
+    names.forEach(function(n){
+      var b=el('button','chip', n==='alle'?'Alle ('+data.listings.length+')':titelCase(n)+' ('+counts[n]+')');
+      b.type='button'; b.setAttribute('aria-pressed', String(filter===n));
+      b.onclick=function(){filter=n; renderChips(); renderList();};
+      chipsEl.appendChild(b);
+    });
+  }
+  function renderList(){
+    listEl.textContent='';
+    var items=data.listings.filter(function(l){return filter==='alle'||l.plaats===filter;});
+    if(!items.length){
+      var li=el('li','leeg','Nog geen woningen gevonden. De bot checkt elke ~10 minuten.'); listEl.appendChild(li); return;
+    }
+    items.forEach(function(l){
+      var li=document.createElement('li');
+      var a=el('a','row'); a.href=safeUrl(l.url); a.target='_blank'; a.rel='noopener noreferrer';
+      var isNew=!l.seed && l.first_seen>lastVisit;
+      if(isNew) a.classList.add('nieuw');
+      var top=el('div','top');
+      var p=el('div','prijs');
+      if(l.prijs){p.textContent='€ '+l.prijs.toLocaleString('nl-NL'); var s=el('small',null,' p/m'); p.appendChild(s);}
+      else p.textContent='Prijs onbekend';
+      top.appendChild(p); top.appendChild(el('div','wanneer',(isNew?'Nieuw · ':'')+ago(l.first_seen)));
+      a.appendChild(top);
+      a.appendChild(el('div','titel',l.titel||'Woning'));
+      a.appendChild(el('div','meta',titelCase(l.plaats)+' · via '+l.site));
+      li.appendChild(a); listEl.appendChild(li);
+    });
+  }
+  function load(first){
+    fetch('listings.json?t='+Date.now(),{cache:'no-store'}).then(function(r){
+      if(!r.ok) throw new Error(r.status); return r.json();
+    }).then(function(d){
+      data=d;
+      subEl.textContent='Max € '+d.max_prijs.toLocaleString('nl-NL')+' · bijgewerkt '+ago(d.updated);
+      renderChips(); renderList();
+    }).catch(function(){
+      subEl.textContent='Kon de lijst niet laden. Probeer te verversen.';
+    });
+  }
+  load(true);
+  setInterval(load,60000);
+  // 'nieuw' markering blijft staan tot je de pagina de volgende keer opent
+  window.addEventListener('pagehide',function(){try{localStorage.setItem('lastVisit',String(Math.floor(Date.now()/1000)));}catch(e){}});
+})();
+</script>
+</body>
+</html>
