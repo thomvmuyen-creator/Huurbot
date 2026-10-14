@@ -15,18 +15,20 @@ PLAATSEN = [
     "heerjansdam", "alblasserdam", "dordrecht",
 ]
 # {plaats} wordt ingevuld. 'pattern' = regex waaraan een woninglink moet voldoen (alleen het pad).
+# Huurwoningen.nl (403), Ikwilhuren.nu en Rentola leverden niets op en zijn verwijderd.
 SITES = {
-    "Huurwoningen.nl": {"url": "https://www.huurwoningen.nl/in/{plaats}/?price=0-{max}"},
     "Huurportaal": {"url": "https://www.huurportaal.nl/huurwoningen/{plaats}?maxPrice={max}"},
-    "Ikwilhuren.nu": {"url": "https://ikwilhuren.nu/huurwoningen/{plaats}/"},
-    "Rentola": {"url": "https://rentola.nl/te-huur/{plaats}"},
-    "Huurstunt": {"url": "https://www.huurstunt.nl/huren/{plaats}/"},
+    # Huurstunt toont ook woningen uit omliggende plaatsen: plaats komt uit de URL en moet in PLAATSEN staan
+    "Huurstunt": {"url": "https://www.huurstunt.nl/huren/{plaats}/",
+                  "plaats_uit_url": r"/huren/in/([^/]+)"},
 }
+# Advertenties waarvan de URL een van deze woorden bevat worden overgeslagen (kamers e.d.)
+UITSLUITEN = ["/kamer/", "kamer-in", "kamer-te-huur", "kamers-", "short-stay", "shortstay"]
 MAX_MELDINGEN_PER_RUN = 15
 # ----------------------------------------------
 
 STATE_FILE = "state.json"
-STATE_VERSION = 2
+STATE_VERSION = 3
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
@@ -95,17 +97,27 @@ def segmenten(pad):
     return [p for p in pad.split("/") if p]
 
 
+SLECHTE_TITELS = {"meer zien", "nieuw", "bekijk", "bekijken", "details", "lees meer",
+                  "meer info", "bekijk woning", "bekijk details", "nl", "en"}
+SOORTEN = ("appartement", "studio", "huurwoning", "woning", "woonhuis", "kamer")
+
+
 def mooie_titel(a, kaart, pad):
     t = a.get_text(" ", strip=True)
-    if len(t) >= 4:
+    if len(t) >= 4 and t.lower() not in SLECHTE_TITELS:
         return t[:100]
     if kaart is not None:
-        h = kaart.find(["h1", "h2", "h3", "h4"])
-        if h and len(h.get_text(strip=True)) >= 4:
-            return h.get_text(" ", strip=True)[:100]
+        for h in kaart.find_all(["h1", "h2", "h3", "h4"]):
+            ht = h.get_text(" ", strip=True)
+            if len(ht) >= 4 and ht.lower() not in SLECHTE_TITELS:
+                return ht[:100]
     segs = segmenten(pad)
     kand = [x for x in segs if "-" in x] or segs
-    return kand[-1].replace("-", " ")[:100]
+    slug = re.sub(r"[-_]p[0-9a-f]{5,6}$", "", kand[-1])
+    tekst = slug.replace("-", " ").strip().title()
+    if segs and segs[0] in SOORTEN and not tekst.lower().startswith(segs[0]):
+        tekst = f"{segs[0].capitalize()}: {tekst}"
+    return tekst[:100]
 
 
 def scrape(site, cfg, plaats):
@@ -149,8 +161,16 @@ def scrape(site, cfg, plaats):
             break
         if prijs is None:
             continue
+        if any(w in key.lower() for w in UITSLUITEN):
+            continue
+        woonplaats = plaats
+        if cfg.get("plaats_uit_url"):
+            m = re.search(cfg["plaats_uit_url"], p)
+            if not m or m.group(1) not in PLAATSEN:
+                continue
+            woonplaats = m.group(1)
         found[key] = {"url": key, "titel": mooie_titel(a, kaart, p), "prijs": prijs,
-                      "plaats": plaats, "site": site}
+                      "plaats": woonplaats, "site": site}
     if not found:
         titel = soup.title.get_text(strip=True)[:60] if soup.title else "-"
         js = " (JS-site?)" if ("__NEXT_DATA__" in r.text or "id=\"__nuxt\"" in r.text) else ""
