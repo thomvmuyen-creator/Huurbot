@@ -1,11 +1,204 @@
 {
  "health": {
+  "Directwonen": 0,
+  "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 0
+  "Huurstunt": 0,
+  "Ikwilhuren.nu": 0,
+  "vb&t": 1
  },
  "listings": {
+  "https://directwonen.nl/appartement-huren/oud-beijerland": {
+   "first_seen": 1792000412,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Appartement",
+   "url": "https://directwonen.nl/appartement-huren/oud-beijerland"
+  },
+  "https://directwonen.nl/eengezinswoning-huren/oud-beijerland": {
+   "first_seen": 1792000410,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Eengezinswoning",
+   "url": "https://directwonen.nl/eengezinswoning-huren/oud-beijerland"
+  },
+  "https://directwonen.nl/huurwoningen-huren/'s-gravendeel/leerambachtstraat/appartement-519649": {
+   "first_seen": 1792000402,
+   "plaats": "puttershoek",
+   "prijs": 475,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Leerambachtstraat, 's-Gravendeel",
+   "url": "https://directwonen.nl/huurwoningen-huren/'s-gravendeel/leerambachtstraat/appartement-519649"
+  },
+  "https://directwonen.nl/huurwoningen-huren/barendrecht": {
+   "first_seen": 1792000405,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Barendrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/barendrecht"
+  },
+  "https://directwonen.nl/huurwoningen-huren/barendrecht/avenue-carre/appartement-520080": {
+   "first_seen": 1792000414,
+   "plaats": "barendrecht",
+   "prijs": 1575,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "A. Carre, Barendrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/barendrecht/avenue-carre/appartement-520080"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/achterhakkers/appartement-520873": {
+   "first_seen": 1792000417,
+   "plaats": "papendrecht",
+   "prijs": 1513,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Achterhakkers, Dordrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/achterhakkers/appartement-520873"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739": {
+   "first_seen": 1792000420,
+   "plaats": "papendrecht",
+   "prijs": 1495,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Alle kenmerken tonen",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741": {
+   "first_seen": 1792000419,
+   "plaats": "papendrecht",
+   "prijs": 1495,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Alle kenmerken tonen",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/raamstraat/appartement-520558": {
+   "first_seen": 1792000416,
+   "plaats": "papendrecht",
+   "prijs": 1500,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Raamstraat, Dordrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/raamstraat/appartement-520558"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/steegoversloot/appartement-520486": {
+   "first_seen": 1792000415,
+   "plaats": "papendrecht",
+   "prijs": 1218,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Steegoversloot, Dordrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/steegoversloot/appartement-520486"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/voorstraat/studio-521189": {
+   "first_seen": 1792000418,
+   "plaats": "papendrecht",
+   "prijs": 625,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Voorstraat, Dordrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/voorstraat/studio-521189"
+  },
+  "https://directwonen.nl/huurwoningen-huren/hendrik-ido-ambacht/jan-van-der-heydenstraat/appartement-521430": {
+   "first_seen": 1792000422,
+   "plaats": "hendrik-ido-ambacht",
+   "prijs": 1550,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "J.v.d. Heydenstraat, Hendrik-Ido-Ambacht",
+   "url": "https://directwonen.nl/huurwoningen-huren/hendrik-ido-ambacht/jan-van-der-heydenstraat/appartement-521430"
+  },
+  "https://directwonen.nl/huurwoningen-huren/hoogvliet-rotterdam": {
+   "first_seen": 1792000407,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Hoogvliet Rotterdam",
+   "url": "https://directwonen.nl/huurwoningen-huren/hoogvliet-rotterdam"
+  },
+  "https://directwonen.nl/huurwoningen-huren/nederland": {
+   "first_seen": 1792000413,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Alle huurwoningen",
+   "url": "https://directwonen.nl/huurwoningen-huren/nederland"
+  },
+  "https://directwonen.nl/huurwoningen-huren/oud-beijerland/slobbegors/appartement-519652": {
+   "first_seen": 1792000408,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Slobbegors, Oud-Beijerland",
+   "url": "https://directwonen.nl/huurwoningen-huren/oud-beijerland/slobbegors/appartement-519652"
+  },
+  "https://directwonen.nl/huurwoningen-huren/oud-beijerland/slobbegors/appartement-521374": {
+   "first_seen": 1792000409,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Slobbegors, Oud-Beijerland",
+   "url": "https://directwonen.nl/huurwoningen-huren/oud-beijerland/slobbegors/appartement-521374"
+  },
+  "https://directwonen.nl/huurwoningen-huren/schiedam": {
+   "first_seen": 1792000403,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Schiedam",
+   "url": "https://directwonen.nl/huurwoningen-huren/schiedam"
+  },
+  "https://directwonen.nl/huurwoningen-huren/spijkenisse": {
+   "first_seen": 1792000406,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Spijkenisse",
+   "url": "https://directwonen.nl/huurwoningen-huren/spijkenisse"
+  },
+  "https://directwonen.nl/huurwoningen-huren/zuidland": {
+   "first_seen": 1792000404,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Zuidland",
+   "url": "https://directwonen.nl/huurwoningen-huren/zuidland"
+  },
+  "https://directwonen.nl/huurwoningen-huren/zwijndrecht/neptunusstraat/appartement-519647": {
+   "first_seen": 1792000421,
+   "plaats": "hendrik-ido-ambacht",
+   "prijs": 390,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Neptunusstraat, Zwijndrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/zwijndrecht/neptunusstraat/appartement-519647"
+  },
+  "https://directwonen.nl/studio-huren/oud-beijerland": {
+   "first_seen": 1792000411,
+   "plaats": "oud-beijerland",
+   "prijs": 415,
+   "seed": true,
+   "site": "Directwonen",
+   "titel": "Studio",
+   "url": "https://directwonen.nl/studio-huren/oud-beijerland"
+  },
   "https://huurportaal.nl/listings/1-bedroom-apartment-surface-area-66m2-unfurnished-available-from-2026-11-01-pb35261": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000420,
    "plaats": "hendrik-ido-ambacht",
    "prijs": 1550,
    "seed": true,
@@ -14,7 +207,7 @@
    "url": "https://huurportaal.nl/listings/1-bedroom-apartment-surface-area-66m2-unfurnished-available-from-2026-11-01-pb35261"
   },
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p334f0a": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000390,
    "plaats": "dordrecht",
    "prijs": 1450,
    "seed": true,
@@ -23,7 +216,7 @@
    "url": "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p334f0a"
   },
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000387,
    "plaats": "dordrecht",
    "prijs": 1495,
    "seed": true,
@@ -32,7 +225,7 @@
    "url": "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7"
   },
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000388,
    "plaats": "dordrecht",
    "prijs": 1450,
    "seed": true,
@@ -41,7 +234,7 @@
    "url": "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e"
   },
   "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000413,
    "plaats": "zwijndrecht",
    "prijs": 1400,
    "seed": true,
@@ -50,7 +243,7 @@
    "url": "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40"
   },
   "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000417,
    "plaats": "hendrik-ido-ambacht",
    "prijs": 925,
    "seed": true,
@@ -59,7 +252,7 @@
    "url": "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b"
   },
   "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000416,
    "plaats": "hendrik-ido-ambacht",
    "prijs": 1210,
    "seed": true,
@@ -68,7 +261,7 @@
    "url": "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd"
   },
   "https://huurportaal.nl/listings/apartment-in-henegouwsestraat-ridderkerk-netherlands-p619c35": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000421,
    "plaats": "ridderkerk",
    "prijs": 506,
    "seed": true,
@@ -77,7 +270,7 @@
    "url": "https://huurportaal.nl/listings/apartment-in-henegouwsestraat-ridderkerk-netherlands-p619c35"
   },
   "https://huurportaal.nl/listings/appartement-te-huur-p382516": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000397,
    "plaats": "dordrecht",
    "prijs": 1152,
    "seed": true,
@@ -86,7 +279,7 @@
    "url": "https://huurportaal.nl/listings/appartement-te-huur-p382516"
   },
   "https://huurportaal.nl/listings/appartement-te-huur-p3cca26": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000405,
    "plaats": "barendrecht",
    "prijs": 1575,
    "seed": true,
@@ -95,7 +288,7 @@
    "url": "https://huurportaal.nl/listings/appartement-te-huur-p3cca26"
   },
   "https://huurportaal.nl/listings/appartement-te-huur-p9331b3": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000402,
    "plaats": "oud-beijerland",
    "prijs": 1375,
    "seed": true,
@@ -104,7 +297,7 @@
    "url": "https://huurportaal.nl/listings/appartement-te-huur-p9331b3"
   },
   "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000404,
    "plaats": "barendrecht",
    "prijs": 525,
    "seed": true,
@@ -113,7 +306,7 @@
    "url": "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d"
   },
   "https://huurportaal.nl/listings/huurwoning-alblasserdam-pbe44aa": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000398,
    "plaats": "alblasserdam",
    "prijs": 354,
    "seed": true,
@@ -122,7 +315,7 @@
    "url": "https://huurportaal.nl/listings/huurwoning-alblasserdam-pbe44aa"
   },
   "https://huurportaal.nl/listings/huurwoning-papendrecht-p25344c": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000414,
    "plaats": "papendrecht",
    "prijs": 683,
    "seed": true,
@@ -131,7 +324,7 @@
    "url": "https://huurportaal.nl/listings/huurwoning-papendrecht-p25344c"
   },
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000422,
    "plaats": "ridderkerk",
    "prijs": 625,
    "seed": true,
@@ -140,7 +333,7 @@
    "url": "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902"
   },
   "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000419,
    "plaats": "hendrik-ido-ambacht",
    "prijs": 1550,
    "seed": true,
@@ -149,7 +342,7 @@
    "url": "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef"
   },
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000406,
    "plaats": "barendrecht",
    "prijs": 1550,
    "seed": true,
@@ -158,7 +351,7 @@
    "url": "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21"
   },
   "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000400,
    "plaats": "rhoon",
    "prijs": 1475,
    "seed": true,
@@ -167,7 +360,7 @@
    "url": "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97"
   },
   "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000401,
    "plaats": "oud-beijerland",
    "prijs": 1375,
    "seed": true,
@@ -176,7 +369,7 @@
    "url": "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35"
   },
   "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000394,
    "plaats": "dordrecht",
    "prijs": 780,
    "seed": true,
@@ -185,7 +378,7 @@
    "url": "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4"
   },
   "https://huurportaal.nl/listings/spuiboulevard-89-a-dordrecht-pbe8afb": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000386,
    "plaats": "dordrecht",
    "prijs": 1570,
    "seed": true,
@@ -194,7 +387,7 @@
    "url": "https://huurportaal.nl/listings/spuiboulevard-89-a-dordrecht-pbe8afb"
   },
   "https://huurportaal.nl/listings/te-huur-appartement-jan-van-der-heydenstraat-in-hendrik-ido-ambacht-pe7760c": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000418,
    "plaats": "hendrik-ido-ambacht",
    "prijs": 1550,
    "seed": true,
@@ -203,7 +396,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-appartement-jan-van-der-heydenstraat-in-hendrik-ido-ambacht-pe7760c"
   },
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p068d6d": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000391,
    "plaats": "dordrecht",
    "prijs": 1495,
    "seed": true,
@@ -212,7 +405,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p068d6d"
   },
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p228d98": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000392,
    "plaats": "dordrecht",
    "prijs": 1450,
    "seed": true,
@@ -221,7 +414,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p228d98"
   },
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p243890": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000389,
    "plaats": "dordrecht",
    "prijs": 1495,
    "seed": true,
@@ -230,7 +423,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p243890"
   },
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p975a1f": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000396,
    "plaats": "dordrecht",
    "prijs": 1450,
    "seed": true,
@@ -239,7 +432,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p975a1f"
   },
   "https://huurportaal.nl/listings/te-huur-appartement-slobbegors-in-oud-beijerland-p1315f4": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000403,
    "plaats": "oud-beijerland",
    "prijs": 415,
    "seed": true,
@@ -248,7 +441,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-appartement-slobbegors-in-oud-beijerland-p1315f4"
   },
   "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-126-in-barendrecht-pdcb35c": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000408,
    "plaats": "barendrecht",
    "prijs": 1550,
    "seed": true,
@@ -257,7 +450,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-126-in-barendrecht-pdcb35c"
   },
   "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-79-in-barendrecht-p4f0d5e": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000407,
    "plaats": "barendrecht",
    "prijs": 1550,
    "seed": true,
@@ -266,7 +459,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-79-in-barendrecht-p4f0d5e"
   },
   "https://huurportaal.nl/listings/te-huur-appartement-wijnstraat-in-dordrecht-pcdf339": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000395,
    "plaats": "dordrecht",
    "prijs": 1495,
    "seed": true,
@@ -275,7 +468,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-appartement-wijnstraat-in-dordrecht-pcdf339"
   },
   "https://huurportaal.nl/listings/te-huur-schapenburg-6-barendrecht-vivantus-verhuur-p8a7491": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000411,
    "plaats": "barendrecht",
    "prijs": 1350,
    "seed": true,
@@ -284,7 +477,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-schapenburg-6-barendrecht-vivantus-verhuur-p8a7491"
   },
   "https://huurportaal.nl/listings/te-huur-sneekermeer-3-barendrecht-vivantus-verhuur-p124bf7": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000410,
    "plaats": "barendrecht",
    "prijs": 1325,
    "seed": true,
@@ -293,7 +486,7 @@
    "url": "https://huurportaal.nl/listings/te-huur-sneekermeer-3-barendrecht-vivantus-verhuur-p124bf7"
   },
   "https://huurportaal.nl/listings/woning-te-huur-p0e9ce9": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000412,
    "plaats": "barendrecht",
    "prijs": 1350,
    "seed": true,
@@ -302,7 +495,7 @@
    "url": "https://huurportaal.nl/listings/woning-te-huur-p0e9ce9"
   },
   "https://huurportaal.nl/listings/woning-te-huur-p4aa1cd": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000409,
    "plaats": "barendrecht",
    "prijs": 1350,
    "seed": true,
@@ -311,7 +504,7 @@
    "url": "https://huurportaal.nl/listings/woning-te-huur-p4aa1cd"
   },
   "https://huurportaal.nl/listings/woning-te-huur-p7dcba6": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000415,
    "plaats": "hendrik-ido-ambacht",
    "prijs": 1550,
    "seed": true,
@@ -320,7 +513,7 @@
    "url": "https://huurportaal.nl/listings/woning-te-huur-p7dcba6"
   },
   "https://huurportaal.nl/listings/woning-te-huur-pff44b3": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000399,
    "plaats": "rhoon",
    "prijs": 1485,
    "seed": true,
@@ -329,7 +522,7 @@
    "url": "https://huurportaal.nl/listings/woning-te-huur-pff44b3"
   },
   "https://huurportaal.nl/listings/woning-te-huur-sisarijs-of-sarisgang-45b-3311ne-dordrecht-p9f48e5": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000393,
    "plaats": "dordrecht",
    "prijs": 1152,
    "seed": true,
@@ -338,7 +531,7 @@
    "url": "https://huurportaal.nl/listings/woning-te-huur-sisarijs-of-sarisgang-45b-3311ne-dordrecht-p9f48e5"
   },
   "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g2nOW": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000420,
    "plaats": "dordrecht",
    "prijs": 1450,
    "seed": true,
@@ -347,7 +540,7 @@
    "url": "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g2nOW"
   },
   "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g96ig": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000421,
    "plaats": "dordrecht",
    "prijs": 1450,
    "seed": true,
@@ -356,7 +549,7 @@
    "url": "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g96ig"
   },
   "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/gBbl4": {
-   "first_seen": 1791980687,
+   "first_seen": 1792000422,
    "plaats": "dordrecht",
    "prijs": 1495,
    "seed": true,
@@ -366,46 +559,67 @@
   }
  },
  "seen": {
-  "https://huurportaal.nl/listings/1-bedroom-apartment-surface-area-66m2-unfurnished-available-from-2026-11-01-pb35261": 1791980687,
-  "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p334f0a": 1791980687,
-  "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7": 1791980687,
-  "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1791980687,
-  "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40": 1791980687,
-  "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b": 1791980687,
-  "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": 1791980687,
-  "https://huurportaal.nl/listings/apartment-in-henegouwsestraat-ridderkerk-netherlands-p619c35": 1791980687,
-  "https://huurportaal.nl/listings/appartement-te-huur-p382516": 1791980687,
-  "https://huurportaal.nl/listings/appartement-te-huur-p3cca26": 1791980687,
-  "https://huurportaal.nl/listings/appartement-te-huur-p9331b3": 1791980687,
-  "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": 1791980687,
-  "https://huurportaal.nl/listings/huurwoning-alblasserdam-pbe44aa": 1791980687,
-  "https://huurportaal.nl/listings/huurwoning-papendrecht-p25344c": 1791980687,
-  "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1791980687,
-  "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1791980687,
-  "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": 1791980687,
-  "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": 1791980687,
-  "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": 1791980687,
-  "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": 1791980687,
-  "https://huurportaal.nl/listings/spuiboulevard-89-a-dordrecht-pbe8afb": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-appartement-jan-van-der-heydenstraat-in-hendrik-ido-ambacht-pe7760c": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p068d6d": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p228d98": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p243890": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p975a1f": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-appartement-slobbegors-in-oud-beijerland-p1315f4": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-126-in-barendrecht-pdcb35c": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-79-in-barendrecht-p4f0d5e": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-appartement-wijnstraat-in-dordrecht-pcdf339": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-schapenburg-6-barendrecht-vivantus-verhuur-p8a7491": 1791980687,
-  "https://huurportaal.nl/listings/te-huur-sneekermeer-3-barendrecht-vivantus-verhuur-p124bf7": 1791980687,
-  "https://huurportaal.nl/listings/woning-te-huur-p0e9ce9": 1791980687,
-  "https://huurportaal.nl/listings/woning-te-huur-p4aa1cd": 1791980687,
-  "https://huurportaal.nl/listings/woning-te-huur-p7dcba6": 1791980687,
-  "https://huurportaal.nl/listings/woning-te-huur-pff44b3": 1791980687,
-  "https://huurportaal.nl/listings/woning-te-huur-sisarijs-of-sarisgang-45b-3311ne-dordrecht-p9f48e5": 1791980687,
-  "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g2nOW": 1791980687,
-  "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g96ig": 1791980687,
-  "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/gBbl4": 1791980687
+  "https://directwonen.nl/appartement-huren/oud-beijerland": 1792000422,
+  "https://directwonen.nl/eengezinswoning-huren/oud-beijerland": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/'s-gravendeel/leerambachtstraat/appartement-519649": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/barendrecht": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/barendrecht/avenue-carre/appartement-520080": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/achterhakkers/appartement-520873": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/raamstraat/appartement-520558": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/steegoversloot/appartement-520486": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/voorstraat/studio-521189": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/hendrik-ido-ambacht/jan-van-der-heydenstraat/appartement-521430": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/hoogvliet-rotterdam": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/nederland": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/oud-beijerland/slobbegors/appartement-519652": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/oud-beijerland/slobbegors/appartement-521374": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/schiedam": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/spijkenisse": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/zuidland": 1792000422,
+  "https://directwonen.nl/huurwoningen-huren/zwijndrecht/neptunusstraat/appartement-519647": 1792000422,
+  "https://directwonen.nl/studio-huren/oud-beijerland": 1792000422,
+  "https://huurportaal.nl/listings/1-bedroom-apartment-surface-area-66m2-unfurnished-available-from-2026-11-01-pb35261": 1792000422,
+  "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p334f0a": 1792000422,
+  "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7": 1792000422,
+  "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1792000422,
+  "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40": 1792000422,
+  "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b": 1792000422,
+  "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": 1792000422,
+  "https://huurportaal.nl/listings/apartment-in-henegouwsestraat-ridderkerk-netherlands-p619c35": 1792000422,
+  "https://huurportaal.nl/listings/appartement-te-huur-p382516": 1792000422,
+  "https://huurportaal.nl/listings/appartement-te-huur-p3cca26": 1792000422,
+  "https://huurportaal.nl/listings/appartement-te-huur-p9331b3": 1792000422,
+  "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": 1792000422,
+  "https://huurportaal.nl/listings/huurwoning-alblasserdam-pbe44aa": 1792000422,
+  "https://huurportaal.nl/listings/huurwoning-papendrecht-p25344c": 1792000422,
+  "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792000422,
+  "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1792000422,
+  "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": 1792000422,
+  "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": 1792000422,
+  "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": 1792000422,
+  "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": 1792000422,
+  "https://huurportaal.nl/listings/spuiboulevard-89-a-dordrecht-pbe8afb": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-appartement-jan-van-der-heydenstraat-in-hendrik-ido-ambacht-pe7760c": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p068d6d": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p228d98": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p243890": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p975a1f": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-appartement-slobbegors-in-oud-beijerland-p1315f4": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-126-in-barendrecht-pdcb35c": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-79-in-barendrecht-p4f0d5e": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-appartement-wijnstraat-in-dordrecht-pcdf339": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-schapenburg-6-barendrecht-vivantus-verhuur-p8a7491": 1792000422,
+  "https://huurportaal.nl/listings/te-huur-sneekermeer-3-barendrecht-vivantus-verhuur-p124bf7": 1792000422,
+  "https://huurportaal.nl/listings/woning-te-huur-p0e9ce9": 1792000422,
+  "https://huurportaal.nl/listings/woning-te-huur-p4aa1cd": 1792000422,
+  "https://huurportaal.nl/listings/woning-te-huur-p7dcba6": 1792000422,
+  "https://huurportaal.nl/listings/woning-te-huur-pff44b3": 1792000422,
+  "https://huurportaal.nl/listings/woning-te-huur-sisarijs-of-sarisgang-45b-3311ne-dordrecht-p9f48e5": 1792000422,
+  "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g2nOW": 1792000422,
+  "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g96ig": 1792000422,
+  "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/gBbl4": 1792000422
  },
- "v": 3
+ "v": 4
 }
