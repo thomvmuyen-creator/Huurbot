@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 4
+  "vb&t": 5
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -250,6 +250,15 @@
    "site": "Huurportaal",
    "titel": "Apartment For Rent At Mauritsstraat Netherlands",
    "url": "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b"
+  },
+  "https://huurportaal.nl/listings/apartment-for-rent-in-nieuwe-lampetsteeg-29-3311ha-dordrecht-centrum-dordrecht-pa1bf75": {
+   "first_seen": 1792045339,
+   "plaats": "dordrecht",
+   "prijs": 950,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Apartment For Rent In Nieuwe Lampetsteeg 29 3311Ha Dordrecht Centrum Dordrecht",
+   "url": "https://huurportaal.nl/listings/apartment-for-rent-in-nieuwe-lampetsteeg-29-3311ha-dordrecht-centrum-dordrecht-pa1bf75"
   },
   "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": {
    "first_seen": 1792000416,
@@ -586,6 +595,7 @@
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1792000422,
   "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40": 1792000422,
   "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b": 1792000422,
+  "https://huurportaal.nl/listings/apartment-for-rent-in-nieuwe-lampetsteeg-29-3311ha-dordrecht-centrum-dordrecht-pa1bf75": 1792045339,
   "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": 1792000422,
   "https://huurportaal.nl/listings/apartment-in-henegouwsestraat-ridderkerk-netherlands-p619c35": 1792000422,
   "https://huurportaal.nl/listings/appartement-te-huur-p382516": 1792000422,
