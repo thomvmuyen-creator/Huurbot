@@ -40,6 +40,7 @@ transition:transform .18s,box-shadow .18s}
 .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .img{aspect-ratio:3/2;background:var(--ph);position:relative;display:grid;place-items:center;color:var(--muted)}
 .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.nf{position:absolute;bottom:8px;font-size:.72rem}
 .badge{position:absolute;left:10px;top:10px;background:var(--new);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.06em;
 text-transform:uppercase;padding:4px 9px;border-radius:999px;z-index:2}
 .heart{position:absolute;right:10px;top:10px;z-index:3;width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;
@@ -59,7 +60,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 16px 40px;color:var(--muted);fon
 </head>
 <body>
 <header class="hero"><div class="wrap">
-  <div class="eyebrow"><span class="dot"></span>Live gevolgd, elke ~10 minuten</div>
+  <div class="eyebrow"><span class="dot"></span>Live gevolgd, elke ~10 minuten · site v7</div>
   <h1>Huurradar Rijnmond</h1>
   <p class="lead">Nieuwe huurwoningen in Ridderkerk, Barendrecht, Dordrecht en omgeving, direct van de bron. Nieuwste bovenaan.</p>
   <div class="stats" id="stats"></div>
@@ -93,7 +94,7 @@ function setup(){
 }
 function stats(){
   var now=Date.now()/1000,d=data.listings.filter(function(l){return !l.seed&&now-l.first_seen<86400}).length,box=$('stats');box.textContent='';
-  [[data.listings.length,'woningen'],[d,'nieuw (24 uur)'],[ago(data.updated),'laatst gecheckt']].forEach(function(s){var e=el('div','stat');e.appendChild(el('b',null,s[0]));e.appendChild(el('span',null,s[1]));box.appendChild(e)});
+  [[data.listings.length,'woningen'],[d,'nieuw (24 uur)'],[data.listings.filter(function(l){return l.img}).length+'/'+data.listings.length,'met foto-link'],[ago(data.updated),'laatst gecheckt']].forEach(function(s){var e=el('div','stat');e.appendChild(el('b',null,s[0]));e.appendChild(el('span',null,s[1]));box.appendChild(e)});
 }
 function render(){
   var now=Date.now()/1000,g=$('grid');g.textContent='';
@@ -107,7 +108,9 @@ function render(){
   items.forEach(function(l){
     var li=el('li','card'),im=el('div','img'),isNew=!l.seed&&l.first_seen>last&&now-l.first_seen<172800;
     im.innerHTML=HOUSE;
-    if(l.img&&safe(l.img)!=='#'){var i=document.createElement('img');i.alt='';i.loading='lazy';i.decoding='async';i.referrerPolicy='no-referrer';i.onerror=function(){i.remove()};im.appendChild(i);i.src=safe(l.img)}
+    if(l.img&&safe(l.img)!=='#'){var i=document.createElement('img'),tried=0;i.alt='';i.loading='lazy';i.decoding='async';i.referrerPolicy='no-referrer';
+      i.onerror=function(){if(!tried){tried=1;i.src='https://images.weserv.nl/?w=640&h=427&fit=cover&output=webp&url='+encodeURIComponent(l.img)}else{i.remove();im.appendChild(el('span','nf','foto laadt niet'))}};
+      im.appendChild(i);i.src=safe(l.img)}else im.appendChild(el('span','nf','geen foto-link'));
     function bd(){return el('span','badge','Nieuw')}
     if(isNew)im.appendChild(bd());
     var h=el('button','heart');h.type='button';h.innerHTML=HEART;h.setAttribute('aria-label','Bewaar als favoriet');h.setAttribute('aria-pressed',String(!!favs[l.url]));
