@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Huurmonitor: checkt huursites op nieuwe woningen, zet ze op de website en stuurt een pushmelding."""
 import json, os, re, sys, time
+from datetime import datetime, timezone
 from urllib.parse import urljoin, urlsplit
 
 import requests
@@ -135,6 +136,63 @@ def afbeelding(node, basis_url):
     return None
 
 
+DATUM_JSON = re.compile(r'"(?:datePublished|datePosted|dateCreated|date_posted|published_?at|publishedAt|created_?at|createdAt|'
+                        r'listed_?at|publicationDate|publicatiedatum|first_?seen|activeFrom)"\s*:\s*"(\d{4}-\d{2}-\d{2}[^"]{0,30})"', re.I)
+DATUM_TEKST = re.compile(r"(?:Geplaatst|Gepubliceerd|Online sinds|Toegevoegd|Publicatiedatum)[^0-9]{0,25}(\d{1,2})[-/ .](\d{1,2})[-/ .](\d{4})", re.I)
+
+
+def plausibele_img(u):
+    low = u.lower()
+    if any(x in low for x in ("logo", "icon", "placeholder", ".svg", "avatar", "favicon")):
+        return False
+    return bool(re.search(r"\.(jpe?g|png|webp|avif)|image|img|media|photo|foto|thumb|cdn", low))
+
+
+def naar_epoch(txt):
+    try:
+        d = datetime.fromisoformat(txt.strip().replace("Z", "+00:00"))
+        if d.tzinfo is None:
+            d = d.replace(tzinfo=timezone.utc)
+        ts = int(d.timestamp())
+        return ts if time.time() - 3 * 365 * 86400 < ts <= time.time() + 3600 else None
+    except Exception:
+        return None
+
+
+def detail_info(url):
+    """Haalt van de woningpagina zelf de eerste foto en (indien vermeld) de publicatiedatum."""
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=20)
+        if r.status_code != 200:
+            return None, None
+    except Exception:
+        return None, None
+    soup = BeautifulSoup(r.text, "html.parser")
+    img = None
+    for key in ("og:image", "og:image:secure_url", "twitter:image"):
+        m = soup.find("meta", attrs={"property": key}) or soup.find("meta", attrs={"name": key})
+        v = (m.get("content") or "").strip() if m else ""
+        if v and plausibele_img(v):
+            img = urljoin(r.url, v)
+            break
+    if not img:
+        img = afbeelding(soup.find("main") or soup.body or soup, r.url)
+    pub = None
+    m = soup.find("meta", attrs={"property": "article:published_time"}) or soup.find(attrs={"itemprop": "datePublished"})
+    if m:
+        pub = naar_epoch(m.get("content") or m.get("datetime") or "")
+    if not pub:
+        for g in DATUM_JSON.findall(r.text):
+            pub = naar_epoch(g)
+            if pub:
+                break
+    if not pub:
+        m = DATUM_TEKST.search(soup.get_text(" ", strip=True))
+        if m:
+            pub = naar_epoch(f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}")
+    return img, pub
+
+
 def mooie_titel(a, kaart, pad, plaats):
     t = a.get_text(" ", strip=True)
     if 4 <= len(t) <= 80 and "|" not in t and "€" not in t and t.lower() not in SLECHTE_TITELS:
@@ -226,7 +284,8 @@ def scrape(site, cfg, url, plaats):
 
 def schrijf_website(state):
     os.makedirs("docs", exist_ok=True)
-    items = sorted(state["listings"].values(), key=lambda x: x["first_seen"], reverse=True)
+    items = [dict(v, ts=v.get("published") or v["first_seen"]) for v in state["listings"].values()]
+    items.sort(key=lambda x: x["ts"], reverse=True)
     data = {"updated": int(time.time()), "max_prijs": MAX_PRIJS, "listings": items}
     with open("docs/listings.json", "w") as f:
         json.dump(data, f, ensure_ascii=False)
@@ -281,6 +340,22 @@ def main():
             notify("Huurbot waarschuwing",
                    f"{site} levert al 3 runs geen woningen op (site aangepast of blokkeert de bot?).")
 
+    if not test:
+        todo = sorted((v for v in state["listings"].values() if not v.get("detail")),
+                      key=lambda x: x["first_seen"], reverse=True)[:60]
+        n_img = n_pub = 0
+        for v in todo:
+            img, pub = detail_info(v["url"])
+            if img:
+                v["img"] = img
+                n_img += 1
+            if pub:
+                v["published"] = pub
+                n_pub += 1
+            v["detail"] = True
+            time.sleep(0.5)
+        print(f"Details opgehaald: {len(todo)} woningen, {n_img} met foto, {n_pub} met publicatiedatum")
+
     if test:
         print(f"\nTest klaar: {gezien_nu} woningen gezien, {len(nieuw)} nieuw.")
         return
@@ -292,7 +367,10 @@ def main():
     else:
         for it in nieuw[:MAX_MELDINGEN_PER_RUN]:
             plaats = it["plaats"].replace("-", " ").title()
-            notify(f"{plaats} · €{it['prijs']}", f"{it['titel']}\n{it['site']}", it["url"], it.get("img"))
+            gepl = ""
+            if it.get("published"):
+                gepl = "\nGeplaatst: " + datetime.fromtimestamp(it["published"]).strftime("%d-%m-%Y")
+            notify(f"{plaats} · €{it['prijs']}", f"{it['titel']}\n{it['site']}{gepl}", it["url"], it.get("img"))
             time.sleep(0.5)
         if len(nieuw) > MAX_MELDINGEN_PER_RUN:
             notify("Huurbot", f"...en nog {len(nieuw) - MAX_MELDINGEN_PER_RUN} nieuwe woningen. Zie de website.")
