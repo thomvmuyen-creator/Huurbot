@@ -73,7 +73,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 16px 40px;color:var(--muted);fon
   <button class="tg" id="t-fav" aria-pressed="false" type="button">Favorieten</button>
 </div></div>
 <main><p class="count" id="count" aria-live="polite"></p><ul class="grid" id="grid"></ul></main>
-<footer id="foot"></footer>
+<footer id="foot"></footer><footer id="stat"></footer>
 <script>
 (function(){
 var $=function(i){return document.getElementById(i)},data=null,S={plaats:'',site:'',max:0,sort:'nieuw',nieuw:false,fav:false},favs={},last=0;
@@ -118,9 +118,10 @@ function render(){
     b.appendChild(p);b.appendChild(t);b.appendChild(m);li.appendChild(im);li.appendChild(h);li.appendChild(b);g.appendChild(li);
   });
 }
+function status(d){var st=d.status;if(!st)return;var p=[];Object.keys(st).forEach(function(k){if(k==='_details')return;p.push(k+' '+st[k].in_plaatsen+(st[k].kaarten===0?' (werkt niet)':''))});var x=st._details;$('stat').textContent='Status per bron: '+p.join(' · ')+(x?'. Foto\'s '+x.met_foto+'/'+x.opgehaald+', plaatsingsdatum '+x.met_datum+'/'+x.opgehaald+(Object.keys(x.fouten).length?', fouten: '+JSON.stringify(x.fouten):'')+'.':'')}
 function load(){
   fetch('listings.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
-    var first=!data;data=d;if(first)setup();stats();render();$('foot').textContent='Bron: '+Object.keys(d.listings.reduce(function(o,l){o[l.site]=1;return o},{})).join(', ')+'. Foto\'s en advertenties blijven eigendom van de verhuurders.';
+    var first=!data;data=d;if(first)setup();stats();render();status(d);$('foot').textContent='Bron: '+Object.keys(d.listings.reduce(function(o,l){o[l.site]=1;return o},{})).join(', ')+'. Foto\'s en advertenties blijven eigendom van de verhuurders.';
   }).catch(function(){$('count').textContent='Kon de lijst niet laden. Ververs de pagina.'});
 }
 $('f-plaats').onchange=function(){S.plaats=this.value;render()};$('f-site').onchange=function(){S.site=this.value;render()};
