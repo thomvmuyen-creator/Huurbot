@@ -39,7 +39,7 @@ MAX_MELDINGEN_PER_RUN = 15
 # ----------------------------------------------
 
 STATE_FILE = "state.json"
-STATE_VERSION = 4
+STATE_VERSION = 5
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
@@ -74,13 +74,15 @@ def telegram(text):
         print("Telegram fout:", r.status_code, r.text)
 
 
-def notify(titel, bericht, link=None):
+def notify(titel, bericht, link=None, img=None):
     """Pushmelding via ntfy (en optioneel Telegram). Zonder NTFY_TOPIC alleen printen."""
     topic = os.environ.get("NTFY_TOPIC")
     if topic:
         payload = {"topic": topic, "title": titel, "message": bericht, "tags": ["house"]}
         if link:
             payload["click"] = link
+        if img:
+            payload["attach"] = img
         try:
             r = requests.post("https://ntfy.sh", json=payload, timeout=20)
             if not r.ok:
@@ -114,6 +116,22 @@ def plaats_uit_pad(cfg, pad):
     for p in PLAATSEN_LANG_EERST:
         if slug == p or slug.startswith(p + "-"):
             return p
+    return None
+
+
+def afbeelding(node, basis_url):
+    """Eerste echte woningfoto in de kaart (geen logo's/iconen/placeholders)."""
+    if node is None:
+        return None
+    for im in node.find_all("img"):
+        for attr in ("src", "data-src", "data-lazy-src", "data-original", "srcset", "data-srcset"):
+            v = (im.get(attr) or "").strip().split(" ")[0].split(",")[0]
+            if not v or v.startswith("data:"):
+                continue
+            low = v.lower()
+            if any(x in low for x in ("logo", "icon", "placeholder", "flag", ".svg", "loading", "avatar")):
+                continue
+            return urljoin(basis_url, v)
     return None
 
 
@@ -196,7 +214,8 @@ def scrape(site, cfg, url, plaats):
             if woonplaats is None:
                 continue
         found[key] = {"url": key, "titel": mooie_titel(a, kaart, p, woonplaats), "prijs": prijs,
-                      "plaats": woonplaats, "site": site}
+                      "plaats": woonplaats, "site": site,
+                      "img": afbeelding(kaart, r.url)}
     if kaarten == 0:
         titel = soup.title.get_text(strip=True)[:60] if soup.title else "-"
         js = " (JS-site?)" if ("__NEXT_DATA__" in r.text or 'id="__nuxt"' in r.text) else ""
@@ -273,7 +292,7 @@ def main():
     else:
         for it in nieuw[:MAX_MELDINGEN_PER_RUN]:
             plaats = it["plaats"].replace("-", " ").title()
-            notify(f"{plaats} · €{it['prijs']}", f"{it['titel']}\n{it['site']}", it["url"])
+            notify(f"{plaats} · €{it['prijs']}", f"{it['titel']}\n{it['site']}", it["url"], it.get("img"))
             time.sleep(0.5)
         if len(nieuw) > MAX_MELDINGEN_PER_RUN:
             notify("Huurbot", f"...en nog {len(nieuw) - MAX_MELDINGEN_PER_RUN} nieuwe woningen. Zie de website.")
