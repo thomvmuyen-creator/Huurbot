@@ -119,8 +119,13 @@ function render(){
   });
 }
 function status(d){var st=d.status;if(!st)return;var p=[];Object.keys(st).forEach(function(k){if(k==='_details')return;p.push(k+' '+st[k].in_plaatsen+(st[k].kaarten===0?' (werkt niet)':''))});var x=st._details;$('stat').textContent='Status per bron: '+p.join(' · ')+(x?'. Foto\'s '+x.met_foto+'/'+x.opgehaald+', plaatsingsdatum '+x.met_datum+'/'+x.opgehaald+(Object.keys(x.fouten).length?', fouten: '+JSON.stringify(x.fouten):'')+'.':'')}
+function haal(){
+  function lok(){return fetch('listings.json?t='+Date.now(),{cache:'no-store'}).then(function(x){if(!x.ok)throw 0;return x.json()})}
+  if(!/\.github\.io$/.test(location.hostname))return lok();
+  var raw='https://raw.githubusercontent.com/'+location.hostname.split('.')[0]+'/'+location.pathname.split('/')[1]+'/main/docs/listings.json?t='+Date.now();
+  return fetch(raw,{cache:'no-store'}).then(function(x){if(!x.ok)throw 0;return x.json()}).catch(lok)}
 function load(){
-  fetch('listings.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+  haal().then(function(d){
     var first=!data;data=d;if(first)setup();stats();render();status(d);$('foot').textContent='Bron: '+Object.keys(d.listings.reduce(function(o,l){o[l.site]=1;return o},{})).join(', ')+'. Foto\'s en advertenties blijven eigendom van de verhuurders.';
   }).catch(function(){$('count').textContent='Kon de lijst niet laden. Ververs de pagina.'});
 }
