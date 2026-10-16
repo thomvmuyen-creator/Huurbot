@@ -101,7 +101,7 @@ function render(){
     return (!S.plaats||l.plaats===S.plaats)&&(!S.site||l.site===S.site)&&(!S.max||(l.prijs||0)<=S.max)&&(!S.nieuw||(!l.seed&&now-l.first_seen<86400))&&(!S.fav||favs[l.url]);});
   if(S.sort==='laag')items.sort(function(a,b){return (a.prijs||1e9)-(b.prijs||1e9)});
   else if(S.sort==='hoog')items.sort(function(a,b){return (b.prijs||0)-(a.prijs||0)});
-  else items.sort(function(a,b){return b.first_seen-a.first_seen});
+  else items.sort(function(a,b){return b.ts-a.ts});
   $('count').textContent=items.length+(items.length==1?' woning':' woningen');
   if(!items.length){g.appendChild(el('li','empty','Geen woningen met deze filters. Pas de filters aan of kom straks terug.'));return}
   items.forEach(function(l){
@@ -114,7 +114,7 @@ function render(){
     h.onclick=function(){if(favs[l.url])delete favs[l.url];else favs[l.url]=1;try{localStorage.setItem('favs',JSON.stringify(favs))}catch(e){}h.setAttribute('aria-pressed',String(!!favs[l.url]));if(S.fav)render()};
     var b=el('div','body'),p=el('div','price');p.textContent=l.prijs?'€ '+l.prijs.toLocaleString('nl-NL'):'Prijs op aanvraag';if(l.prijs)p.appendChild(el('small',null,' p/m'));
     var a=el('a','main',l.titel||'Woning');a.href=safe(l.url);a.target='_blank';a.rel='noopener noreferrer';var t=el('div','title');t.appendChild(a);
-    var m=el('div','meta');m.appendChild(el('span',null,tc(l.plaats)+' · '+l.site));m.appendChild(el('span',null,ago(l.first_seen)));
+    var m=el('div','meta');m.appendChild(el('span',null,tc(l.plaats)+' · '+l.site));m.appendChild(el('span',null,(l.published?'Geplaatst ':'Gevonden ')+ago(l.ts)));
     b.appendChild(p);b.appendChild(t);b.appendChild(m);li.appendChild(im);li.appendChild(h);li.appendChild(b);g.appendChild(li);
   });
 }
