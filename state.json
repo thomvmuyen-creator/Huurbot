@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 11
+  "vb&t": 12
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -196,6 +196,33 @@
    "site": "Directwonen",
    "titel": "Studio",
    "url": "https://directwonen.nl/studio-huren/oud-beijerland"
+  },
+  "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-112-3315-kt-dordrecht-p6fe79b": {
+   "first_seen": 1792143628,
+   "plaats": "dordrecht",
+   "prijs": 1057,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "1 Bedroom Apartment For Rent In Van Eesterenplein 112 3315 Kt Dordrecht",
+   "url": "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-112-3315-kt-dordrecht-p6fe79b"
+  },
+  "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-179-3315-kv-dordrecht-pfe6c21": {
+   "first_seen": 1792143627,
+   "plaats": "dordrecht",
+   "prijs": 1083,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "1 Bedroom Apartment For Rent In Van Eesterenplein 179 3315 Kv Dordrecht",
+   "url": "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-179-3315-kv-dordrecht-pfe6c21"
+  },
+  "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-62-3315-ks-dordrecht-pb3d603": {
+   "first_seen": 1792143626,
+   "plaats": "dordrecht",
+   "prijs": 1083,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "1 Bedroom Apartment For Rent In Van Eesterenplein 62 3315 Ks Dordrecht",
+   "url": "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-62-3315-ks-dordrecht-pb3d603"
   },
   "https://huurportaal.nl/listings/1-bedroom-apartment-surface-area-66m2-unfurnished-available-from-2026-11-01-pb35261": {
    "first_seen": 1792000420,
@@ -589,6 +616,9 @@
   "https://directwonen.nl/huurwoningen-huren/zuidland": 1792000422,
   "https://directwonen.nl/huurwoningen-huren/zwijndrecht/neptunusstraat/appartement-519647": 1792000422,
   "https://directwonen.nl/studio-huren/oud-beijerland": 1792000422,
+  "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-112-3315-kt-dordrecht-p6fe79b": 1792143628,
+  "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-179-3315-kv-dordrecht-pfe6c21": 1792143628,
+  "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-62-3315-ks-dordrecht-pb3d603": 1792143628,
   "https://huurportaal.nl/listings/1-bedroom-apartment-surface-area-66m2-unfurnished-available-from-2026-11-01-pb35261": 1792000422,
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p334f0a": 1792000422,
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7": 1792000422,
