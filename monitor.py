@@ -132,7 +132,7 @@ def afbeelding(node, basis_url):
             if not v or v.startswith("data:"):
                 continue
             low = v.lower()
-            if any(x in low for x in ("logo", "icon", "placeholder", "flag", ".svg", "loading", "avatar")):
+            if any(x in low for x in ("logo", "icon", "placeholder", "flag", ".svg", "loading", "avatar", "/content/images/")):
                 continue
             return urljoin(basis_url, v)
     return None
@@ -148,7 +148,7 @@ DATUM_MAAND = re.compile(TREFW + r"[^0-9]{0,25}(\d{1,2}) (" + "|".join(MAANDEN) 
 
 def plausibele_img(u):
     low = u.lower()
-    if any(x in low for x in ("logo", "icon", "placeholder", ".svg", "avatar", "favicon")):
+    if any(x in low for x in ("logo", "icon", "placeholder", ".svg", "avatar", "favicon", "/content/images/")):
         return False
     return bool(re.search(r"\.(jpe?g|png|webp|avif)|image|img|media|photo|foto|thumb|cdn", low))
 
@@ -374,6 +374,13 @@ def main():
                    f"{site} levert al 3 runs geen woningen op (site aangepast of blokkeert de bot?).")
 
     if not test:
+        telling = {}
+        for v in state["listings"].values():
+            if v.get("img"):
+                telling[v["img"]] = telling.get(v["img"], 0) + 1
+        for v in state["listings"].values():
+            if v.get("img") and telling[v["img"]] >= 3:
+                v["img"], v["detail"], v["pogingen"] = None, False, 1
         todo = sorted((v for v in state["listings"].values() if not v.get("detail")),
                       key=lambda x: x["first_seen"], reverse=True)[:60]
         n_img = n_pub = 0
