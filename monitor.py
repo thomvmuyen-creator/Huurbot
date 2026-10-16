@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Huurmonitor: checkt huursites op nieuwe woningen, zet ze op de website en stuurt een pushmelding."""
 import json, os, re, sys, time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from urllib.parse import urljoin, urlsplit
 
@@ -162,7 +163,7 @@ def naar_epoch(txt):
 def detail_info(url):
     """Haalt van de woningpagina zelf de eerste foto en (indien vermeld) de publicatiedatum."""
     try:
-        r = requests.get(url, headers=HEADERS, timeout=20)
+        r = requests.get(url, headers=HEADERS, timeout=12)
         if r.status_code != 200:
             return None, None
     except Exception:
@@ -216,7 +217,7 @@ def mooie_titel(a, kaart, pad, plaats):
 def scrape(site, cfg, url, plaats):
     """Geeft (woningen in jouw plaatsen, aantal woningkaarten gezien).
     Een woning = interne link + 1-3 verschillende prijzen (EUR) in dezelfde kaart."""
-    r = requests.get(url, headers=HEADERS, timeout=25)
+    r = requests.get(url, headers=HEADERS, timeout=15)
     if r.status_code != 200:
         raise RuntimeError(f"HTTP {r.status_code}")
     soup = BeautifulSoup(r.text, "html.parser")
@@ -291,6 +292,25 @@ def schrijf_website(state):
         json.dump(data, f, ensure_ascii=False)
 
 
+def haal_site(site, cfg):
+    """Haalt alle pagina's van één site op (sites zelf lopen parallel)."""
+    if "urls" in cfg:
+        doelen = [(u, None) for u in cfg["urls"]]
+    else:
+        doelen = [(cfg["url"].format(plaats=p, max=MAX_PRIJS), p) for p in PLAATSEN]
+    uit = []
+    for url, plaats in doelen:
+        label = plaats or url.split("//")[1][:55]
+        try:
+            items, kaarten = scrape(site, cfg, url, plaats)
+            fout = None
+        except Exception as e:
+            items, kaarten, fout = [], 0, str(e)
+        uit.append((label, items, kaarten, fout))
+        time.sleep(0.4)
+    return uit
+
+
 def main():
     test = "--test" in sys.argv
     state = load_state()
@@ -304,19 +324,14 @@ def main():
     nieuw, gezien_nu = [], 0
     nu = int(time.time())
 
+    with ThreadPoolExecutor(max_workers=len(SITES)) as ex:
+        resultaten = dict(zip(SITES, ex.map(lambda kv: haal_site(*kv), SITES.items())))
+
     for site, cfg in SITES.items():
-        if "urls" in cfg:
-            doelen = [(u, None) for u in cfg["urls"]]
-        else:
-            doelen = [(cfg["url"].format(plaats=p, max=MAX_PRIJS), p) for p in PLAATSEN]
         kaarten_totaal, rank = 0, 0
-        for url, plaats in doelen:
-            label = plaats or url.split("//")[1][:55]
-            try:
-                items, kaarten = scrape(site, cfg, url, plaats)
-            except Exception as e:
-                items, kaarten = [], 0
-                print(f"[{site}/{label}] fout: {e}")
+        for label, items, kaarten, fout in resultaten[site]:
+            if fout:
+                print(f"[{site}/{label}] fout: {fout}")
             kaarten_totaal += kaarten
             print(f"[{site}/{label}] {kaarten} woningkaarten, {len(items)} in jouw plaatsen")
             for it in items[:2]:
@@ -332,7 +347,6 @@ def main():
                     rank += 1
                     state["listings"][it["url"]] = it
                     nieuw.append(it)
-            time.sleep(1.5)
         h = state["health"].get(site, 0)
         h = h + 1 if kaarten_totaal == 0 else 0
         state["health"][site] = h
@@ -344,8 +358,9 @@ def main():
         todo = sorted((v for v in state["listings"].values() if not v.get("detail")),
                       key=lambda x: x["first_seen"], reverse=True)[:60]
         n_img = n_pub = 0
-        for v in todo:
-            img, pub = detail_info(v["url"])
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            resultaat = list(ex.map(lambda v: detail_info(v["url"]), todo))
+        for v, (img, pub) in zip(todo, resultaat):
             if img:
                 v["img"] = img
                 n_img += 1
@@ -353,7 +368,6 @@ def main():
                 v["published"] = pub
                 n_pub += 1
             v["detail"] = True
-            time.sleep(0.5)
         print(f"Details opgehaald: {len(todo)} woningen, {n_img} met foto, {n_pub} met publicatiedatum")
 
     if test:
