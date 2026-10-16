@@ -42,7 +42,7 @@ MAX_MELDINGEN_PER_RUN = 15
 # ----------------------------------------------
 
 STATE_FILE = "state.json"
-STATE_VERSION = 5
+STATE_VERSION = 6
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
@@ -88,8 +88,14 @@ def notify(titel, bericht, link=None, img=None):
             payload["attach"] = img
         try:
             r = requests.post("https://ntfy.sh", json=payload, timeout=20)
+            if not r.ok and "attach" in payload:
+                print("ntfy weigerde de melding met foto:", r.status_code, r.text[:150], "-> opnieuw zonder foto")
+                payload.pop("attach")
+                r = requests.post("https://ntfy.sh", json=payload, timeout=20)
             if not r.ok:
-                print("ntfy fout:", r.status_code, r.text)
+                print("ntfy fout:", r.status_code, r.text[:150])
+            else:
+                print("ntfy melding verstuurd:", titel)
         except Exception as e:
             print("ntfy fout:", e)
     else:
@@ -421,6 +427,18 @@ def main():
             time.sleep(0.5)
         if len(nieuw) > MAX_MELDINGEN_PER_RUN:
             notify("Huurbot", f"...en nog {len(nieuw) - MAX_MELDINGEN_PER_RUN} nieuwe woningen. Zie de website.")
+
+    if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":  # alleen bij 'Run workflow'
+        st = state.get("status", {})
+        regels = [f"{k}: {v['in_plaatsen']}" + (" (werkt niet)" if v["kaarten"] == 0 else "")
+                  for k, v in st.items() if k != "_details"]
+        dt = st.get("_details", {})
+        notify("Huurbot test", f"{len(state['listings'])} woningen op de site, {len(nieuw)} nieuw in deze run.\n"
+               + "\n".join(regels) + f"\nFoto's {dt.get('met_foto', 0)}/{dt.get('opgehaald', 0)}")
+        nw = max(state["listings"].values(), key=lambda x: x.get("published") or x["first_seen"], default=None)
+        if nw:
+            notify(f"Test: {nw['plaats'].replace('-', ' ').title()} · €{nw['prijs']}",
+                   f"{nw['titel']}\n{nw['site']}", nw["url"], nw.get("img"))
 
     grens = nu - 30 * 86400
     state["listings"] = {k: v for k, v in state["listings"].items() if v["first_seen"] >= grens}
