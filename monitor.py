@@ -187,7 +187,22 @@ def detail_info(url):
             img = urljoin(r.url, v)
             break
     if not img:
+        m = soup.find("link", attrs={"rel": "image_src"})
+        if m and m.get("href") and plausibele_img(m["href"]):
+            img = urljoin(r.url, m["href"])
+    if not img:
+        for sc in soup.find_all("script", type="application/ld+json"):
+            m = re.search(r'"image"\s*:\s*\[?\s*"([^"]+)"', sc.string or "")
+            if m and plausibele_img(m.group(1)):
+                img = urljoin(r.url, m.group(1))
+                break
+    if not img:
         img = afbeelding(soup.find("main") or soup.body or soup, r.url)
+    if not img:  # laatste redmiddel: foto-URL in ingebedde JSON/data-attributen
+        for u in re.findall(r"https?://[^\"'\s<>\\]{10,300}\.(?:jpe?g|webp|png)", r.text):
+            if plausibele_img(u):
+                img = u
+                break
     pub = None
     m = soup.find("meta", attrs={"property": "article:published_time"}) or soup.find(attrs={"itemprop": "datePublished"})
     if m:
@@ -366,7 +381,7 @@ def main():
                     continue
                 if it["url"] not in state["seen"]:
                     state["seen"][it["url"]] = nu
-                    it["first_seen"] = nu - rank
+                    it["first_seen"] = nu - rank * len(SITES) - list(SITES).index(site)
                     it["seed"] = eerste_run
                     rank += 1
                     state["listings"][it["url"]] = it
