@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 3
+  "vb&t": 4
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -766,6 +766,44 @@
   "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g2nOW": 1792143872,
   "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g96ig": 1792143872,
   "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/gBbl4": 1792143872
+ },
+ "status": {
+  "Directwonen": {
+   "fouten": 0,
+   "in_plaatsen": 52,
+   "kaarten": 66
+  },
+  "HS Makelaars": {
+   "fouten": 0,
+   "in_plaatsen": 1,
+   "kaarten": 3
+  },
+  "Huurportaal": {
+   "fouten": 1,
+   "in_plaatsen": 65,
+   "kaarten": 67
+  },
+  "Huurstunt": {
+   "fouten": 0,
+   "in_plaatsen": 36,
+   "kaarten": 120
+  },
+  "Ikwilhuren.nu": {
+   "fouten": 0,
+   "in_plaatsen": 0,
+   "kaarten": 28
+  },
+  "_details": {
+   "fouten": {},
+   "met_datum": 0,
+   "met_foto": 0,
+   "opgehaald": 0
+  },
+  "vb&t": {
+   "fouten": 1,
+   "in_plaatsen": 0,
+   "kaarten": 0
+  }
  },
  "v": 5
 }
