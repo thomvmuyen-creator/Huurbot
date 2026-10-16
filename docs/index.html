@@ -76,7 +76,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 16px 40px;color:var(--muted);fon
 <footer id="foot"></footer><footer id="stat"></footer>
 <script>
 (function(){
-var $=function(i){return document.getElementById(i)},data=null,S={plaats:'',site:'',max:0,sort:'nieuw',nieuw:false,fav:false},favs={},last=0;
+var $=function(i){return document.getElementById(i)},data=null,S={plaats:'',site:'',max:0,sort:'nieuw',nieuw:false,fav:false},favs={},last=0,shown=48;
 try{favs=JSON.parse(localStorage.getItem('favs')||'{}');last=+localStorage.getItem('lastVisit')||0}catch(e){}
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
 function tc(s){return s.replace(/-/g,' ').replace(/\b\w/g,function(c){return c.toUpperCase()})}
@@ -102,12 +102,12 @@ function render(){
   if(S.sort==='laag')items.sort(function(a,b){return (a.prijs||1e9)-(b.prijs||1e9)});
   else if(S.sort==='hoog')items.sort(function(a,b){return (b.prijs||0)-(a.prijs||0)});
   else items.sort(function(a,b){return b.ts-a.ts});
-  $('count').textContent=items.length+(items.length==1?' woning':' woningen');
+  var total=items.length;$('count').textContent=total+(total==1?' woning':' woningen');items=items.slice(0,shown);
   if(!items.length){g.appendChild(el('li','empty','Geen woningen met deze filters. Pas de filters aan of kom straks terug.'));return}
   items.forEach(function(l){
     var li=el('li','card'),im=el('div','img'),isNew=!l.seed&&l.first_seen>last&&now-l.first_seen<172800;
     im.innerHTML=HOUSE;
-    if(l.img){var i=new Image();i.loading='lazy';i.alt='';i.referrerPolicy='no-referrer';i.onload=function(){im.textContent='';im.appendChild(i);if(isNew)im.appendChild(bd())};i.src=safe(l.img)}
+    if(l.img&&safe(l.img)!=='#'){var i=document.createElement('img');i.alt='';i.loading='lazy';i.decoding='async';i.referrerPolicy='no-referrer';i.onerror=function(){i.remove()};im.appendChild(i);i.src=safe(l.img)}
     function bd(){return el('span','badge','Nieuw')}
     if(isNew)im.appendChild(bd());
     var h=el('button','heart');h.type='button';h.innerHTML=HEART;h.setAttribute('aria-label','Bewaar als favoriet');h.setAttribute('aria-pressed',String(!!favs[l.url]));
@@ -117,6 +117,7 @@ function render(){
     var m=el('div','meta');m.appendChild(el('span',null,tc(l.plaats)+' · '+l.site));m.appendChild(el('span',null,(l.published?'Geplaatst ':'Gevonden ')+ago(l.ts)));
     b.appendChild(p);b.appendChild(t);b.appendChild(m);li.appendChild(im);li.appendChild(h);li.appendChild(b);g.appendChild(li);
   });
+  if(total>shown){var lm=el('li','empty'),bt=el('button','tg','Toon meer ('+(total-shown)+')');bt.id='meer';bt.type='button';bt.onclick=function(){shown+=48;render()};lm.appendChild(bt);g.appendChild(lm)}
 }
 function status(d){var st=d.status;if(!st)return;var p=[];Object.keys(st).forEach(function(k){if(k==='_details')return;p.push(k+' '+st[k].in_plaatsen+(st[k].kaarten===0?' (werkt niet)':''))});var x=st._details;$('stat').textContent='Status per bron: '+p.join(' · ')+(x?'. Foto\'s '+x.met_foto+'/'+x.opgehaald+', plaatsingsdatum '+x.met_datum+'/'+x.opgehaald+(Object.keys(x.fouten).length?', fouten: '+JSON.stringify(x.fouten):'')+'.':'')}
 function haal(){
@@ -129,9 +130,9 @@ function load(){
     var first=!data;data=d;if(first)setup();stats();render();status(d);$('foot').textContent='Bron: '+Object.keys(d.listings.reduce(function(o,l){o[l.site]=1;return o},{})).join(', ')+'. Foto\'s en advertenties blijven eigendom van de verhuurders.';
   }).catch(function(){$('count').textContent='Kon de lijst niet laden. Ververs de pagina.'});
 }
-$('f-plaats').onchange=function(){S.plaats=this.value;render()};$('f-site').onchange=function(){S.site=this.value;render()};
-$('f-max').onchange=function(){S.max=+this.value;render()};$('f-sort').onchange=function(){S.sort=this.value;render()};
-[['t-nieuw','nieuw'],['t-fav','fav']].forEach(function(x){var b=$(x[0]);b.onclick=function(){S[x[1]]=!S[x[1]];b.setAttribute('aria-pressed',String(S[x[1]]));render()}});
+$('f-plaats').onchange=function(){S.plaats=this.value;shown=48;render()};$('f-site').onchange=function(){S.site=this.value;shown=48;render()};
+$('f-max').onchange=function(){S.max=+this.value;shown=48;render()};$('f-sort').onchange=function(){S.sort=this.value;shown=48;render()};
+[['t-nieuw','nieuw'],['t-fav','fav']].forEach(function(x){var b=$(x[0]);b.onclick=function(){S[x[1]]=!S[x[1]];b.setAttribute('aria-pressed',String(S[x[1]]));shown=48;render()}});
 var sk=$('grid');for(var i=0;i<6;i++)sk.appendChild(el('li','sk'));
 load();setInterval(load,60000);
 addEventListener('pagehide',function(){try{localStorage.setItem('lastVisit',String(Math.floor(Date.now()/1000)))}catch(e){}});
