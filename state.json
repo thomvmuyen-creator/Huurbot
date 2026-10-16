@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 3
+  "vb&t": 4
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -777,8 +777,8 @@
   },
   "Huurportaal": {
    "fouten": 2,
-   "in_plaatsen": 65,
-   "kaarten": 67
+   "in_plaatsen": 58,
+   "kaarten": 60
   },
   "Huurstunt": {
    "fouten": 0,
@@ -797,7 +797,7 @@
    "opgehaald": 9
   },
   "vb&t": {
-   "fouten": 0,
+   "fouten": 3,
    "in_plaatsen": 0,
    "kaarten": 0
   }
