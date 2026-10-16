@@ -3,124 +3,132 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Huurwoningen Rijnmond</title>
-<meta name="theme-color" content="#1d2b2a">
+<title>Huurradar Rijnmond</title>
+<meta name="theme-color" content="#16302b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#eef1f0; --surface:#ffffff; --ink:#1d2b2a; --muted:#5d6b69; --line:#d3dad8;
-  --brick:#b4452c; --brick-soft:#f6e4de; --chip:#dfe6e4; --chip-on:#1d2b2a; --chip-on-ink:#ffffff;
-  color-scheme:light;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#121918; --surface:#1a2322; --ink:#e8efed; --muted:#93a3a0; --line:#2b3836;
-    --brick:#e0755a; --brick-soft:#3a2420; --chip:#243130; --chip-on:#e8efed; --chip-on-ink:#121918;
-    color-scheme:dark;
-  }
-}
-*{box-sizing:border-box}
-html{height:100%}
-body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);
-  font:16px/1.45 "Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;
-  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
-main{max-width:760px;margin:0 auto;padding:20px 16px 48px}
-h1{font-size:1.6rem;line-height:1.2;margin:0 0 4px;letter-spacing:-.01em}
-.sub{color:var(--muted);font-size:.9rem;margin:0 0 18px}
-.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 14px;margin:0 -16px;padding-left:16px;padding-right:16px;
-  scrollbar-width:none}
-.chips::-webkit-scrollbar{display:none}
-.chip{flex:none;border:0;background:var(--chip);color:var(--ink);font:inherit;font-size:.88rem;
-  padding:7px 13px;border-radius:999px;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink)}
-.chip:focus-visible,a:focus-visible{outline:3px solid var(--brick);outline-offset:2px}
-.list{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.row{display:block;text-decoration:none;color:inherit;padding:14px 16px 14px 13px;border-left:4px solid transparent;
-  border-top:1px solid var(--line)}
-.list li:first-child .row{border-top:0}
-.row.nieuw{border-left-color:var(--brick);background:var(--brick-soft)}
-.row:hover{background:var(--chip)}
-.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.prijs{font-size:1.25rem;font-weight:700;font-variant-numeric:tabular-nums}
-.prijs small{font-size:.8rem;font-weight:400;color:var(--muted)}
-.wanneer{font-size:.82rem;color:var(--muted);white-space:nowrap}
-.nieuw .wanneer{color:var(--brick);font-weight:600}
-.titel{margin:2px 0 0;overflow-wrap:anywhere}
-.meta{color:var(--muted);font-size:.85rem;margin-top:2px}
-.leeg{padding:28px 16px;text-align:center;color:var(--muted)}
+:root{--bg:#f4f2ee;--surface:#fff;--ink:#16302b;--muted:#5f6f6b;--line:#e1ddd5;--accent:#1f5f4a;--accent-ink:#fff;
+--new:#c2410c;--shadow:0 1px 2px rgba(22,48,43,.06),0 8px 24px rgba(22,48,43,.07);--ph:#e6e2da;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1a18;--surface:#172522;--ink:#e9f0ee;--muted:#9bb0ab;--line:#26382f;
+--accent:#5fc3a0;--accent-ink:#0f1a18;--new:#fb923c;--shadow:0 1px 2px rgba(0,0,0,.3);--ph:#21332f;color-scheme:dark}}
+*{box-sizing:border-box}html{height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 "Avenir Next","Segoe UI",system-ui,sans-serif;
+padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+.hero{background:#16302b;color:#fff;padding:28px 16px 64px}
+.wrap{max-width:1120px;margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:8px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:#a9d8c7}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:p 2s infinite}
+@keyframes p{70%{box-shadow:0 0 0 8px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+h1{font:700 clamp(1.9rem,5vw,3rem)/1.1 Fraunces,Georgia,serif;margin:10px 0 6px;letter-spacing:-.02em}
+.lead{margin:0;color:#c5ded5;max-width:52ch}
+.stats{display:flex;gap:28px;margin-top:22px;flex-wrap:wrap}
+.stat b{display:block;font:700 1.7rem/1 Fraunces,Georgia,serif}.stat span{font-size:.82rem;color:#a9d8c7}
+.panel{max-width:1120px;margin:-36px auto 0;padding:0 16px}
+.bar{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:14px;
+display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;align-items:end}
+label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+select{width:100%;font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink)}
+.tg{font:inherit;font-weight:600;padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);cursor:pointer}
+.tg[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+select:focus-visible,.tg:focus-visible,.card a:focus-visible,.heart:focus-visible{outline:3px solid var(--new);outline-offset:2px}
+main{max-width:1120px;margin:0 auto;padding:22px 16px 56px}
+.count{color:var(--muted);font-size:.9rem;margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;list-style:none;margin:0;padding:0}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.img{aspect-ratio:3/2;background:var(--ph);position:relative;display:grid;place-items:center;color:var(--muted)}
+.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:10px;top:10px;background:var(--new);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.06em;
+text-transform:uppercase;padding:4px 9px;border-radius:999px;z-index:2}
+.heart{position:absolute;right:10px;top:10px;z-index:3;width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;
+background:rgba(255,255,255,.92);color:#16302b;display:grid;place-items:center}
+.heart[aria-pressed=true]{color:#dc2626}.heart[aria-pressed=true] path{fill:currentColor}
+.body{padding:14px 16px 16px}
+.price{font:700 1.45rem/1.1 Fraunces,Georgia,serif}.price small{font:400 .8rem system-ui,sans-serif;color:var(--muted)}
+.title{margin:6px 0 2px;font-weight:600;overflow-wrap:anywhere}
+.card a.main{color:inherit;text-decoration:none}.card a.main::after{content:"";position:absolute;inset:0;z-index:1}
+.meta{font-size:.85rem;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.sk{height:300px;border-radius:14px;background:linear-gradient(90deg,var(--ph),var(--surface),var(--ph));background-size:200% 100%;animation:s 1.4s infinite}
+@keyframes s{to{background-position:-200% 0}}
+.empty{grid-column:1/-1;text-align:center;padding:48px 16px;color:var(--muted)}
+footer{max-width:1120px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font-size:.8rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<main>
-  <h1>Nieuwe huurwoningen</h1>
-  <p class="sub" id="sub">Laden…</p>
-  <div class="chips" id="chips" role="group" aria-label="Filter op plaats"></div>
-  <ul class="list" id="list"></ul>
-</main>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow"><span class="dot"></span>Live gevolgd, elke ~10 minuten</div>
+  <h1>Huurradar Rijnmond</h1>
+  <p class="lead">Nieuwe huurwoningen in Ridderkerk, Barendrecht, Dordrecht en omgeving, direct van de bron. Nieuwste bovenaan.</p>
+  <div class="stats" id="stats"></div>
+</div></header>
+<div class="panel"><div class="bar" id="bar">
+  <div><label for="f-plaats">Plaats</label><select id="f-plaats"></select></div>
+  <div><label for="f-site">Bron</label><select id="f-site"></select></div>
+  <div><label for="f-max">Max. huur</label><select id="f-max"></select></div>
+  <div><label for="f-sort">Sorteren</label><select id="f-sort"><option value="nieuw">Nieuwste eerst</option><option value="laag">Prijs laag-hoog</option><option value="hoog">Prijs hoog-laag</option></select></div>
+  <button class="tg" id="t-nieuw" aria-pressed="false" type="button">Laatste 24 uur</button>
+  <button class="tg" id="t-fav" aria-pressed="false" type="button">Favorieten</button>
+</div></div>
+<main><p class="count" id="count" aria-live="polite"></p><ul class="grid" id="grid"></ul></main>
+<footer id="foot"></footer>
 <script>
 (function(){
-  var listEl=document.getElementById('list'), chipsEl=document.getElementById('chips'), subEl=document.getElementById('sub');
-  var data=null, filter='alle', lastVisit=0;
-  try{ lastVisit=parseInt(localStorage.getItem('lastVisit')||'0',10); }catch(e){}
-
-  function titelCase(s){return s.replace(/-/g,' ').replace(/\b\w/g,function(c){return c.toUpperCase();});}
-  function ago(ts){
-    var m=Math.round((Date.now()/1000-ts)/60);
-    if(m<2) return 'zojuist';
-    if(m<60) return m+' min geleden';
-    var h=Math.round(m/60); if(h<24) return h+' uur geleden';
-    var d=Math.round(h/24); return d+(d===1?' dag':' dagen')+' geleden';
-  }
-  function safeUrl(u){return /^https?:\/\//i.test(u)?u:'#';}
-  function el(tag,cls,text){var e=document.createElement(tag); if(cls)e.className=cls; if(text!=null)e.textContent=text; return e;}
-
-  function renderChips(){
-    chipsEl.textContent='';
-    var counts={}; data.listings.forEach(function(l){counts[l.plaats]=(counts[l.plaats]||0)+1;});
-    var names=['alle'].concat(Object.keys(counts).sort());
-    names.forEach(function(n){
-      var b=el('button','chip', n==='alle'?'Alle ('+data.listings.length+')':titelCase(n)+' ('+counts[n]+')');
-      b.type='button'; b.setAttribute('aria-pressed', String(filter===n));
-      b.onclick=function(){filter=n; renderChips(); renderList();};
-      chipsEl.appendChild(b);
-    });
-  }
-  function renderList(){
-    listEl.textContent='';
-    var items=data.listings.filter(function(l){return filter==='alle'||l.plaats===filter;});
-    if(!items.length){
-      var li=el('li','leeg','Nog geen woningen gevonden. De bot checkt elke ~10 minuten.'); listEl.appendChild(li); return;
-    }
-    items.forEach(function(l){
-      var li=document.createElement('li');
-      var a=el('a','row'); a.href=safeUrl(l.url); a.target='_blank'; a.rel='noopener noreferrer';
-      var isNew=!l.seed && l.first_seen>lastVisit;
-      if(isNew) a.classList.add('nieuw');
-      var top=el('div','top');
-      var p=el('div','prijs');
-      if(l.prijs){p.textContent='€ '+l.prijs.toLocaleString('nl-NL'); var s=el('small',null,' p/m'); p.appendChild(s);}
-      else p.textContent='Prijs onbekend';
-      top.appendChild(p); top.appendChild(el('div','wanneer',(isNew?'Nieuw · ':'')+ago(l.first_seen)));
-      a.appendChild(top);
-      a.appendChild(el('div','titel',l.titel||'Woning'));
-      a.appendChild(el('div','meta',titelCase(l.plaats)+' · via '+l.site));
-      li.appendChild(a); listEl.appendChild(li);
-    });
-  }
-  function load(first){
-    fetch('listings.json?t='+Date.now(),{cache:'no-store'}).then(function(r){
-      if(!r.ok) throw new Error(r.status); return r.json();
-    }).then(function(d){
-      data=d;
-      subEl.textContent='Max € '+d.max_prijs.toLocaleString('nl-NL')+' · bijgewerkt '+ago(d.updated);
-      renderChips(); renderList();
-    }).catch(function(){
-      subEl.textContent='Kon de lijst niet laden. Probeer te verversen.';
-    });
-  }
-  load(true);
-  setInterval(load,60000);
-  // 'nieuw' markering blijft staan tot je de pagina de volgende keer opent
-  window.addEventListener('pagehide',function(){try{localStorage.setItem('lastVisit',String(Math.floor(Date.now()/1000)));}catch(e){}});
+var $=function(i){return document.getElementById(i)},data=null,S={plaats:'',site:'',max:0,sort:'nieuw',nieuw:false,fav:false},favs={},last=0;
+try{favs=JSON.parse(localStorage.getItem('favs')||'{}');last=+localStorage.getItem('lastVisit')||0}catch(e){}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function tc(s){return s.replace(/-/g,' ').replace(/\b\w/g,function(c){return c.toUpperCase()})}
+function ago(ts){var m=Math.round((Date.now()/1000-ts)/60);if(m<2)return 'zojuist';if(m<60)return m+' min geleden';var h=Math.round(m/60);if(h<24)return h+' uur geleden';var d=Math.round(h/24);return d+(d==1?' dag':' dagen')+' geleden'}
+function safe(u){return /^https?:\/\//i.test(u||'')?u:'#'}
+function fill(sel,opts,cur){sel.textContent='';opts.forEach(function(o){var op=el('option',null,o[1]);op.value=o[0];sel.appendChild(op)});sel.value=cur}
+var HOUSE='<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></svg>';
+var HEART='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 018-2.7A4.5 4.5 0 0120 10c0 5.7-8 11-8 11z"/></svg>';
+function setup(){
+  var pl={},si={};data.listings.forEach(function(l){pl[l.plaats]=1;si[l.site]=1});
+  fill($('f-plaats'),[['','Alle plaatsen']].concat(Object.keys(pl).sort().map(function(p){return [p,tc(p)]})),S.plaats);
+  fill($('f-site'),[['','Alle bronnen']].concat(Object.keys(si).sort().map(function(p){return [p,p]})),S.site);
+  fill($('f-max'),[['0','Geen limiet']].concat([800,1000,1200,1400,1500,1600].map(function(v){return [String(v),'€ '+v.toLocaleString('nl-NL')]})),String(S.max));
+}
+function stats(){
+  var now=Date.now()/1000,d=data.listings.filter(function(l){return !l.seed&&now-l.first_seen<86400}).length,box=$('stats');box.textContent='';
+  [[data.listings.length,'woningen'],[d,'nieuw (24 uur)'],[ago(data.updated),'laatst gecheckt']].forEach(function(s){var e=el('div','stat');e.appendChild(el('b',null,s[0]));e.appendChild(el('span',null,s[1]));box.appendChild(e)});
+}
+function render(){
+  var now=Date.now()/1000,g=$('grid');g.textContent='';
+  var items=data.listings.filter(function(l){
+    return (!S.plaats||l.plaats===S.plaats)&&(!S.site||l.site===S.site)&&(!S.max||(l.prijs||0)<=S.max)&&(!S.nieuw||(!l.seed&&now-l.first_seen<86400))&&(!S.fav||favs[l.url]);});
+  if(S.sort==='laag')items.sort(function(a,b){return (a.prijs||1e9)-(b.prijs||1e9)});
+  else if(S.sort==='hoog')items.sort(function(a,b){return (b.prijs||0)-(a.prijs||0)});
+  else items.sort(function(a,b){return b.first_seen-a.first_seen});
+  $('count').textContent=items.length+(items.length==1?' woning':' woningen');
+  if(!items.length){g.appendChild(el('li','empty','Geen woningen met deze filters. Pas de filters aan of kom straks terug.'));return}
+  items.forEach(function(l){
+    var li=el('li','card'),im=el('div','img'),isNew=!l.seed&&l.first_seen>last&&now-l.first_seen<172800;
+    im.innerHTML=HOUSE;
+    if(l.img){var i=new Image();i.loading='lazy';i.alt='';i.referrerPolicy='no-referrer';i.onload=function(){im.textContent='';im.appendChild(i);if(isNew)im.appendChild(bd())};i.src=safe(l.img)}
+    function bd(){return el('span','badge','Nieuw')}
+    if(isNew)im.appendChild(bd());
+    var h=el('button','heart');h.type='button';h.innerHTML=HEART;h.setAttribute('aria-label','Bewaar als favoriet');h.setAttribute('aria-pressed',String(!!favs[l.url]));
+    h.onclick=function(){if(favs[l.url])delete favs[l.url];else favs[l.url]=1;try{localStorage.setItem('favs',JSON.stringify(favs))}catch(e){}h.setAttribute('aria-pressed',String(!!favs[l.url]));if(S.fav)render()};
+    var b=el('div','body'),p=el('div','price');p.textContent=l.prijs?'€ '+l.prijs.toLocaleString('nl-NL'):'Prijs op aanvraag';if(l.prijs)p.appendChild(el('small',null,' p/m'));
+    var a=el('a','main',l.titel||'Woning');a.href=safe(l.url);a.target='_blank';a.rel='noopener noreferrer';var t=el('div','title');t.appendChild(a);
+    var m=el('div','meta');m.appendChild(el('span',null,tc(l.plaats)+' · '+l.site));m.appendChild(el('span',null,ago(l.first_seen)));
+    b.appendChild(p);b.appendChild(t);b.appendChild(m);li.appendChild(im);li.appendChild(h);li.appendChild(b);g.appendChild(li);
+  });
+}
+function load(){
+  fetch('listings.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+    var first=!data;data=d;if(first)setup();stats();render();$('foot').textContent='Bron: '+Object.keys(d.listings.reduce(function(o,l){o[l.site]=1;return o},{})).join(', ')+'. Foto\'s en advertenties blijven eigendom van de verhuurders.';
+  }).catch(function(){$('count').textContent='Kon de lijst niet laden. Ververs de pagina.'});
+}
+$('f-plaats').onchange=function(){S.plaats=this.value;render()};$('f-site').onchange=function(){S.site=this.value;render()};
+$('f-max').onchange=function(){S.max=+this.value;render()};$('f-sort').onchange=function(){S.sort=this.value;render()};
+[['t-nieuw','nieuw'],['t-fav','fav']].forEach(function(x){var b=$(x[0]);b.onclick=function(){S[x[1]]=!S[x[1]];b.setAttribute('aria-pressed',String(S[x[1]]));render()}});
+var sk=$('grid');for(var i=0;i<6;i++)sk.appendChild(el('li','sk'));
+load();setInterval(load,60000);
+addEventListener('pagehide',function(){try{localStorage.setItem('lastVisit',String(Math.floor(Date.now()/1000)))}catch(e){}});
 })();
 </script>
 </body>
