@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 
 # ---------------- INSTELLINGEN ----------------
 MAX_PRIJS = 1600
+MIN_PRIJS = 400  # onder dit bedrag zijn het vrijwel altijd kamers/short-stay
 PLAATSEN = [
     "ridderkerk", "hendrik-ido-ambacht", "papendrecht", "zwijndrecht",
     "barendrecht", "oud-beijerland", "puttershoek", "poortugaal", "rhoon",
@@ -32,7 +33,7 @@ SITES = {
     "HS Makelaars": {
         "urls": ["https://www.hsmakelaars.nl/woningaanbod/huur"],
         "plaats_uit_url": r"/woningaanbod/huur/([^/]+)/"},
-    "Directwonen": {"url": "https://directwonen.nl/huurwoningen-huren/{plaats}"},
+    "Directwonen": {"url": "https://directwonen.nl/huurwoningen-huren/{plaats}", "controleer_plaats": True},
 }
 # Advertenties waarvan de URL een van deze woorden bevat worden overgeslagen (kamers e.d.)
 UITSLUITEN = ["/kamer/", "kamer-in", "kamer-te-huur", "kamers-", "kamer-huren", "kamers-huren",
@@ -139,7 +140,10 @@ def afbeelding(node, basis_url):
 
 DATUM_JSON = re.compile(r'"(?:datePublished|datePosted|dateCreated|date_posted|published_?at|publishedAt|created_?at|createdAt|'
                         r'listed_?at|publicationDate|publicatiedatum|first_?seen|activeFrom)"\s*:\s*"(\d{4}-\d{2}-\d{2}[^"]{0,30})"', re.I)
-DATUM_TEKST = re.compile(r"(?:Geplaatst|Gepubliceerd|Online sinds|Toegevoegd|Publicatiedatum)[^0-9]{0,25}(\d{1,2})[-/ .](\d{1,2})[-/ .](\d{4})", re.I)
+TREFW = r"(?:Geplaatst|Gepubliceerd|Online sinds|Toegevoegd|Publicatiedatum|Aangeboden sinds|Aangeboden op|Plaatsingsdatum)"
+DATUM_TEKST = re.compile(TREFW + r"[^0-9]{0,25}(\d{1,2})[-/ .](\d{1,2})[-/ .](\d{4})", re.I)
+MAANDEN = {m: i + 1 for i, m in enumerate("januari februari maart april mei juni juli augustus september oktober november december".split())}
+DATUM_MAAND = re.compile(TREFW + r"[^0-9]{0,25}(\d{1,2}) (" + "|".join(MAANDEN) + r") (\d{4})", re.I)
 
 
 def plausibele_img(u):
@@ -165,9 +169,9 @@ def detail_info(url):
     try:
         r = requests.get(url, headers=HEADERS, timeout=12)
         if r.status_code != 200:
-            return None, None
+            return None, None, f"HTTP {r.status_code}"
     except Exception:
-        return None, None
+        return None, None, "geen verbinding"
     soup = BeautifulSoup(r.text, "html.parser")
     img = None
     for key in ("og:image", "og:image:secure_url", "twitter:image"):
@@ -188,10 +192,15 @@ def detail_info(url):
             if pub:
                 break
     if not pub:
-        m = DATUM_TEKST.search(soup.get_text(" ", strip=True))
+        txt = soup.get_text(" ", strip=True)
+        m = DATUM_TEKST.search(txt)
         if m:
             pub = naar_epoch(f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}")
-    return img, pub
+        if not pub:
+            m = DATUM_MAAND.search(txt)
+            if m:
+                pub = naar_epoch(f"{m.group(3)}-{MAANDEN[m.group(2).lower()]:02d}-{int(m.group(1)):02d}")
+    return img, pub, "ok"
 
 
 def mooie_titel(a, kaart, pad, plaats):
@@ -272,6 +281,13 @@ def scrape(site, cfg, url, plaats):
             woonplaats = plaats_uit_pad(cfg, p)
             if woonplaats is None:
                 continue
+        if cfg.get("controleer_plaats"):
+            tk = (kaart.get_text(" ", strip=True) if kaart is not None else t).lower().replace("-", " ")
+            namen = [x for x in PLAATSEN_LANG_EERST if x.replace("-", " ") in tk]
+            if not namen:
+                continue
+            if woonplaats not in namen:
+                woonplaats = namen[0]
         found[key] = {"url": key, "titel": mooie_titel(a, kaart, p, woonplaats), "prijs": prijs,
                       "plaats": woonplaats, "site": site,
                       "img": afbeelding(kaart, r.url)}
@@ -287,7 +303,7 @@ def schrijf_website(state):
     os.makedirs("docs", exist_ok=True)
     items = [dict(v, ts=v.get("published") or v["first_seen"]) for v in state["listings"].values()]
     items.sort(key=lambda x: x["ts"], reverse=True)
-    data = {"updated": int(time.time()), "max_prijs": MAX_PRIJS, "listings": items}
+    data = {"updated": int(time.time()), "max_prijs": MAX_PRIJS, "listings": items, "status": state.get("status", {})}
     with open("docs/listings.json", "w") as f:
         json.dump(data, f, ensure_ascii=False)
 
@@ -328,8 +344,10 @@ def main():
         resultaten = dict(zip(SITES, ex.map(lambda kv: haal_site(*kv), SITES.items())))
 
     for site, cfg in SITES.items():
-        kaarten_totaal, rank = 0, 0
+        kaarten_totaal, rank, n_in, n_fout = 0, 0, 0, 0
         for label, items, kaarten, fout in resultaten[site]:
+            n_in += len(items)
+            n_fout += 1 if fout else 0
             if fout:
                 print(f"[{site}/{label}] fout: {fout}")
             kaarten_totaal += kaarten
@@ -338,7 +356,7 @@ def main():
                 print(f"   voorbeeld: EUR {it['prijs']} | {it['plaats']} | {it['titel']} | {it['url']}")
             for it in items:  # volgorde van de site = nieuwste eerst
                 gezien_nu += 1
-                if it["prijs"] > MAX_PRIJS:
+                if it["prijs"] > MAX_PRIJS or it["prijs"] < MIN_PRIJS:
                     continue
                 if it["url"] not in state["seen"]:
                     state["seen"][it["url"]] = nu
@@ -347,6 +365,7 @@ def main():
                     rank += 1
                     state["listings"][it["url"]] = it
                     nieuw.append(it)
+        state.setdefault("status", {})[site] = {"kaarten": kaarten_totaal, "in_plaatsen": n_in, "fouten": n_fout}
         h = state["health"].get(site, 0)
         h = h + 1 if kaarten_totaal == 0 else 0
         state["health"][site] = h
@@ -358,16 +377,23 @@ def main():
         todo = sorted((v for v in state["listings"].values() if not v.get("detail")),
                       key=lambda x: x["first_seen"], reverse=True)[:60]
         n_img = n_pub = 0
+        fouten = {}
         with ThreadPoolExecutor(max_workers=8) as ex:
             resultaat = list(ex.map(lambda v: detail_info(v["url"]), todo))
-        for v, (img, pub) in zip(todo, resultaat):
+        for v, (img, pub, st) in zip(todo, resultaat):
+            v["pogingen"] = v.get("pogingen", 0) + 1
+            if st == "ok" or v["pogingen"] >= 3:
+                v["detail"] = True
+            if st != "ok":
+                fouten[st] = fouten.get(st, 0) + 1
             if img:
                 v["img"] = img
                 n_img += 1
             if pub:
                 v["published"] = pub
                 n_pub += 1
-            v["detail"] = True
+        state.setdefault("status", {})["_details"] = {"opgehaald": len(todo), "met_foto": n_img,
+                                                    "met_datum": n_pub, "fouten": fouten}
         print(f"Details opgehaald: {len(todo)} woningen, {n_img} met foto, {n_pub} met publicatiedatum")
 
     if test:
