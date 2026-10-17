@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 9
+  "vb&t": 10
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -288,6 +288,19 @@
    "titel": "1 Bedroom Apartment Surface Area 66M2 Unfurnished Available From 2026 11 01",
    "url": "https://huurportaal.nl/listings/1-bedroom-apartment-surface-area-66m2-unfurnished-available-from-2026-11-01-pb35261"
   },
+  "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p0c0999": {
+   "detail": true,
+   "first_seen": 1792230121,
+   "img": "https://huurstunt.nl/rental-images-resize/416862a3-2cf9-408c-8046-bde3929c6e0e/01a14450-da78-7038-be5a-b23e5afa7e8f/01a14450-da79-7326-bd58-b303e519ba3a.jpeg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1450,
+   "published": 1792221807,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "1 Bedroom Appartement Surface Area 39M2",
+   "url": "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p0c0999"
+  },
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p334f0a": {
    "detail": true,
    "first_seen": 1792146850,
@@ -482,6 +495,32 @@
    "site": "Huurportaal",
    "titel": "Liv Residential Woning Van Beuningenhaven 126 2993Ej Barendrecht In Barendrecht Barendrecht",
    "url": "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21"
+  },
+  "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": {
+   "detail": true,
+   "first_seen": 1792230127,
+   "img": "https://ikwilhuren.nu/media/b8/b811619eb25a4e40fc03d4a6980beb04/1600/hofnar-51-rhoon-1-.jpg",
+   "plaats": "rhoon",
+   "pogingen": 1,
+   "prijs": 1475,
+   "published": 1791207686,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Mvgm Te Huur Hofnar 55 Rhoon",
+   "url": "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97"
+  },
+  "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": {
+   "detail": true,
+   "first_seen": 1792230133,
+   "img": "https://ikwilhuren.nu/media/0f/0f6f2fc4c34818ec82fc05c6b2eba68e/1600/1362-1-vivaldistraat-oud-beijerland-bert-rietberg-01.jpg",
+   "plaats": "oud-beijerland",
+   "pogingen": 1,
+   "prijs": 1375,
+   "published": 1790074582,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Mvgm Te Huur Vivaldistraat 23 Oud Beijerland",
+   "url": "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35"
   },
   "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": {
    "detail": true,
@@ -755,6 +794,7 @@
   "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-179-3315-kv-dordrecht-pfe6c21": 1792146878,
   "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-62-3315-ks-dordrecht-pb3d603": 1792146878,
   "https://huurportaal.nl/listings/1-bedroom-apartment-surface-area-66m2-unfurnished-available-from-2026-11-01-pb35261": 1792146878,
+  "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p0c0999": 1792230133,
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p334f0a": 1792146878,
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7": 1792146878,
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1792146878,
@@ -770,6 +810,8 @@
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792146878,
   "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1792146878,
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": 1792146878,
+  "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": 1792230133,
+  "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": 1792230133,
   "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-jan-van-der-heydenstraat-in-hendrik-ido-ambacht-pe7760c": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p068d6d": 1792146878,
@@ -818,9 +860,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 9,
-   "opgehaald": 9
+   "met_datum": 3,
+   "met_foto": 12,
+   "opgehaald": 12
   },
   "vb&t": {
    "fouten": 0,
