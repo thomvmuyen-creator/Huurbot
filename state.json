@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 17
+  "vb&t": 18
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -352,6 +352,19 @@
    "site": "Huurportaal",
    "titel": "Apartment For Rent At Jeroen Boschlaan Netherlands",
    "url": "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40"
+  },
+  "https://huurportaal.nl/listings/apartment-for-rent-at-stationsstraat-netherlands-p2aeb44": {
+   "detail": true,
+   "first_seen": 1792314538,
+   "img": "https://d1rf1jwua027xh.cloudfront.net/portfolio_d1981e39-b1e3-45c0-9a2d-34729e3d2f73/listings/listing_f277efa1-f276-4b68-9323-b5eb42b9a7d8/media/a13eb6a7.jpg?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6ICJodHRwczovL2QxcmYxand1YTAyN3hoLmNsb3VkZnJvbnQubmV0L3BvcnRmb2xpb19kMTk4MWUzOS1iMWUzLTQ1YzAtOWEyZC0zNDcyOWUzZDJmNzMvbGlzdGluZ3MvbGlzdGluZ19mMjc3ZWZhMS1mMjc2LTRiNjgtOTMyMy1iNWViNDJiOWE3ZDgvbWVkaWEvYTEzZWI2YTcuanBnIiwgIkNvbmRpdGlvbiI6IHsiRGF0ZUxlc3NUaGFuIjogeyJBV1M6RXBvY2hUaW1lIjogMjE0NzQ4MzY0N319fV19&Signature=hQQF44OjjjmB5H1wdalPr4LeJKlwQrj9BxOk2fngM4AiS8IaGgbZ7yv2nGyGxCmtxOQKdJnW8wGSAo%2Fu2uKstnp0JN4Rzw%2F9tb3T3bwxrZ0ZO5PwdThpdj16oXfZlSDYLC%2FqZJVTG55HgoB5OOts736pOFlc8%2BRMTIsoUEEzUx21cdVsAq8fXAF%2FwyATn0IcK6QXHpqCdBAfuiFT%2FGk2rqHxDIarQyDYzwSrReW4UZRL8jxuWF9MLAUB0KGnYVrtN7ykQXIThf7BwwydWfdUaEZ0oHRBy1adqjAJEkx3xYdHcBEhjGFj0zLlTezamTqZABH8rRdf8Y9VG8WsyOVqdA%3D%3D&Key-Pair-Id=K194587S03REZY",
+   "plaats": "rhoon",
+   "pogingen": 1,
+   "prijs": 1058,
+   "published": 1792301514,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Apartment For Rent At Stationsstraat Netherlands",
+   "url": "https://huurportaal.nl/listings/apartment-for-rent-at-stationsstraat-netherlands-p2aeb44"
   },
   "https://huurportaal.nl/listings/apartment-for-rent-in-nieuwe-lampetsteeg-29-3311ha-dordrecht-centrum-dordrecht-pa1bf75": {
    "detail": true,
@@ -799,6 +812,7 @@
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7": 1792146878,
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1792146878,
   "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40": 1792146878,
+  "https://huurportaal.nl/listings/apartment-for-rent-at-stationsstraat-netherlands-p2aeb44": 1792314538,
   "https://huurportaal.nl/listings/apartment-for-rent-in-nieuwe-lampetsteeg-29-3311ha-dordrecht-centrum-dordrecht-pa1bf75": 1792146878,
   "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": 1792146878,
   "https://huurportaal.nl/listings/apartment-in-henegouwsestraat-ridderkerk-netherlands-p619c35": 1792146878,
@@ -845,8 +859,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 65,
-   "kaarten": 67
+   "in_plaatsen": 67,
+   "kaarten": 69
   },
   "Huurstunt": {
    "fouten": 0,
@@ -860,9 +874,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 9,
-   "opgehaald": 9
+   "met_datum": 1,
+   "met_foto": 10,
+   "opgehaald": 10
   },
   "vb&t": {
    "fouten": 0,
