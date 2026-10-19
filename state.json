@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 25
+  "vb&t": 26
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -509,6 +509,18 @@
    "titel": "Liv Residential Woning Van Beuningenhaven 126 2993Ej Barendrecht In Barendrecht Barendrecht",
    "url": "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21"
   },
+  "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27": {
+   "detail": true,
+   "first_seen": 1792403210,
+   "img": "https://img2.rentola.com/tMm55pOeAN5rfVBCqkrbZuydcF4=/0x240/filters:format(webp)/https%3A%2F%2Fi.rentola-platform.xyz%2Fproperty-example-images%2Fnl%2Fapartment%2F0-4e8bf34f.jpg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 650,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Mauritsweg 157 Livable Tijdelijke Ruimteoplossingen 728D27",
+   "url": "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27"
+  },
   "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": {
    "detail": true,
    "first_seen": 1792230127,
@@ -824,6 +836,7 @@
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792146878,
   "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1792146878,
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": 1792146878,
+  "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27": 1792403210,
   "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": 1792230133,
   "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": 1792230133,
   "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": 1792146878,
@@ -859,8 +872,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 55,
-   "kaarten": 57
+   "in_plaatsen": 52,
+   "kaarten": 54
   },
   "Huurstunt": {
    "fouten": 0,
@@ -875,8 +888,8 @@
   "_details": {
    "fouten": {},
    "met_datum": 0,
-   "met_foto": 9,
-   "opgehaald": 9
+   "met_foto": 10,
+   "opgehaald": 10
   },
   "vb&t": {
    "fouten": 0,
