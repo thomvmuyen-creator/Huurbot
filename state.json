@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 44
+  "vb&t": 45
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -664,6 +664,19 @@
    "titel": "Te Huur Appartement Johan De Wittstraat In Dordrecht",
    "url": "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p975a1f"
   },
+  "https://huurportaal.nl/listings/te-huur-appartement-octant-91-in-dordrecht-p985884": {
+   "detail": true,
+   "first_seen": 1792630276,
+   "img": "https://casco-media-prod.global.ssl.fastly.net/listings/api/media/fe9e1b72-4752-5808-bd81-f6d8bf07655b/9691c99c-f3be-563a-ae1b-d78f8b66a707?original_uri=https%3A%2F%2Fcdn.prd.osre.eu%2Fc1214bd6-ac4f-4a6c-9083-75b6c60948e1%2F4aea8d32-e43b-4e37-8818-4340a1492a3f%2Fb38a39e9-8709-4356-a0f7-e3710bfbed71&sig=5b747c5ecff44e657a500cc1f3b9cd1985c5b0abea40599bdfecf5be822a40b8&width=1200&auto=webp",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1036,
+   "published": 1792627997,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Te Huur Appartement Octant 91 In Dordrecht",
+   "url": "https://huurportaal.nl/listings/te-huur-appartement-octant-91-in-dordrecht-p985884"
+  },
   "https://huurportaal.nl/listings/te-huur-appartement-slobbegors-in-oud-beijerland-p1315f4": {
    "detail": true,
    "first_seen": 1792146860,
@@ -900,6 +913,7 @@
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p228d98": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p243890": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p975a1f": 1792146878,
+  "https://huurportaal.nl/listings/te-huur-appartement-octant-91-in-dordrecht-p985884": 1792630276,
   "https://huurportaal.nl/listings/te-huur-appartement-slobbegors-in-oud-beijerland-p1315f4": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-126-in-barendrecht-pdcb35c": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-79-in-barendrecht-p4f0d5e": 1792146878,
@@ -943,9 +957,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 9,
-   "opgehaald": 9
+   "met_datum": 1,
+   "met_foto": 10,
+   "opgehaald": 10
   },
   "vb&t": {
    "fouten": 0,
