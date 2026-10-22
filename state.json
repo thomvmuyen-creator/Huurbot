@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 46
+  "vb&t": 47
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -496,6 +496,19 @@
    "titel": "Appartement Te Huur",
    "url": "https://huurportaal.nl/listings/appartement-te-huur-p9331b3"
   },
+  "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8": {
+   "detail": true,
+   "first_seen": 1792665238,
+   "img": "https://cloud.funda.nl/tiara-media/2dbbdd7f-f42d-40d3-ad45-b190813516cc/dd970455-4a73-4989-b7a2-8260b6e1501a",
+   "plaats": "papendrecht",
+   "pogingen": 1,
+   "prijs": 1490,
+   "published": 1792655126,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Appartement Te Huur",
+   "url": "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8"
+  },
   "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": {
    "detail": true,
    "first_seen": 1792146861,
@@ -913,6 +926,7 @@
   "https://huurportaal.nl/listings/appartement-te-huur-p3cca26": 1792146878,
   "https://huurportaal.nl/listings/appartement-te-huur-p8286bd": 1792578309,
   "https://huurportaal.nl/listings/appartement-te-huur-p9331b3": 1792146878,
+  "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8": 1792665238,
   "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": 1792146878,
   "https://huurportaal.nl/listings/huurwoning-papendrecht-p25344c": 1792146878,
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792146878,
@@ -956,8 +970,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 63,
-   "kaarten": 65
+   "in_plaatsen": 65,
+   "kaarten": 67
   },
   "Huurstunt": {
    "fouten": 0,
