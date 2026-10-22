@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 47
+  "vb&t": 48
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -444,6 +444,19 @@
    "titel": "Appartement Te Huur In Het Centrum Van Dordrecht",
    "url": "https://huurportaal.nl/listings/appartement-te-huur-in-het-centrum-van-dordrecht-p61c39f"
   },
+  "https://huurportaal.nl/listings/appartement-te-huur-p158fdf": {
+   "detail": true,
+   "first_seen": 1792683234,
+   "img": "https://cloud.funda.nl/tiara-media/68710616-bcfd-40b7-af43-3c3948d7804f/85c4a95d-ff6d-529f-b43b-759fcd6cd295",
+   "plaats": "hendrik-ido-ambacht",
+   "pogingen": 1,
+   "prijs": 1550,
+   "published": 1792670546,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Appartement Te Huur",
+   "url": "https://huurportaal.nl/listings/appartement-te-huur-p158fdf"
+  },
   "https://huurportaal.nl/listings/appartement-te-huur-p382516": {
    "detail": true,
    "first_seen": 1792146857,
@@ -508,6 +521,19 @@
    "site": "Huurportaal",
    "titel": "Appartement Te Huur",
    "url": "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8"
+  },
+  "https://huurportaal.nl/listings/appartement-te-huur-ped20d0": {
+   "detail": true,
+   "first_seen": 1792683228,
+   "img": "https://cloud.funda.nl/tiara-media/ace5c1fd-86f3-48b8-85ef-4841e6c47a14/169dd461-c51b-474b-8d4d-88b79a41bd9d",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1450,
+   "published": 1792668070,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Appartement Te Huur",
+   "url": "https://huurportaal.nl/listings/appartement-te-huur-ped20d0"
   },
   "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": {
    "detail": true,
@@ -768,6 +794,19 @@
    "titel": "Te Huur Sneekermeer 3 Barendrecht Vivantus Verhuur",
    "url": "https://huurportaal.nl/listings/te-huur-sneekermeer-3-barendrecht-vivantus-verhuur-p124bf7"
   },
+  "https://huurportaal.nl/listings/woning-te-huur-p065944": {
+   "detail": true,
+   "first_seen": 1792683240,
+   "img": "https://cloud.funda.nl/tiara-media/87bc2090-ba0d-42a4-9d71-b1475f008f6e/7cb74801-c199-4e4a-8504-6bab5a5996e6",
+   "plaats": "hendrik-ido-ambacht",
+   "pogingen": 1,
+   "prijs": 1550,
+   "published": 1791206509,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Woning Te Huur",
+   "url": "https://huurportaal.nl/listings/woning-te-huur-p065944"
+  },
   "https://huurportaal.nl/listings/woning-te-huur-p0e9ce9": {
    "detail": true,
    "first_seen": 1792146869,
@@ -922,11 +961,13 @@
   "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": 1792146878,
   "https://huurportaal.nl/listings/apartment-in-henegouwsestraat-ridderkerk-netherlands-p619c35": 1792146878,
   "https://huurportaal.nl/listings/appartement-te-huur-in-het-centrum-van-dordrecht-p61c39f": 1792490908,
+  "https://huurportaal.nl/listings/appartement-te-huur-p158fdf": 1792683240,
   "https://huurportaal.nl/listings/appartement-te-huur-p382516": 1792146878,
   "https://huurportaal.nl/listings/appartement-te-huur-p3cca26": 1792146878,
   "https://huurportaal.nl/listings/appartement-te-huur-p8286bd": 1792578309,
   "https://huurportaal.nl/listings/appartement-te-huur-p9331b3": 1792146878,
   "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8": 1792665238,
+  "https://huurportaal.nl/listings/appartement-te-huur-ped20d0": 1792683240,
   "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": 1792146878,
   "https://huurportaal.nl/listings/huurwoning-papendrecht-p25344c": 1792146878,
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792146878,
@@ -947,6 +988,7 @@
   "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-79-in-barendrecht-p4f0d5e": 1792146878,
   "https://huurportaal.nl/listings/te-huur-schapenburg-6-barendrecht-vivantus-verhuur-p8a7491": 1792146878,
   "https://huurportaal.nl/listings/te-huur-sneekermeer-3-barendrecht-vivantus-verhuur-p124bf7": 1792146878,
+  "https://huurportaal.nl/listings/woning-te-huur-p065944": 1792683240,
   "https://huurportaal.nl/listings/woning-te-huur-p0e9ce9": 1792146878,
   "https://huurportaal.nl/listings/woning-te-huur-p4aa1cd": 1792146878,
   "https://huurportaal.nl/listings/woning-te-huur-p7dcba6": 1792146878,
@@ -970,12 +1012,12 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 65,
-   "kaarten": 67
+   "in_plaatsen": 63,
+   "kaarten": 65
   },
   "Huurstunt": {
    "fouten": 0,
-   "in_plaatsen": 30,
+   "in_plaatsen": 29,
    "kaarten": 113
   },
   "Ikwilhuren.nu": {
@@ -985,9 +1027,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 1,
-   "met_foto": 10,
-   "opgehaald": 10
+   "met_datum": 3,
+   "met_foto": 12,
+   "opgehaald": 12
   },
   "vb&t": {
    "fouten": 0,
