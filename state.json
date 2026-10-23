@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 50
+  "vb&t": 51
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -716,6 +716,19 @@
    "titel": "Te Huur Appartement Johan De Wittstraat In Dordrecht",
    "url": "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p975a1f"
   },
+  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-pf7319f": {
+   "detail": true,
+   "first_seen": 1792716804,
+   "img": "https://casco-media-prod.global.ssl.fastly.net/listings/api/media/f37187fa-f63a-572a-a8e4-b136a622a6c7/088164d9-6d54-55fc-b87c-64e035f0b2f9?original_uri=https%3A%2F%2Fvenumfilestore.blob.core.windows.net%2Fpub%2Fdc3a022e%2F0388%2F4d58%2Fa034%2F5ff67d3bd277%2F%24l%2Fimage00034%2520%281%29.jpeg&sig=f09022f5698566867a21d0e8fe97163290f37352c37bb4abde82b04e62839051&width=1200&auto=webp",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1450,
+   "published": 1792710571,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Te Huur Appartement Johan De Wittstraat In Dordrecht",
+   "url": "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-pf7319f"
+  },
   "https://huurportaal.nl/listings/te-huur-appartement-octant-91-in-dordrecht-p985884": {
    "detail": true,
    "first_seen": 1792630276,
@@ -982,6 +995,7 @@
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p228d98": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p243890": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p975a1f": 1792146878,
+  "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-pf7319f": 1792716804,
   "https://huurportaal.nl/listings/te-huur-appartement-octant-91-in-dordrecht-p985884": 1792630276,
   "https://huurportaal.nl/listings/te-huur-appartement-slobbegors-in-oud-beijerland-p1315f4": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-126-in-barendrecht-pdcb35c": 1792146878,
@@ -1027,9 +1041,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 9,
-   "opgehaald": 9
+   "met_datum": 1,
+   "met_foto": 10,
+   "opgehaald": 10
   },
   "vb&t": {
    "fouten": 0,
