@@ -4,8 +4,8 @@
   "HS Makelaars": 0,
   "Huurportaal": 0,
   "Huurstunt": 0,
-  "Ikwilhuren.nu": 1,
-  "vb&t": 60
+  "Ikwilhuren.nu": 0,
+  "vb&t": 61
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -91,6 +91,18 @@
    "site": "Directwonen",
    "titel": "J.d. Wittstraat, Dordrecht",
    "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/octant/appartement-522047": {
+   "detail": true,
+   "first_seen": 1792860338,
+   "img": "https://resources.directwonen.nl/image/638ffcd5-fc3a-44da-800d-3750958944f4",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1036,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Octant, Dordrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/octant/appartement-522047"
   },
   "https://directwonen.nl/huurwoningen-huren/dordrecht/raamstraat/appartement-520558": {
    "detail": true,
@@ -972,6 +984,7 @@
   "https://directwonen.nl/huurwoningen-huren/dordrecht/achterhakkers/appartement-520873": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739": 1792173976,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741": 1792173976,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/octant/appartement-522047": 1792860343,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/raamstraat/appartement-520558": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/steegoversloot/appartement-520486": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/voorstraat/studio-521189": 1792146878,
@@ -1044,7 +1057,7 @@
  "status": {
   "Directwonen": {
    "fouten": 0,
-   "in_plaatsen": 60,
+   "in_plaatsen": 62,
    "kaarten": 68
   },
   "HS Makelaars": {
@@ -1063,15 +1076,15 @@
    "kaarten": 103
   },
   "Ikwilhuren.nu": {
-   "fouten": 3,
+   "fouten": 0,
    "in_plaatsen": 0,
-   "kaarten": 0
+   "kaarten": 28
   },
   "_details": {
    "fouten": {},
    "met_datum": 0,
-   "met_foto": 9,
-   "opgehaald": 9
+   "met_foto": 10,
+   "opgehaald": 10
   },
   "vb&t": {
    "fouten": 0,
