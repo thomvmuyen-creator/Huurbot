@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 58
+  "vb&t": 59
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -379,6 +379,19 @@
    "titel": "Apartment For Rent At Jeroen Boschlaan Netherlands",
    "url": "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40"
   },
+  "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b": {
+   "detail": true,
+   "first_seen": 1792833971,
+   "img": "https://d1rf1jwua027xh.cloudfront.net/portfolio_8906a446-c08c-4506-bfd4-663ade3f8dd0/listings/listing_046a7d1c-9335-40e8-b21a-5da925a5eef0/media/S56-1.jpg?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6ICJodHRwczovL2QxcmYxand1YTAyN3hoLmNsb3VkZnJvbnQubmV0L3BvcnRmb2xpb184OTA2YTQ0Ni1jMDhjLTQ1MDYtYmZkNC02NjNhZGUzZjhkZDAvbGlzdGluZ3MvbGlzdGluZ18wNDZhN2QxYy05MzM1LTQwZTgtYjIxYS01ZGE5MjVhNWVlZjAvbWVkaWEvUzU2LTEuanBnIiwgIkNvbmRpdGlvbiI6IHsiRGF0ZUxlc3NUaGFuIjogeyJBV1M6RXBvY2hUaW1lIjogMjE0NzQ4MzY0N319fV19&Signature=A4IKQwtMebPn3MymIIYHcZBff6R6rnm5EMVAgm7qWfckb83cNCBHGtDpQ5Ih0oF0jKYuukGRAq2MmIATCN6jfu1Czi9Jqa57Ci6954DFidqmC8K0l0GyKQto6epy2AWLdqhgVrUwsttt5FsCXT0FBMzYAspJefw%2B7mucmJ5RnCXd%2FcyLAQ7MLmQ4Biw68oE12ZzPg5ck3xaHL0GN2vUxgkz5k0jIzic9HbKAQcPgEsIXXA7EAqbJlLsoUeb86%2B82YOeS86z%2FNF8eOcv74huR0zz2GobidQbjMxRhRUHnspB%2F9s7yG9z8cyZB54YO8xxUZh37FHT%2BBhutiegPOpFK8A%3D%3D&Key-Pair-Id=K194587S03REZY",
+   "plaats": "hendrik-ido-ambacht",
+   "pogingen": 1,
+   "prijs": 925,
+   "published": 1791955810,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Apartment For Rent At Mauritsstraat Netherlands",
+   "url": "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b"
+  },
   "https://huurportaal.nl/listings/apartment-for-rent-at-stationsstraat-netherlands-p2aeb44": {
    "detail": true,
    "first_seen": 1792314538,
@@ -560,6 +573,19 @@
    "site": "Huurportaal",
    "titel": "Huurwoning Papendrecht",
    "url": "https://huurportaal.nl/listings/huurwoning-papendrecht-p25344c"
+  },
+  "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb262e8": {
+   "detail": true,
+   "first_seen": 1792833977,
+   "img": "https://www.gapph.nl/images/woonruimte/tijdelijke-huurwoning-ridderkerk-1923-20334-800.jpg",
+   "plaats": "ridderkerk",
+   "pogingen": 1,
+   "prijs": 625,
+   "published": 1792819367,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Huurwoning Ridderkerk",
+   "url": "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb262e8"
   },
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": {
    "detail": true,
@@ -969,6 +995,7 @@
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1792146878,
   "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-pr-p840edd": 1792476307,
   "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40": 1792146878,
+  "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b": 1792833977,
   "https://huurportaal.nl/listings/apartment-for-rent-at-stationsstraat-netherlands-p2aeb44": 1792314538,
   "https://huurportaal.nl/listings/apartment-for-rent-in-nieuwe-lampetsteeg-29-3311ha-dordrecht-centrum-dordrecht-pa1bf75": 1792146878,
   "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": 1792146878,
@@ -983,6 +1010,7 @@
   "https://huurportaal.nl/listings/appartement-te-huur-ped20d0": 1792683240,
   "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": 1792146878,
   "https://huurportaal.nl/listings/huurwoning-papendrecht-p25344c": 1792146878,
+  "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb262e8": 1792833977,
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792146878,
   "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1792146878,
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": 1792146878,
@@ -1026,8 +1054,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 64,
-   "kaarten": 66
+   "in_plaatsen": 60,
+   "kaarten": 62
   },
   "Huurstunt": {
    "fouten": 0,
@@ -1041,9 +1069,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 9,
-   "opgehaald": 9
+   "met_datum": 2,
+   "met_foto": 11,
+   "opgehaald": 11
   },
   "vb&t": {
    "fouten": 0,
