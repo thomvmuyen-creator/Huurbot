@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 80
+  "vb&t": 81
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -181,7 +181,7 @@
    "first_seen": 1793127250,
    "img": "https://resources.directwonen.nl/Content/img/tiles.png",
    "plaats": "oud-beijerland",
-   "pogingen": 1,
+   "pogingen": 2,
    "prijs": 415,
    "seed": false,
    "site": "Directwonen",
@@ -1123,9 +1123,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 2,
-   "met_foto": 12,
-   "opgehaald": 12
+   "met_datum": 0,
+   "met_foto": 10,
+   "opgehaald": 10
   },
   "vb&t": {
    "fouten": 0,
