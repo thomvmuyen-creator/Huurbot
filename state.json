@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 87
+  "vb&t": 88
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -377,6 +377,19 @@
    "titel": "2 Room Apartment To Let In Johan De Wittstraat 27F 3311 Kg Dordrecht Netherlands",
    "url": "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e"
   },
+  "https://huurportaal.nl/listings/3-bedrooms-appartement-surface-area-79m2-p54c758": {
+   "detail": true,
+   "first_seen": 1793263954,
+   "img": "https://huurstunt.nl/rental-images-resize/416862a3-2cf9-408c-8046-bde3929c6e0e/01a17dfa-333d-7125-9c0b-247bc6deaa71/01a17dfa-333e-7047-94c8-40696ba84784.jpeg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1412,
+   "published": 1793254018,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "3 Bedrooms Appartement Surface Area 79M2",
+   "url": "https://huurportaal.nl/listings/3-bedrooms-appartement-surface-area-79m2-p54c758"
+  },
   "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-pr-p840edd": {
    "detail": true,
    "first_seen": 1792476307,
@@ -389,6 +402,19 @@
    "site": "Huurportaal",
    "titel": "Apartment At Perengaarde Zuid Holland Hendrik Ido Ambacht 3344 Pr",
    "url": "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-pr-p840edd"
+  },
+  "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-p3f0a98": {
+   "detail": true,
+   "first_seen": 1793263966,
+   "img": "https://cdn.realmark.cloud/marketsuite/media/projects/3448/publicPhotos/3c79146d-833b-42e3-8d31-97c7d19a0cdb/2e44c245-7fd1-4e08-b171-17076aa.webp",
+   "plaats": "papendrecht",
+   "pogingen": 1,
+   "prijs": 1225,
+   "published": 1793252368,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Apartment At Zonnedauw Zuid Holland Papendrecht 3353 Cz",
+   "url": "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-p3f0a98"
   },
   "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40": {
    "detail": true,
@@ -687,6 +713,19 @@
    "site": "Huurportaal",
    "titel": "Mauritsweg 157 Livable Tijdelijke Ruimteoplossingen 728D27",
    "url": "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27"
+  },
+  "https://huurportaal.nl/listings/mvgm-te-huur-adrianapolder-75-barendrecht-p91852d": {
+   "detail": true,
+   "first_seen": 1793263960,
+   "img": "https://ikwilhuren.nu/media/44/44a6ef70a8b019b0e6ffa578893c0ba9/1600/img-8122.jpg",
+   "plaats": "barendrecht",
+   "pogingen": 1,
+   "prijs": 1505,
+   "published": 1793258700,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Mvgm Te Huur Adrianapolder 75 Barendrecht",
+   "url": "https://huurportaal.nl/listings/mvgm-te-huur-adrianapolder-75-barendrecht-p91852d"
   },
   "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": {
    "detail": true,
@@ -1071,7 +1110,9 @@
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7": 1792146878,
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27c-3311-kg-dordrecht-netherlands-p16464a": 1792647171,
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1792146878,
+  "https://huurportaal.nl/listings/3-bedrooms-appartement-surface-area-79m2-p54c758": 1793263966,
   "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-pr-p840edd": 1792476307,
+  "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-p3f0a98": 1793263966,
   "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40": 1792146878,
   "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b": 1792833977,
   "https://huurportaal.nl/listings/apartment-for-rent-at-stationsstraat-netherlands-p2aeb44": 1792314538,
@@ -1095,6 +1136,7 @@
   "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1792146878,
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": 1792146878,
   "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27": 1792403210,
+  "https://huurportaal.nl/listings/mvgm-te-huur-adrianapolder-75-barendrecht-p91852d": 1793263966,
   "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": 1792230133,
   "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": 1792230133,
   "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": 1792146878,
@@ -1136,13 +1178,13 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 62,
-   "kaarten": 64
+   "in_plaatsen": 64,
+   "kaarten": 66
   },
   "Huurstunt": {
    "fouten": 0,
    "in_plaatsen": 42,
-   "kaarten": 115
+   "kaarten": 114
   },
   "Ikwilhuren.nu": {
    "fouten": 0,
@@ -1151,9 +1193,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 10,
-   "opgehaald": 10
+   "met_datum": 3,
+   "met_foto": 13,
+   "opgehaald": 13
   },
   "vb&t": {
    "fouten": 0,
