@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 88
+  "vb&t": 89
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -259,6 +259,66 @@
    "site": "Directwonen",
    "titel": "Studio",
    "url": "https://directwonen.nl/studio-huren/oud-beijerland"
+  },
+  "https://directwonen.nl/verhuren/kamer-barendrecht": {
+   "detail": true,
+   "first_seen": 1793288466,
+   "img": "https://resources.directwonen.nl/Content/img/tiles.png",
+   "plaats": "oud-beijerland",
+   "pogingen": 2,
+   "prijs": 415,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Barendrecht",
+   "url": "https://directwonen.nl/verhuren/kamer-barendrecht"
+  },
+  "https://directwonen.nl/verhuren/kamer-hoogvliet-rotterdam": {
+   "detail": true,
+   "first_seen": 1793288478,
+   "img": "https://resources.directwonen.nl/Content/img/tiles.png",
+   "plaats": "oud-beijerland",
+   "pogingen": 2,
+   "prijs": 415,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Hoogvliet Rotterdam",
+   "url": "https://directwonen.nl/verhuren/kamer-hoogvliet-rotterdam"
+  },
+  "https://directwonen.nl/verhuren/kamer-numansdorp": {
+   "detail": true,
+   "first_seen": 1793288460,
+   "img": "https://resources.directwonen.nl/Content/img/tiles.png",
+   "plaats": "oud-beijerland",
+   "pogingen": 2,
+   "prijs": 415,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Numansdorp",
+   "url": "https://directwonen.nl/verhuren/kamer-numansdorp"
+  },
+  "https://directwonen.nl/verhuren/kamer-spijkenisse": {
+   "detail": true,
+   "first_seen": 1793288472,
+   "img": "https://resources.directwonen.nl/Content/img/tiles.png",
+   "plaats": "oud-beijerland",
+   "pogingen": 2,
+   "prijs": 415,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Spijkenisse",
+   "url": "https://directwonen.nl/verhuren/kamer-spijkenisse"
+  },
+  "https://directwonen.nl/verhuren/kamer-zuidland": {
+   "detail": true,
+   "first_seen": 1793288454,
+   "img": "https://resources.directwonen.nl/Content/img/tiles.png",
+   "plaats": "oud-beijerland",
+   "pogingen": 2,
+   "prijs": 415,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Zuidland",
+   "url": "https://directwonen.nl/verhuren/kamer-zuidland"
   },
   "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-112-3315-kt-dordrecht-p6fe79b": {
    "detail": true,
@@ -1101,6 +1161,11 @@
   "https://directwonen.nl/huurwoningen-huren/spijkenisse": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/zuidland": 1792146878,
   "https://directwonen.nl/studio-huren/oud-beijerland": 1792146878,
+  "https://directwonen.nl/verhuren/kamer-barendrecht": 1793288483,
+  "https://directwonen.nl/verhuren/kamer-hoogvliet-rotterdam": 1793288483,
+  "https://directwonen.nl/verhuren/kamer-numansdorp": 1793288483,
+  "https://directwonen.nl/verhuren/kamer-spijkenisse": 1793288483,
+  "https://directwonen.nl/verhuren/kamer-zuidland": 1793288483,
   "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-112-3315-kt-dordrecht-p6fe79b": 1792146878,
   "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-179-3315-kv-dordrecht-pfe6c21": 1792146878,
   "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-62-3315-ks-dordrecht-pb3d603": 1792146878,
@@ -1177,14 +1242,14 @@
    "kaarten": 2
   },
   "Huurportaal": {
-   "fouten": 1,
-   "in_plaatsen": 64,
-   "kaarten": 66
+   "fouten": 3,
+   "in_plaatsen": 48,
+   "kaarten": 50
   },
   "Huurstunt": {
    "fouten": 0,
    "in_plaatsen": 42,
-   "kaarten": 114
+   "kaarten": 115
   },
   "Ikwilhuren.nu": {
    "fouten": 0,
@@ -1193,9 +1258,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 3,
-   "met_foto": 13,
-   "opgehaald": 13
+   "met_datum": 0,
+   "met_foto": 15,
+   "opgehaald": 15
   },
   "vb&t": {
    "fouten": 0,
