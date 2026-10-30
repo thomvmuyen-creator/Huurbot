@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 92
+  "vb&t": 93
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -878,6 +878,19 @@
    "titel": "Room At Dordrecht",
    "url": "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4"
   },
+  "https://huurportaal.nl/listings/room-at-dordrecht-p817d47": {
+   "detail": true,
+   "first_seen": 1793360705,
+   "img": "https://static.homesearch.nl/photos/1727848928-70016.jpg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 780,
+   "published": 1793337661,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Room At Dordrecht",
+   "url": "https://huurportaal.nl/listings/room-at-dordrecht-p817d47"
+  },
   "https://huurportaal.nl/listings/te-huur-appartement-hooftstraat-137-in-dordrecht-pecfe6f": {
    "detail": true,
    "first_seen": 1793127255,
@@ -1261,6 +1274,7 @@
   "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": 1792230133,
   "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": 1792230133,
   "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": 1792146878,
+  "https://huurportaal.nl/listings/room-at-dordrecht-p817d47": 1793360705,
   "https://huurportaal.nl/listings/te-huur-appartement-hooftstraat-137-in-dordrecht-pecfe6f": 1793127255,
   "https://huurportaal.nl/listings/te-huur-appartement-jan-van-der-heydenstraat-in-hendrik-ido-ambacht-pe7760c": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p068d6d": 1792146878,
@@ -1299,13 +1313,13 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 68,
-   "kaarten": 70
+   "in_plaatsen": 65,
+   "kaarten": 67
   },
   "Huurstunt": {
    "fouten": 0,
-   "in_plaatsen": 42,
-   "kaarten": 137
+   "in_plaatsen": 41,
+   "kaarten": 139
   },
   "Ikwilhuren.nu": {
    "fouten": 0,
@@ -1314,9 +1328,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 4,
-   "met_foto": 19,
-   "opgehaald": 19
+   "met_datum": 1,
+   "met_foto": 16,
+   "opgehaald": 16
   },
   "vb&t": {
    "fouten": 0,
