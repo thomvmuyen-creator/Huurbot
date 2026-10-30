@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 93
+  "vb&t": 94
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -68,6 +68,18 @@
    "titel": "Achterhakkers, Dordrecht",
    "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/achterhakkers/appartement-520873"
   },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/hooftstraat/appartement-522200": {
+   "detail": true,
+   "first_seen": 1793380473,
+   "img": "https://resources.directwonen.nl/image/6c1b2cbb-ad01-49ad-92a5-8d88c18143e0",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1412,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Hooftstraat, Dordrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/hooftstraat/appartement-522200"
+  },
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739": {
    "detail": true,
    "first_seen": 1792173971,
@@ -127,6 +139,18 @@
    "site": "Directwonen",
    "titel": "Steegoversloot, Dordrecht",
    "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/steegoversloot/appartement-520486"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/troelstraweg/woning-522196": {
+   "detail": true,
+   "first_seen": 1793380479,
+   "img": "https://resources.directwonen.nl/image/517a10f2-68ee-43bf-9ee1-a7f6ec0f5874",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 460,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Troelstraweg, Dordrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/troelstraweg/woning-522196"
   },
   "https://directwonen.nl/huurwoningen-huren/dordrecht/voorstraat/studio-521189": {
    "detail": true,
@@ -1210,11 +1234,13 @@
   "https://directwonen.nl/huurwoningen-huren/barendrecht": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/barendrecht/avenue-carre/appartement-520080": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/achterhakkers/appartement-520873": 1792146878,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/hooftstraat/appartement-522200": 1793380484,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739": 1792173976,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741": 1792173976,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/octant/appartement-522047": 1792860343,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/raamstraat/appartement-520558": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/steegoversloot/appartement-520486": 1792146878,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/troelstraweg/woning-522196": 1793380484,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/voorstraat/studio-521189": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/hendrik-ido-ambacht/jan-van-der-heydenstraat/appartement-521430": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/hoogvliet-rotterdam": 1792146878,
@@ -1303,7 +1329,7 @@
  "status": {
   "Directwonen": {
    "fouten": 0,
-   "in_plaatsen": 58,
+   "in_plaatsen": 62,
    "kaarten": 72
   },
   "HS Makelaars": {
@@ -1319,7 +1345,7 @@
   "Huurstunt": {
    "fouten": 0,
    "in_plaatsen": 41,
-   "kaarten": 139
+   "kaarten": 123
   },
   "Ikwilhuren.nu": {
    "fouten": 0,
@@ -1328,9 +1354,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 1,
-   "met_foto": 16,
-   "opgehaald": 16
+   "met_datum": 0,
+   "met_foto": 17,
+   "opgehaald": 17
   },
   "vb&t": {
    "fouten": 0,
