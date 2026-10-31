@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 100
+  "vb&t": 101
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -1097,6 +1097,19 @@
    "titel": "Te Huur Sneekermeer 3 Barendrecht Vivantus Verhuur",
    "url": "https://huurportaal.nl/listings/te-huur-sneekermeer-3-barendrecht-vivantus-verhuur-p124bf7"
   },
+  "https://huurportaal.nl/listings/woning-te-huur-nieuwstraat-1c-3311xr-dordrecht-p9719d4": {
+   "detail": true,
+   "first_seen": 1793490151,
+   "img": "https://d1zsattj8yq64o.cloudfront.net/media/22571399/.jpg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1500,
+   "published": 1793428419,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Woning Te Huur Nieuwstraat 1C 3311Xr Dordrecht",
+   "url": "https://huurportaal.nl/listings/woning-te-huur-nieuwstraat-1c-3311xr-dordrecht-p9719d4"
+  },
   "https://huurportaal.nl/listings/woning-te-huur-p065944": {
    "detail": true,
    "first_seen": 1792683240,
@@ -1328,6 +1341,7 @@
   "https://huurportaal.nl/listings/te-huur-appartement-van-beuningenhaven-79-in-barendrecht-p4f0d5e": 1792146878,
   "https://huurportaal.nl/listings/te-huur-schapenburg-6-barendrecht-vivantus-verhuur-p8a7491": 1792146878,
   "https://huurportaal.nl/listings/te-huur-sneekermeer-3-barendrecht-vivantus-verhuur-p124bf7": 1792146878,
+  "https://huurportaal.nl/listings/woning-te-huur-nieuwstraat-1c-3311xr-dordrecht-p9719d4": 1793490151,
   "https://huurportaal.nl/listings/woning-te-huur-p065944": 1792683240,
   "https://huurportaal.nl/listings/woning-te-huur-p0e9ce9": 1792146878,
   "https://huurportaal.nl/listings/woning-te-huur-p4aa1cd": 1792146878,
@@ -1368,9 +1382,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 15,
-   "opgehaald": 15
+   "met_datum": 1,
+   "met_foto": 16,
+   "opgehaald": 16
   },
   "vb&t": {
    "fouten": 0,
