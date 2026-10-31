@@ -5,7 +5,7 @@
   "Huurportaal": 0,
   "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 96
+  "vb&t": 97
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -721,6 +721,19 @@
    "titel": "Appartement Te Huur",
    "url": "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8"
   },
+  "https://huurportaal.nl/listings/appartement-te-huur-pbde6b2": {
+   "detail": true,
+   "first_seen": 1793428891,
+   "img": "https://cloud.funda.nl/tiara-media/343d2852-78ab-4e3f-b019-e0107acd00b1/c3d74225-bf3b-45fe-aa63-d3e80c162e16",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1500,
+   "published": 1793415811,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Appartement Te Huur",
+   "url": "https://huurportaal.nl/listings/appartement-te-huur-pbde6b2"
+  },
   "https://huurportaal.nl/listings/appartement-te-huur-ped20d0": {
    "detail": true,
    "first_seen": 1792683228,
@@ -1286,6 +1299,7 @@
   "https://huurportaal.nl/listings/appartement-te-huur-p8286bd": 1792578309,
   "https://huurportaal.nl/listings/appartement-te-huur-p9331b3": 1792146878,
   "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8": 1792665238,
+  "https://huurportaal.nl/listings/appartement-te-huur-pbde6b2": 1793428891,
   "https://huurportaal.nl/listings/appartement-te-huur-ped20d0": 1792683240,
   "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": 1792146878,
   "https://huurportaal.nl/listings/huurwoning-dordrecht-p74f582": 1793172497,
@@ -1339,8 +1353,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 65,
-   "kaarten": 67
+   "in_plaatsen": 64,
+   "kaarten": 66
   },
   "Huurstunt": {
    "fouten": 0,
@@ -1354,9 +1368,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 15,
-   "opgehaald": 15
+   "met_datum": 1,
+   "met_foto": 16,
+   "opgehaald": 16
   },
   "vb&t": {
    "fouten": 0,
