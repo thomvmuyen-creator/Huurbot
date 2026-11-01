@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 1,
+  "Huurstunt": 0,
   "Ikwilhuren.nu": 0,
-  "vb&t": 104
+  "vb&t": 105
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -67,6 +67,18 @@
    "site": "Directwonen",
    "titel": "Achterhakkers, Dordrecht",
    "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/achterhakkers/appartement-520873"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
+   "detail": true,
+   "first_seen": 1793565506,
+   "img": "https://resources.directwonen.nl/image/ada2eb2b-b335-4803-859b-87683f1b29b5",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 780,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Hellingen, Dordrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301"
   },
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hooftstraat/appartement-522200": {
    "detail": true,
@@ -1260,6 +1272,7 @@
   "https://directwonen.nl/huurwoningen-huren/barendrecht": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/barendrecht/avenue-carre/appartement-520080": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/achterhakkers/appartement-520873": 1792146878,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": 1793565511,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hooftstraat/appartement-522200": 1793380484,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739": 1792173976,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741": 1792173976,
@@ -1357,7 +1370,7 @@
  "status": {
   "Directwonen": {
    "fouten": 0,
-   "in_plaatsen": 61,
+   "in_plaatsen": 65,
    "kaarten": 73
   },
   "HS Makelaars": {
@@ -1367,13 +1380,13 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 61,
-   "kaarten": 63
+   "in_plaatsen": 66,
+   "kaarten": 68
   },
   "Huurstunt": {
-   "fouten": 12,
-   "in_plaatsen": 0,
-   "kaarten": 0
+   "fouten": 0,
+   "in_plaatsen": 42,
+   "kaarten": 123
   },
   "Ikwilhuren.nu": {
    "fouten": 0,
@@ -1383,8 +1396,8 @@
   "_details": {
    "fouten": {},
    "met_datum": 0,
-   "met_foto": 15,
-   "opgehaald": 15
+   "met_foto": 16,
+   "opgehaald": 16
   },
   "vb&t": {
    "fouten": 0,
