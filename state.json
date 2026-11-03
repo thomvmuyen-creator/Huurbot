@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 4,
+  "Huurstunt": 5,
   "Ikwilhuren.nu": 0,
-  "vb&t": 112
+  "vb&t": 113
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -499,6 +499,19 @@
    "titel": "Apartment At Perengaarde Zuid Holland Hendrik Ido Ambacht 3344 Pr",
    "url": "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-pr-p840edd"
   },
+  "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-ps-pb64c14": {
+   "detail": true,
+   "first_seen": 1793744643,
+   "img": "https://cdn.realmark.cloud/marketsuite/media/projects/3470/publicPhotos/82d4af47-ffdd-4f43-be31-1262cdb0154f/33e79b87-a693-43c4-b3c7-bcc15d3.webp",
+   "plaats": "hendrik-ido-ambacht",
+   "pogingen": 1,
+   "prijs": 1450,
+   "published": 1793639011,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Apartment At Perengaarde Zuid Holland Hendrik Ido Ambacht 3344 Ps",
+   "url": "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-ps-pb64c14"
+  },
   "https://huurportaal.nl/listings/apartment-at-schooldwarsstraat-zuid-holland-papendrecht-3351-at-p4571b5": {
    "detail": true,
    "first_seen": 1793339654,
@@ -940,6 +953,19 @@
    "titel": "Room At Dordrecht",
    "url": "https://huurportaal.nl/listings/room-at-dordrecht-p817d47"
   },
+  "https://huurportaal.nl/listings/te-huur-appartement-grote-spuistraat-in-dordrecht-p9e370f": {
+   "detail": true,
+   "first_seen": 1793744637,
+   "img": "https://casco-media-prod.global.ssl.fastly.net/listings/api/media/4cdf1540-fce3-548e-be93-6f16d3068dfb/b1fd0117-cdb5-5b64-a9cd-0fab51f06c2e?original_uri=https%3A%2F%2Fmedia.yes-co.com%2Fapi%2Fmedia%2Fresample%2Fd2af8410-3dee-48d8-924f-e92be1590e54%2F1600x1600&sig=cc5a1a3e7099d4ebd4170f202ee97d73bd11aafbcda25569bb4f85c243ac36e5&width=1200&auto=webp",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1500,
+   "published": 1793635999,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Te Huur Appartement Grote Spuistraat In Dordrecht",
+   "url": "https://huurportaal.nl/listings/te-huur-appartement-grote-spuistraat-in-dordrecht-p9e370f"
+  },
   "https://huurportaal.nl/listings/te-huur-appartement-hooftstraat-137-in-dordrecht-pecfe6f": {
    "detail": true,
    "first_seen": 1793127255,
@@ -1307,6 +1333,7 @@
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1792146878,
   "https://huurportaal.nl/listings/3-bedrooms-appartement-surface-area-79m2-p54c758": 1793263966,
   "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-pr-p840edd": 1792476307,
+  "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-ps-pb64c14": 1793744643,
   "https://huurportaal.nl/listings/apartment-at-schooldwarsstraat-zuid-holland-papendrecht-3351-at-p4571b5": 1793339666,
   "https://huurportaal.nl/listings/apartment-at-schooldwarsstraat-zuid-holland-papendrecht-3351-at-pd6769d": 1793339666,
   "https://huurportaal.nl/listings/apartment-at-schooldwarsstraat-zuid-holland-papendrecht-3351-at-pef0094": 1793339666,
@@ -1341,6 +1368,7 @@
   "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": 1792230133,
   "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": 1792146878,
   "https://huurportaal.nl/listings/room-at-dordrecht-p817d47": 1793360705,
+  "https://huurportaal.nl/listings/te-huur-appartement-grote-spuistraat-in-dordrecht-p9e370f": 1793744643,
   "https://huurportaal.nl/listings/te-huur-appartement-hooftstraat-137-in-dordrecht-pecfe6f": 1793127255,
   "https://huurportaal.nl/listings/te-huur-appartement-jan-van-der-heydenstraat-in-hendrik-ido-ambacht-pe7760c": 1792146878,
   "https://huurportaal.nl/listings/te-huur-appartement-johan-de-wittstraat-in-dordrecht-p068d6d": 1792146878,
@@ -1380,8 +1408,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 63,
-   "kaarten": 65
+   "in_plaatsen": 65,
+   "kaarten": 67
   },
   "Huurstunt": {
    "fouten": 12,
@@ -1395,9 +1423,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 15,
-   "opgehaald": 15
+   "met_datum": 2,
+   "met_foto": 17,
+   "opgehaald": 17
   },
   "vb&t": {
    "fouten": 0,
