@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 6,
+  "Huurstunt": 7,
   "Ikwilhuren.nu": 0,
-  "vb&t": 114
+  "vb&t": 115
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -446,6 +446,19 @@
    "site": "Huurportaal",
    "titel": "1 Bedroom Appartement Surface Area 45M2",
    "url": "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7"
+  },
+  "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27a-3311-kg-dordrecht-netherlands-pc0ece0": {
+   "detail": true,
+   "first_seen": 1793785158,
+   "img": "https://haywebattachments.blob.core.windows.net/public/2499/4366240/138810938/$xl/image00034.jpeg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1450,
+   "published": 1793769407,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "2 Room Apartment To Let In Johan De Wittstraat 27A 3311 Kg Dordrecht Netherlands",
+   "url": "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27a-3311-kg-dordrecht-netherlands-pc0ece0"
   },
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27c-3311-kg-dordrecht-netherlands-p16464a": {
    "detail": true,
@@ -927,6 +940,19 @@
    "titel": "Mvgm Te Huur Vivaldistraat 23 Oud Beijerland",
    "url": "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35"
   },
+  "https://huurportaal.nl/listings/per-direct-te-huur-pe8e744": {
+   "detail": true,
+   "first_seen": 1793785152,
+   "img": "https://resources.kamernet.nl/image/e49ceab9-91db-4f63-b741-9b89d924a660",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1500,
+   "published": 1793721740,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Per Direct Te Huur",
+   "url": "https://huurportaal.nl/listings/per-direct-te-huur-pe8e744"
+  },
   "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": {
    "detail": true,
    "first_seen": 1792146856,
@@ -1329,6 +1355,7 @@
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p0c0999": 1792230133,
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p334f0a": 1792146878,
   "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-45m2-p0465e7": 1792146878,
+  "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27a-3311-kg-dordrecht-netherlands-pc0ece0": 1793785158,
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27c-3311-kg-dordrecht-netherlands-p16464a": 1792647171,
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1792146878,
   "https://huurportaal.nl/listings/3-bedrooms-appartement-surface-area-79m2-p54c758": 1793263966,
@@ -1366,6 +1393,7 @@
   "https://huurportaal.nl/listings/mvgm-te-huur-adrianapolder-75-barendrecht-p91852d": 1793263966,
   "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": 1792230133,
   "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": 1792230133,
+  "https://huurportaal.nl/listings/per-direct-te-huur-pe8e744": 1793785158,
   "https://huurportaal.nl/listings/room-at-dordrecht-p250ba4": 1792146878,
   "https://huurportaal.nl/listings/room-at-dordrecht-p817d47": 1793360705,
   "https://huurportaal.nl/listings/te-huur-appartement-grote-spuistraat-in-dordrecht-p9e370f": 1793744643,
@@ -1398,8 +1426,8 @@
  "status": {
   "Directwonen": {
    "fouten": 0,
-   "in_plaatsen": 67,
-   "kaarten": 73
+   "in_plaatsen": 65,
+   "kaarten": 71
   },
   "HS Makelaars": {
    "fouten": 0,
@@ -1408,8 +1436,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 65,
-   "kaarten": 67
+   "in_plaatsen": 62,
+   "kaarten": 64
   },
   "Huurstunt": {
    "fouten": 12,
@@ -1423,9 +1451,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 15,
-   "opgehaald": 15
+   "met_datum": 2,
+   "met_foto": 17,
+   "opgehaald": 17
   },
   "vb&t": {
    "fouten": 0,
