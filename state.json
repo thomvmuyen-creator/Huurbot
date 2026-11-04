@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 8,
+  "Huurstunt": 9,
   "Ikwilhuren.nu": 0,
-  "vb&t": 116
+  "vb&t": 117
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -331,6 +331,18 @@
    "site": "Directwonen",
    "titel": "Numansdorp",
    "url": "https://directwonen.nl/verhuren/kamer-numansdorp"
+  },
+  "https://directwonen.nl/verhuren/kamer-schiedam": {
+   "detail": true,
+   "first_seen": 1793832346,
+   "img": "https://resources.directwonen.nl/Content/img/tiles.png",
+   "plaats": "oud-beijerland",
+   "pogingen": 1,
+   "prijs": 415,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Schiedam",
+   "url": "https://directwonen.nl/verhuren/kamer-schiedam"
   },
   "https://directwonen.nl/verhuren/kamer-spijkenisse": {
    "detail": true,
@@ -1346,6 +1358,7 @@
   "https://directwonen.nl/verhuren/kamer-barendrecht": 1793288483,
   "https://directwonen.nl/verhuren/kamer-hoogvliet-rotterdam": 1793288483,
   "https://directwonen.nl/verhuren/kamer-numansdorp": 1793288483,
+  "https://directwonen.nl/verhuren/kamer-schiedam": 1793832351,
   "https://directwonen.nl/verhuren/kamer-spijkenisse": 1793288483,
   "https://directwonen.nl/verhuren/kamer-zuidland": 1793288483,
   "https://huurportaal.nl/listings/1-bedroom-apartment-for-rent-in-van-eesterenplein-112-3315-kt-dordrecht-p6fe79b": 1792146878,
@@ -1436,8 +1449,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 58,
-   "kaarten": 60
+   "in_plaatsen": 61,
+   "kaarten": 63
   },
   "Huurstunt": {
    "fouten": 12,
@@ -1452,8 +1465,8 @@
   "_details": {
    "fouten": {},
    "met_datum": 0,
-   "met_foto": 15,
-   "opgehaald": 15
+   "met_foto": 16,
+   "opgehaald": 16
   },
   "vb&t": {
    "fouten": 0,
