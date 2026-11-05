@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 12,
+  "Huurstunt": 13,
   "Ikwilhuren.nu": 0,
-  "vb&t": 120
+  "vb&t": 121
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -331,6 +331,18 @@
    "site": "Directwonen",
    "titel": "Numansdorp",
    "url": "https://directwonen.nl/verhuren/kamer-numansdorp"
+  },
+  "https://directwonen.nl/verhuren/kamer-rhoon": {
+   "detail": true,
+   "first_seen": 1793919197,
+   "img": "https://resources.directwonen.nl/Content/img/tiles.png",
+   "plaats": "oud-beijerland",
+   "pogingen": 1,
+   "prijs": 415,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "Rhoon",
+   "url": "https://directwonen.nl/verhuren/kamer-rhoon"
   },
   "https://directwonen.nl/verhuren/kamer-schiedam": {
    "detail": true,
@@ -1358,6 +1370,7 @@
   "https://directwonen.nl/verhuren/kamer-barendrecht": 1793288483,
   "https://directwonen.nl/verhuren/kamer-hoogvliet-rotterdam": 1793288483,
   "https://directwonen.nl/verhuren/kamer-numansdorp": 1793288483,
+  "https://directwonen.nl/verhuren/kamer-rhoon": 1793919202,
   "https://directwonen.nl/verhuren/kamer-schiedam": 1793832351,
   "https://directwonen.nl/verhuren/kamer-spijkenisse": 1793288483,
   "https://directwonen.nl/verhuren/kamer-zuidland": 1793288483,
@@ -1439,8 +1452,8 @@
  "status": {
   "Directwonen": {
    "fouten": 0,
-   "in_plaatsen": 54,
-   "kaarten": 91
+   "in_plaatsen": 55,
+   "kaarten": 65
   },
   "HS Makelaars": {
    "fouten": 0,
@@ -1449,8 +1462,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 61,
-   "kaarten": 62
+   "in_plaatsen": 54,
+   "kaarten": 55
   },
   "Huurstunt": {
    "fouten": 12,
@@ -1465,8 +1478,8 @@
   "_details": {
    "fouten": {},
    "met_datum": 0,
-   "met_foto": 16,
-   "opgehaald": 16
+   "met_foto": 17,
+   "opgehaald": 17
   },
   "vb&t": {
    "fouten": 0,
