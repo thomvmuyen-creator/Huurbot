@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 19,
+  "Huurstunt": 20,
   "Ikwilhuren.nu": 0,
-  "vb&t": 127
+  "vb&t": 128
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -115,6 +115,18 @@
    "site": "Directwonen",
    "titel": "J.d. Wittstraat, Dordrecht",
    "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741"
+  },
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-523564": {
+   "detail": true,
+   "first_seen": 1794063061,
+   "img": "https://resources.directwonen.nl/image/a2366206-bf53-4fcc-b8f1-7deb06d6be73",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1450,
+   "seed": false,
+   "site": "Directwonen",
+   "titel": "J.d. Wittstraat, Dordrecht",
+   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-523564"
   },
   "https://directwonen.nl/huurwoningen-huren/dordrecht/octant/appartement-522047": {
    "detail": true,
@@ -1365,6 +1377,7 @@
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hooftstraat/appartement-522200": 1793380484,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739": 1792173976,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741": 1792173976,
+  "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-523564": 1794063066,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/octant/appartement-522047": 1792860343,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/raamstraat/appartement-520558": 1792146878,
   "https://directwonen.nl/huurwoningen-huren/dordrecht/steegoversloot/appartement-520486": 1792146878,
@@ -1466,7 +1479,7 @@
  "status": {
   "Directwonen": {
    "fouten": 0,
-   "in_plaatsen": 55,
+   "in_plaatsen": 57,
    "kaarten": 65
   },
   "HS Makelaars": {
@@ -1492,8 +1505,8 @@
   "_details": {
    "fouten": {},
    "met_datum": 0,
-   "met_foto": 17,
-   "opgehaald": 17
+   "met_foto": 18,
+   "opgehaald": 18
   },
   "vb&t": {
    "fouten": 0,
