@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 29,
+  "Huurstunt": 30,
   "Ikwilhuren.nu": 0,
-  "vb&t": 137
+  "vb&t": 138
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -938,6 +938,19 @@
    "titel": "Liv Residential Woning Van Beuningenhaven 126 2993Ej Barendrecht In Barendrecht Barendrecht",
    "url": "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21"
   },
+  "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-79-2993ej-barendrecht-in-barendrecht-barendrecht-pc2deb4": {
+   "detail": true,
+   "first_seen": 1794257112,
+   "img": "https://livresidential.ams3.digitaloceanspaces.com/production/properties/52072/responsive-images/6063049ee854b5e9e7e7d904bf2a2c726642d3ef384934b95635f53cc3860239___media_library_original_1200_800.jpg",
+   "plaats": "barendrecht",
+   "pogingen": 1,
+   "prijs": 1550,
+   "published": 1794222147,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Liv Residential Woning Van Beuningenhaven 79 2993Ej Barendrecht In Barendrecht Barendrecht",
+   "url": "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-79-2993ej-barendrecht-in-barendrecht-barendrecht-pc2deb4"
+  },
   "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27": {
    "detail": true,
    "first_seen": 1792403210,
@@ -1442,6 +1455,7 @@
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792146878,
   "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1792146878,
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": 1792146878,
+  "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-79-2993ej-barendrecht-in-barendrecht-barendrecht-pc2deb4": 1794257112,
   "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27": 1792403210,
   "https://huurportaal.nl/listings/mvgm-te-huur-adrianapolder-75-barendrecht-p91852d": 1793263966,
   "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": 1792230133,
@@ -1478,9 +1492,9 @@
  },
  "status": {
   "Directwonen": {
-   "fouten": 2,
-   "in_plaatsen": 58,
-   "kaarten": 63
+   "fouten": 0,
+   "in_plaatsen": 59,
+   "kaarten": 67
   },
   "HS Makelaars": {
    "fouten": 0,
@@ -1504,9 +1518,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 17,
-   "opgehaald": 17
+   "met_datum": 1,
+   "met_foto": 18,
+   "opgehaald": 18
   },
   "vb&t": {
    "fouten": 0,
