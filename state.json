@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 39,
+  "Huurstunt": 40,
   "Ikwilhuren.nu": 0,
-  "vb&t": 147
+  "vb&t": 148
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -951,6 +951,19 @@
    "titel": "Jan Van Der Heydenstraat 17 3341Bj Hendrik Ido Ambacht",
    "url": "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef"
   },
+  "https://huurportaal.nl/listings/leeuwarden-tesselschadestraat-1-a-p48d297": {
+   "detail": true,
+   "first_seen": 1794487417,
+   "img": "https://fryslanhomes.frl/media/ekcnxboa/09103836_1.jpg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1335,
+   "published": 1794460660,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Leeuwarden Tesselschadestraat 1 A",
+   "url": "https://huurportaal.nl/listings/leeuwarden-tesselschadestraat-1-a-p48d297"
+  },
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": {
    "detail": true,
    "first_seen": 1792146862,
@@ -1482,6 +1495,7 @@
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb262e8": 1792833977,
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792146878,
   "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1792146878,
+  "https://huurportaal.nl/listings/leeuwarden-tesselschadestraat-1-a-p48d297": 1794487417,
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": 1792146878,
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-79-2993ej-barendrecht-in-barendrecht-barendrecht-pc2deb4": 1794257112,
   "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27": 1792403210,
@@ -1532,7 +1546,7 @@
   "Huurportaal": {
    "fouten": 1,
    "in_plaatsen": 58,
-   "kaarten": 60
+   "kaarten": 59
   },
   "Huurstunt": {
    "fouten": 12,
@@ -1546,9 +1560,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 17,
-   "opgehaald": 17
+   "met_datum": 1,
+   "met_foto": 18,
+   "opgehaald": 18
   },
   "vb&t": {
    "fouten": 0,
