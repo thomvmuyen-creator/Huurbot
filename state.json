@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 47,
+  "Huurstunt": 48,
   "Ikwilhuren.nu": 0,
-  "vb&t": 155
+  "vb&t": 156
  },
  "listings": {
   "https://directwonen.nl/appartement-huren/oud-beijerland": {
@@ -821,6 +821,19 @@
    "titel": "Appartement Te Huur",
    "url": "https://huurportaal.nl/listings/appartement-te-huur-p9331b3"
   },
+  "https://huurportaal.nl/listings/appartement-te-huur-p9a4bca": {
+   "detail": true,
+   "first_seen": 1794669347,
+   "img": "https://cloud.funda.nl/tiara-media/5e59a85b-5015-4d1d-afcd-e4fee98e99b9/2edde1df-f56c-4e7b-9981-52b51752dc08",
+   "plaats": "zwijndrecht",
+   "pogingen": 1,
+   "prijs": 1500,
+   "published": 1794661369,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Appartement Te Huur",
+   "url": "https://huurportaal.nl/listings/appartement-te-huur-p9a4bca"
+  },
   "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8": {
    "detail": true,
    "first_seen": 1792665238,
@@ -1485,6 +1498,7 @@
   "https://huurportaal.nl/listings/appartement-te-huur-p7e9625": 1794352975,
   "https://huurportaal.nl/listings/appartement-te-huur-p8286bd": 1792578309,
   "https://huurportaal.nl/listings/appartement-te-huur-p9331b3": 1792146878,
+  "https://huurportaal.nl/listings/appartement-te-huur-p9a4bca": 1794669347,
   "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8": 1792665238,
   "https://huurportaal.nl/listings/appartement-te-huur-pbde6b2": 1793428891,
   "https://huurportaal.nl/listings/appartement-te-huur-ped20d0": 1792683240,
@@ -1535,8 +1549,8 @@
  "status": {
   "Directwonen": {
    "fouten": 0,
-   "in_plaatsen": 50,
-   "kaarten": 55
+   "in_plaatsen": 44,
+   "kaarten": 49
   },
   "HS Makelaars": {
    "fouten": 0,
@@ -1545,8 +1559,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 61,
-   "kaarten": 62
+   "in_plaatsen": 62,
+   "kaarten": 63
   },
   "Huurstunt": {
    "fouten": 12,
@@ -1560,9 +1574,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 17,
-   "opgehaald": 17
+   "met_datum": 1,
+   "met_foto": 18,
+   "opgehaald": 18
   },
   "vb&t": {
    "fouten": 0,
