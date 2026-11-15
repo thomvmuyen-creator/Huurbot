@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 53,
+  "Huurstunt": 54,
   "Ikwilhuren.nu": 0,
-  "vb&t": 161
+  "vb&t": 162
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -31,30 +31,6 @@
    "site": "Directwonen",
    "titel": "Hooftstraat, Dordrecht",
    "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/hooftstraat/appartement-522200"
-  },
-  "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739": {
-   "detail": true,
-   "first_seen": 1792173971,
-   "img": "https://resources.directwonen.nl/image/1a8a3afc-9128-450a-ac8a-178c8e510a41",
-   "plaats": "dordrecht",
-   "pogingen": 1,
-   "prijs": 1495,
-   "seed": false,
-   "site": "Directwonen",
-   "titel": "J.d. Wittstraat, Dordrecht",
-   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521739"
-  },
-  "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741": {
-   "detail": true,
-   "first_seen": 1792173965,
-   "img": "https://resources.directwonen.nl/image/379109ab-f331-47d6-ba12-b617f616e2cf",
-   "plaats": "dordrecht",
-   "pogingen": 1,
-   "prijs": 1495,
-   "seed": false,
-   "site": "Directwonen",
-   "titel": "J.d. Wittstraat, Dordrecht",
-   "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-521741"
   },
   "https://directwonen.nl/huurwoningen-huren/dordrecht/johan-de-wittstraat/appartement-523564": {
    "detail": true,
