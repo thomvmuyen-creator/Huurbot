@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 56,
+  "Huurstunt": 57,
   "Ikwilhuren.nu": 0,
-  "vb&t": 164
+  "vb&t": 165
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -163,19 +163,6 @@
    "site": "Directwonen",
    "titel": "Zuidland",
    "url": "https://directwonen.nl/verhuren/kamer-zuidland"
-  },
-  "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p0c0999": {
-   "detail": true,
-   "first_seen": 1792230121,
-   "img": "https://huurstunt.nl/rental-images-resize/416862a3-2cf9-408c-8046-bde3929c6e0e/01a14450-da78-7038-be5a-b23e5afa7e8f/01a14450-da79-7326-bd58-b303e519ba3a.jpeg",
-   "plaats": "dordrecht",
-   "pogingen": 1,
-   "prijs": 1450,
-   "published": 1792221807,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "1 Bedroom Appartement Surface Area 39M2",
-   "url": "https://huurportaal.nl/listings/1-bedroom-appartement-surface-area-39m2-p0c0999"
   },
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27a-3311-kg-dordrecht-netherlands-pc0ece0": {
    "detail": true,
@@ -552,32 +539,6 @@
    "site": "Huurportaal",
    "titel": "Mvgm Te Huur Adrianapolder 75 Barendrecht",
    "url": "https://huurportaal.nl/listings/mvgm-te-huur-adrianapolder-75-barendrecht-p91852d"
-  },
-  "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97": {
-   "detail": true,
-   "first_seen": 1792230127,
-   "img": "https://ikwilhuren.nu/media/b8/b811619eb25a4e40fc03d4a6980beb04/1600/hofnar-51-rhoon-1-.jpg",
-   "plaats": "rhoon",
-   "pogingen": 1,
-   "prijs": 1475,
-   "published": 1791207686,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Mvgm Te Huur Hofnar 55 Rhoon",
-   "url": "https://huurportaal.nl/listings/mvgm-te-huur-hofnar-55-rhoon-pf22e97"
-  },
-  "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35": {
-   "detail": true,
-   "first_seen": 1792230133,
-   "img": "https://ikwilhuren.nu/media/0f/0f6f2fc4c34818ec82fc05c6b2eba68e/1600/1362-1-vivaldistraat-oud-beijerland-bert-rietberg-01.jpg",
-   "plaats": "oud-beijerland",
-   "pogingen": 1,
-   "prijs": 1375,
-   "published": 1790074582,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Mvgm Te Huur Vivaldistraat 23 Oud Beijerland",
-   "url": "https://huurportaal.nl/listings/mvgm-te-huur-vivaldistraat-23-oud-beijerland-pf16e35"
   },
   "https://huurportaal.nl/listings/per-direct-te-huur-pe8e744": {
    "detail": true,
