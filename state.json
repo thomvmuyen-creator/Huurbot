@@ -1,11 +1,11 @@
 {
  "health": {
   "Directwonen": 0,
-  "HS Makelaars": 1,
+  "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 58,
+  "Huurstunt": 59,
   "Ikwilhuren.nu": 0,
-  "vb&t": 166
+  "vb&t": 167
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -307,19 +307,6 @@
    "titel": "Apartment For Rent At Mauritsstraat Netherlands",
    "url": "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b"
   },
-  "https://huurportaal.nl/listings/apartment-for-rent-at-stationsstraat-netherlands-p2aeb44": {
-   "detail": true,
-   "first_seen": 1792314538,
-   "img": "https://d1rf1jwua027xh.cloudfront.net/portfolio_d1981e39-b1e3-45c0-9a2d-34729e3d2f73/listings/listing_f277efa1-f276-4b68-9323-b5eb42b9a7d8/media/a13eb6a7.jpg?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6ICJodHRwczovL2QxcmYxand1YTAyN3hoLmNsb3VkZnJvbnQubmV0L3BvcnRmb2xpb19kMTk4MWUzOS1iMWUzLTQ1YzAtOWEyZC0zNDcyOWUzZDJmNzMvbGlzdGluZ3MvbGlzdGluZ19mMjc3ZWZhMS1mMjc2LTRiNjgtOTMyMy1iNWViNDJiOWE3ZDgvbWVkaWEvYTEzZWI2YTcuanBnIiwgIkNvbmRpdGlvbiI6IHsiRGF0ZUxlc3NUaGFuIjogeyJBV1M6RXBvY2hUaW1lIjogMjE0NzQ4MzY0N319fV19&Signature=hQQF44OjjjmB5H1wdalPr4LeJKlwQrj9BxOk2fngM4AiS8IaGgbZ7yv2nGyGxCmtxOQKdJnW8wGSAo%2Fu2uKstnp0JN4Rzw%2F9tb3T3bwxrZ0ZO5PwdThpdj16oXfZlSDYLC%2FqZJVTG55HgoB5OOts736pOFlc8%2BRMTIsoUEEzUx21cdVsAq8fXAF%2FwyATn0IcK6QXHpqCdBAfuiFT%2FGk2rqHxDIarQyDYzwSrReW4UZRL8jxuWF9MLAUB0KGnYVrtN7ykQXIThf7BwwydWfdUaEZ0oHRBy1adqjAJEkx3xYdHcBEhjGFj0zLlTezamTqZABH8rRdf8Y9VG8WsyOVqdA%3D%3D&Key-Pair-Id=K194587S03REZY",
-   "plaats": "rhoon",
-   "pogingen": 1,
-   "prijs": 1058,
-   "published": 1792301514,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Apartment For Rent At Stationsstraat Netherlands",
-   "url": "https://huurportaal.nl/listings/apartment-for-rent-at-stationsstraat-netherlands-p2aeb44"
-  },
   "https://huurportaal.nl/listings/apartment-for-rent-at-voorstraat-netherlands-p8a9165": {
    "detail": true,
    "first_seen": 1794390966,
@@ -449,6 +436,19 @@
    "site": "Huurportaal",
    "titel": "Appartement Te Huur",
    "url": "https://huurportaal.nl/listings/appartement-te-huur-ped20d0"
+  },
+  "https://huurportaal.nl/listings/beverwijcksplaats-6d-dordrecht-p71d8e5": {
+   "detail": true,
+   "first_seen": 1794911544,
+   "img": "https://nmgwonen.nl/wp-content/uploads/sites/3/eyemove/wonen/35.384.724/woningfotos-9-4-4-5-94457815_Beverwijcksplaats6E1Dordrecht01-1536x1024.jpg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1285,
+   "published": 1794899240,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Beverwijcksplaats 6D Dordrecht",
+   "url": "https://huurportaal.nl/listings/beverwijcksplaats-6d-dordrecht-p71d8e5"
   },
   "https://huurportaal.nl/listings/huurwoning-dordrecht-p74f582": {
    "detail": true,
@@ -741,6 +741,7 @@
   "https://huurportaal.nl/listings/appartement-te-huur-pbb00b8": 1792665238,
   "https://huurportaal.nl/listings/appartement-te-huur-pbde6b2": 1793428891,
   "https://huurportaal.nl/listings/appartement-te-huur-ped20d0": 1792683240,
+  "https://huurportaal.nl/listings/beverwijcksplaats-6d-dordrecht-p71d8e5": 1794911544,
   "https://huurportaal.nl/listings/house-in-oranjestraat-netherlands-pb0ca9d": 1792146878,
   "https://huurportaal.nl/listings/huurwoning-dordrecht-p74f582": 1793172497,
   "https://huurportaal.nl/listings/huurwoning-papendrecht-p25344c": 1792146878,
@@ -792,9 +793,9 @@
    "kaarten": 49
   },
   "HS Makelaars": {
-   "fouten": 1,
-   "in_plaatsen": 0,
-   "kaarten": 0
+   "fouten": 0,
+   "in_plaatsen": 1,
+   "kaarten": 2
   },
   "Huurportaal": {
    "fouten": 1,
@@ -813,9 +814,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 8,
-   "opgehaald": 8
+   "met_datum": 1,
+   "met_foto": 9,
+   "opgehaald": 9
   },
   "vb&t": {
    "fouten": 0,
