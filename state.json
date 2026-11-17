@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 59,
+  "Huurstunt": 60,
   "Ikwilhuren.nu": 0,
-  "vb&t": 167
+  "vb&t": 168
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -790,7 +790,7 @@
   "Directwonen": {
    "fouten": 0,
    "in_plaatsen": 46,
-   "kaarten": 49
+   "kaarten": 51
   },
   "HS Makelaars": {
    "fouten": 0,
@@ -814,9 +814,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 1,
-   "met_foto": 9,
-   "opgehaald": 9
+   "met_datum": 0,
+   "met_foto": 8,
+   "opgehaald": 8
   },
   "vb&t": {
    "fouten": 0,
