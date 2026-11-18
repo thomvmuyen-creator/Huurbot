@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 62,
+  "Huurstunt": 63,
   "Ikwilhuren.nu": 0,
-  "vb&t": 170
+  "vb&t": 171
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -359,6 +359,19 @@
    "titel": "Appartement Te Huur",
    "url": "https://huurportaal.nl/listings/appartement-te-huur-p17fc35"
   },
+  "https://huurportaal.nl/listings/appartement-te-huur-p5fe3aa": {
+   "detail": true,
+   "first_seen": 1795024626,
+   "img": "https://cloud.funda.nl/tiara-media/5a109676-df23-492f-ac2a-a5400a59262e/9ada3853-d139-43c7-be2a-3d5f80df7987",
+   "plaats": "papendrecht",
+   "pogingen": 1,
+   "prijs": 963,
+   "published": 1795004797,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Appartement Te Huur",
+   "url": "https://huurportaal.nl/listings/appartement-te-huur-p5fe3aa"
+  },
   "https://huurportaal.nl/listings/appartement-te-huur-p7e9625": {
    "detail": true,
    "first_seen": 1794352975,
@@ -527,18 +540,6 @@
    "site": "Huurportaal",
    "titel": "Liv Residential Woning Van Beuningenhaven 79 2993Ej Barendrecht In Barendrecht Barendrecht",
    "url": "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-79-2993ej-barendrecht-in-barendrecht-barendrecht-pc2deb4"
-  },
-  "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27": {
-   "detail": true,
-   "first_seen": 1792403210,
-   "img": "https://img2.rentola.com/tMm55pOeAN5rfVBCqkrbZuydcF4=/0x240/filters:format(webp)/https%3A%2F%2Fi.rentola-platform.xyz%2Fproperty-example-images%2Fnl%2Fapartment%2F0-4e8bf34f.jpg",
-   "plaats": "dordrecht",
-   "pogingen": 1,
-   "prijs": 650,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Mauritsweg 157 Livable Tijdelijke Ruimteoplossingen 728D27",
-   "url": "https://huurportaal.nl/listings/mauritsweg-157-livable-tijdelijke-ruimteoplossingen-728d27"
   },
   "https://huurportaal.nl/listings/mvgm-te-huur-adrianapolder-75-barendrecht-p91852d": {
    "detail": true,
@@ -747,6 +748,7 @@
   "https://huurportaal.nl/listings/appartement-te-huur-p17fc35": 1793172497,
   "https://huurportaal.nl/listings/appartement-te-huur-p382516": 1792146878,
   "https://huurportaal.nl/listings/appartement-te-huur-p3cca26": 1792146878,
+  "https://huurportaal.nl/listings/appartement-te-huur-p5fe3aa": 1795024626,
   "https://huurportaal.nl/listings/appartement-te-huur-p7e9625": 1794352975,
   "https://huurportaal.nl/listings/appartement-te-huur-p8286bd": 1792578309,
   "https://huurportaal.nl/listings/appartement-te-huur-p9331b3": 1792146878,
