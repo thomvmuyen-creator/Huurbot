@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 73,
+  "Huurstunt": 74,
   "Ikwilhuren.nu": 0,
-  "vb&t": 181
+  "vb&t": 182
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -320,19 +320,6 @@
    "titel": "Apartment For Rent At Voorstraat Netherlands",
    "url": "https://huurportaal.nl/listings/apartment-for-rent-at-voorstraat-netherlands-p8a9165"
   },
-  "https://huurportaal.nl/listings/appartement-te-huur-p158fdf": {
-   "detail": true,
-   "first_seen": 1792683234,
-   "img": "https://cloud.funda.nl/tiara-media/68710616-bcfd-40b7-af43-3c3948d7804f/85c4a95d-ff6d-529f-b43b-759fcd6cd295",
-   "plaats": "hendrik-ido-ambacht",
-   "pogingen": 1,
-   "prijs": 1550,
-   "published": 1792670546,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Appartement Te Huur",
-   "url": "https://huurportaal.nl/listings/appartement-te-huur-p158fdf"
-  },
   "https://huurportaal.nl/listings/appartement-te-huur-p17fc35": {
    "detail": true,
    "first_seen": 1793172491,
@@ -410,19 +397,6 @@
    "site": "Huurportaal",
    "titel": "Appartement Te Huur",
    "url": "https://huurportaal.nl/listings/appartement-te-huur-pbde6b2"
-  },
-  "https://huurportaal.nl/listings/appartement-te-huur-ped20d0": {
-   "detail": true,
-   "first_seen": 1792683228,
-   "img": "https://cloud.funda.nl/tiara-media/ace5c1fd-86f3-48b8-85ef-4841e6c47a14/169dd461-c51b-474b-8d4d-88b79a41bd9d",
-   "plaats": "dordrecht",
-   "pogingen": 1,
-   "prijs": 1450,
-   "published": 1792668070,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Appartement Te Huur",
-   "url": "https://huurportaal.nl/listings/appartement-te-huur-ped20d0"
   },
   "https://huurportaal.nl/listings/beverwijcksplaats-6d-dordrecht-p71d8e5": {
    "detail": true,
@@ -618,19 +592,6 @@
    "site": "Huurportaal",
    "titel": "Woning Te Huur Nieuwstraat 1C 3311Xr Dordrecht",
    "url": "https://huurportaal.nl/listings/woning-te-huur-nieuwstraat-1c-3311xr-dordrecht-p9719d4"
-  },
-  "https://huurportaal.nl/listings/woning-te-huur-p065944": {
-   "detail": true,
-   "first_seen": 1792683240,
-   "img": "https://cloud.funda.nl/tiara-media/87bc2090-ba0d-42a4-9d71-b1475f008f6e/7cb74801-c199-4e4a-8504-6bab5a5996e6",
-   "plaats": "hendrik-ido-ambacht",
-   "pogingen": 1,
-   "prijs": 1550,
-   "published": 1791206509,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Woning Te Huur",
-   "url": "https://huurportaal.nl/listings/woning-te-huur-p065944"
   },
   "https://www.huurstunt.nl/appartement/huren/in/dordrecht/hooftstraat/gJkpk": {
    "detail": true,
