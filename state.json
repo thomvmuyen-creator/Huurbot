@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 70,
+  "Huurstunt": 71,
   "Ikwilhuren.nu": 0,
-  "vb&t": 178
+  "vb&t": 179
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -189,6 +189,19 @@
    "site": "Huurportaal",
    "titel": "2 Room Apartment To Let In Johan De Wittstraat 27C 3311 Kg Dordrecht Netherlands",
    "url": "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27c-3311-kg-dordrecht-netherlands-p16464a"
+  },
+  "https://huurportaal.nl/listings/2-room-in-the-heart-of-historic-dordrecht-ff67c3": {
+   "detail": true,
+   "first_seen": 1795220269,
+   "img": "https://i.rentola-platform.xyz/rentola.nl/landlord-module-images/1312968/5264/c05305f4-5e78-431e-b681-c2a50121da1a.webp",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 990,
+   "published": 1795209136,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "2 Room In The Heart Of Historic Dordrecht Ff67C3",
+   "url": "https://huurportaal.nl/listings/2-room-in-the-heart-of-historic-dordrecht-ff67c3"
   },
   "https://huurportaal.nl/listings/3-bedrooms-appartement-surface-area-79m2-p54c758": {
    "detail": true,
@@ -715,6 +728,7 @@
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27a-3311-kg-dordrecht-netherlands-pc0ece0": 1793785158,
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27c-3311-kg-dordrecht-netherlands-p16464a": 1792647171,
   "https://huurportaal.nl/listings/2-room-apartment-to-let-in-johan-de-wittstraat-27f-3311-kg-dordrecht-netherlands-pb0a67e": 1792146878,
+  "https://huurportaal.nl/listings/2-room-in-the-heart-of-historic-dordrecht-ff67c3": 1795220269,
   "https://huurportaal.nl/listings/3-bedrooms-appartement-surface-area-79m2-p54c758": 1793263966,
   "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-pr-p840edd": 1792476307,
   "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-ps-p7548a8": 1795170714,
@@ -820,9 +834,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 8,
-   "opgehaald": 8
+   "met_datum": 1,
+   "met_foto": 9,
+   "opgehaald": 9
   },
   "vb&t": {
    "fouten": 0,
