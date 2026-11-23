@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 79,
+  "Huurstunt": 80,
   "Ikwilhuren.nu": 0,
-  "vb&t": 187
+  "vb&t": 188
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -294,19 +294,6 @@
    "titel": "Apartment At Zonnedauw Zuid Holland Papendrecht 3353 Cz",
    "url": "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-p3f0a98"
   },
-  "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b": {
-   "detail": true,
-   "first_seen": 1792833971,
-   "img": "https://d1rf1jwua027xh.cloudfront.net/portfolio_8906a446-c08c-4506-bfd4-663ade3f8dd0/listings/listing_046a7d1c-9335-40e8-b21a-5da925a5eef0/media/S56-1.jpg?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6ICJodHRwczovL2QxcmYxand1YTAyN3hoLmNsb3VkZnJvbnQubmV0L3BvcnRmb2xpb184OTA2YTQ0Ni1jMDhjLTQ1MDYtYmZkNC02NjNhZGUzZjhkZDAvbGlzdGluZ3MvbGlzdGluZ18wNDZhN2QxYy05MzM1LTQwZTgtYjIxYS01ZGE5MjVhNWVlZjAvbWVkaWEvUzU2LTEuanBnIiwgIkNvbmRpdGlvbiI6IHsiRGF0ZUxlc3NUaGFuIjogeyJBV1M6RXBvY2hUaW1lIjogMjE0NzQ4MzY0N319fV19&Signature=A4IKQwtMebPn3MymIIYHcZBff6R6rnm5EMVAgm7qWfckb83cNCBHGtDpQ5Ih0oF0jKYuukGRAq2MmIATCN6jfu1Czi9Jqa57Ci6954DFidqmC8K0l0GyKQto6epy2AWLdqhgVrUwsttt5FsCXT0FBMzYAspJefw%2B7mucmJ5RnCXd%2FcyLAQ7MLmQ4Biw68oE12ZzPg5ck3xaHL0GN2vUxgkz5k0jIzic9HbKAQcPgEsIXXA7EAqbJlLsoUeb86%2B82YOeS86z%2FNF8eOcv74huR0zz2GobidQbjMxRhRUHnspB%2F9s7yG9z8cyZB54YO8xxUZh37FHT%2BBhutiegPOpFK8A%3D%3D&Key-Pair-Id=K194587S03REZY",
-   "plaats": "hendrik-ido-ambacht",
-   "pogingen": 1,
-   "prijs": 925,
-   "published": 1791955810,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Apartment For Rent At Mauritsstraat Netherlands",
-   "url": "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b"
-  },
   "https://huurportaal.nl/listings/apartment-for-rent-at-voorstraat-netherlands-p8a9165": {
    "detail": true,
    "first_seen": 1794390966,
@@ -449,19 +436,6 @@
    "site": "Huurportaal",
    "titel": "Huurwoning Ridderkerk",
    "url": "https://huurportaal.nl/listings/huurwoning-ridderkerk-p353951"
-  },
-  "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb262e8": {
-   "detail": true,
-   "first_seen": 1792833977,
-   "img": "https://www.gapph.nl/images/woonruimte/tijdelijke-huurwoning-ridderkerk-1923-20334-800.jpg",
-   "plaats": "ridderkerk",
-   "pogingen": 1,
-   "prijs": 625,
-   "published": 1792819367,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Huurwoning Ridderkerk",
-   "url": "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb262e8"
   },
   "https://huurportaal.nl/listings/leeuwarden-tesselschadestraat-1-a-p48d297": {
    "detail": true,
@@ -728,8 +702,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 63,
-   "kaarten": 65
+   "in_plaatsen": 65,
+   "kaarten": 67
   },
   "Huurstunt": {
    "fouten": 12,
