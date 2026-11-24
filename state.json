@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 81,
+  "Huurstunt": 82,
   "Ikwilhuren.nu": 0,
-  "vb&t": 189
+  "vb&t": 190
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -451,6 +451,19 @@
    "titel": "Leeuwarden Tesselschadestraat 1 A",
    "url": "https://huurportaal.nl/listings/leeuwarden-tesselschadestraat-1-a-p48d297"
   },
+  "https://huurportaal.nl/listings/lijnbaan-185-dordrecht-p5432d0": {
+   "detail": true,
+   "first_seen": 1795498370,
+   "img": "https://nmgwonen.nl/wp-content/uploads/sites/3/eyemove/wonen/34.792.338/woningfotos-7-0-8-2-70820429_03-1536x1024.jpg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1158,
+   "published": 1795497436,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Lijnbaan 185 Dordrecht",
+   "url": "https://huurportaal.nl/listings/lijnbaan-185-dordrecht-p5432d0"
+  },
   "https://huurportaal.nl/listings/lijnbaan-227-dordrecht-p39bf81": {
    "detail": true,
    "first_seen": 1795096101,
@@ -654,6 +667,7 @@
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792146878,
   "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1792146878,
   "https://huurportaal.nl/listings/leeuwarden-tesselschadestraat-1-a-p48d297": 1794487417,
+  "https://huurportaal.nl/listings/lijnbaan-185-dordrecht-p5432d0": 1795498370,
   "https://huurportaal.nl/listings/lijnbaan-227-dordrecht-p39bf81": 1795096101,
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-126-2993ej-barendrecht-in-barendrecht-barendrecht-p771b21": 1792146878,
   "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-79-2993ej-barendrecht-in-barendrecht-barendrecht-pc2deb4": 1794257112,
@@ -704,8 +718,8 @@
   },
   "Huurportaal": {
    "fouten": 1,
-   "in_plaatsen": 64,
-   "kaarten": 66
+   "in_plaatsen": 65,
+   "kaarten": 67
   },
   "Huurstunt": {
    "fouten": 12,
