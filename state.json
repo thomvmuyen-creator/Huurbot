@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 88,
+  "Huurstunt": 89,
   "Ikwilhuren.nu": 0,
-  "vb&t": 196
+  "vb&t": 197
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -55,18 +55,6 @@
    "site": "Directwonen",
    "titel": "Troelstraweg, Dordrecht",
    "url": "https://directwonen.nl/huurwoningen-huren/dordrecht/troelstraweg/woning-522196"
-  },
-  "https://directwonen.nl/huurwoningen-huren/numansdorp": {
-   "detail": true,
-   "first_seen": 1793127250,
-   "img": "https://resources.directwonen.nl/Content/img/tiles.png",
-   "plaats": "oud-beijerland",
-   "pogingen": 2,
-   "prijs": 415,
-   "seed": false,
-   "site": "Directwonen",
-   "titel": "Numansdorp",
-   "url": "https://directwonen.nl/huurwoningen-huren/numansdorp"
   },
   "https://directwonen.nl/verhuren/kamer-barendrecht": {
    "detail": true,
@@ -542,19 +530,6 @@
    "titel": "Te Huur Appartement Grote Spuistraat In Dordrecht",
    "url": "https://huurportaal.nl/listings/te-huur-appartement-grote-spuistraat-in-dordrecht-p9e370f"
   },
-  "https://huurportaal.nl/listings/te-huur-appartement-hooftstraat-137-in-dordrecht-pecfe6f": {
-   "detail": true,
-   "first_seen": 1793127255,
-   "img": "https://casco-media-prod.global.ssl.fastly.net/listings/api/media/d71cc2b5-abdf-5b0d-a4a4-5bc72f3eaecb/93155689-fff2-5138-8fc0-b94946393883?original_uri=https%3A%2F%2Fcdn.prd.osre.eu%2F81c42f8e-3c0a-4179-84bf-46a8af3d1d92%2Ff9592e76-a8be-433e-bfd7-632015a990b2%2Fab6a5512-a60e-4c8f-9dac-4dda12a921a7&sig=e26655daa366a0d573d3900b144f0bc5662d1856755e5fe0ee944b61a681f8f3&width=1200&auto=webp",
-   "plaats": "dordrecht",
-   "pogingen": 1,
-   "prijs": 1412,
-   "published": 1793124609,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Te Huur Appartement Hooftstraat 137 In Dordrecht",
-   "url": "https://huurportaal.nl/listings/te-huur-appartement-hooftstraat-137-in-dordrecht-pecfe6f"
-  },
   "https://huurportaal.nl/listings/woning-te-huur-nieuwstraat-1c-3311xr-dordrecht-p9719d4": {
    "detail": true,
    "first_seen": 1793490151,
@@ -567,19 +542,6 @@
    "site": "Huurportaal",
    "titel": "Woning Te Huur Nieuwstraat 1C 3311Xr Dordrecht",
    "url": "https://huurportaal.nl/listings/woning-te-huur-nieuwstraat-1c-3311xr-dordrecht-p9719d4"
-  },
-  "https://www.huurstunt.nl/appartement/huren/in/dordrecht/hooftstraat/gJkpk": {
-   "detail": true,
-   "first_seen": 1793127254,
-   "img": "https://www.huurstunt.nl/rental-images-resize/facebook_og_image/416862a3-2cf9-408c-8046-bde3929c6e0e/01a17dfa-333d-7125-9c0b-247bc6deaa71/01a17dfa-333e-7047-94c8-40696ba84784.jpeg",
-   "plaats": "dordrecht",
-   "pogingen": 1,
-   "prijs": 1412,
-   "published": 1793059200,
-   "seed": false,
-   "site": "Huurstunt",
-   "titel": "Appartement: Gjkpk",
-   "url": "https://www.huurstunt.nl/appartement/huren/in/dordrecht/hooftstraat/gJkpk"
   }
  },
  "seen": {
