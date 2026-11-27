@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 91,
+  "Huurstunt": 92,
   "Ikwilhuren.nu": 0,
-  "vb&t": 199
+  "vb&t": 200
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -283,6 +283,19 @@
    "titel": "Apartment At Zonnedauw Zuid Holland Papendrecht 3353 Cz",
    "url": "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-p3f0a98"
   },
+  "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-pc85bf8": {
+   "detail": true,
+   "first_seen": 1795809447,
+   "img": "https://cdn.realmark.cloud/marketsuite/media/projects/3940/publicPhotos/db60f349-fb79-423d-9ff7-878307ad1b93/27f13f6f-2e24-41c9-80f7-bdcc832.webp",
+   "plaats": "papendrecht",
+   "pogingen": 1,
+   "prijs": 1225,
+   "published": 1795795458,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Apartment At Zonnedauw Zuid Holland Papendrecht 3353 Cz",
+   "url": "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-pc85bf8"
+  },
   "https://huurportaal.nl/listings/apartment-for-rent-at-voorstraat-netherlands-p8a9165": {
    "detail": true,
    "first_seen": 1794390966,
@@ -295,6 +308,19 @@
    "site": "Huurportaal",
    "titel": "Apartment For Rent At Voorstraat Netherlands",
    "url": "https://huurportaal.nl/listings/apartment-for-rent-at-voorstraat-netherlands-p8a9165"
+  },
+  "https://huurportaal.nl/listings/appartement-te-huur-centrum-raamstraat-in-dordrecht-pa697b7": {
+   "detail": true,
+   "first_seen": 1795809441,
+   "img": "https://casco-media-prod.global.ssl.fastly.net/listings/api/media/feae3691-9db7-5833-af27-fb31bb040985/04856ffa-2f3a-5a9f-ab5d-7f4406a97794?original_uri=https%3A%2F%2Fimages.realworks.nl%2Fservlets%2Fimages%2Fmedia.objectmedia%2F296701291.jpg%3Fportalid%3D8%26check%3Dapi_sha256%253Aa5eb7c3085464f15a1af108359d7283a95b727ea1394b4155c46daa9abedfd65%26resize%3D4&sig=0e557d7fdb33ec53025cb28bbdc1372930f31d3ff45e06b7dda8a6dba9772903&width=1200&auto=webp",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1550,
+   "published": 1795795865,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Appartement Te Huur Centrum Raamstraat In Dordrecht",
+   "url": "https://huurportaal.nl/listings/appartement-te-huur-centrum-raamstraat-in-dordrecht-pa697b7"
   },
   "https://huurportaal.nl/listings/appartement-te-huur-p0cd94e": {
    "detail": true,
@@ -598,6 +624,7 @@
   "https://huurportaal.nl/listings/apartment-at-schooldwarsstraat-zuid-holland-papendrecht-3351-at-pd6769d": 1793339666,
   "https://huurportaal.nl/listings/apartment-at-schooldwarsstraat-zuid-holland-papendrecht-3351-at-pef0094": 1793339666,
   "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-p3f0a98": 1793263966,
+  "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-pc85bf8": 1795809447,
   "https://huurportaal.nl/listings/apartment-for-rent-at-jeroen-boschlaan-netherlands-p5a8f40": 1792146878,
   "https://huurportaal.nl/listings/apartment-for-rent-at-mauritsstraat-netherlands-p332e6b": 1792833977,
   "https://huurportaal.nl/listings/apartment-for-rent-at-stationsstraat-netherlands-p2aeb44": 1792314538,
@@ -605,6 +632,7 @@
   "https://huurportaal.nl/listings/apartment-for-rent-in-nieuwe-lampetsteeg-29-3311ha-dordrecht-centrum-dordrecht-pa1bf75": 1792146878,
   "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": 1792146878,
   "https://huurportaal.nl/listings/apartment-in-henegouwsestraat-ridderkerk-netherlands-p619c35": 1792146878,
+  "https://huurportaal.nl/listings/appartement-te-huur-centrum-raamstraat-in-dordrecht-pa697b7": 1795809447,
   "https://huurportaal.nl/listings/appartement-te-huur-in-het-centrum-van-dordrecht-p61c39f": 1792490908,
   "https://huurportaal.nl/listings/appartement-te-huur-p0cd94e": 1795778003,
   "https://huurportaal.nl/listings/appartement-te-huur-p158fdf": 1792683240,
