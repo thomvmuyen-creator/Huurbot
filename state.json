@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 90,
+  "Huurstunt": 91,
   "Ikwilhuren.nu": 0,
-  "vb&t": 198
+  "vb&t": 199
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -296,18 +296,18 @@
    "titel": "Apartment For Rent At Voorstraat Netherlands",
    "url": "https://huurportaal.nl/listings/apartment-for-rent-at-voorstraat-netherlands-p8a9165"
   },
-  "https://huurportaal.nl/listings/appartement-te-huur-p17fc35": {
+  "https://huurportaal.nl/listings/appartement-te-huur-p0cd94e": {
    "detail": true,
-   "first_seen": 1793172491,
-   "img": "https://cloud.funda.nl/tiara-media/2c0b4008-2796-4c08-909a-3f78678b3fce/5f9f18e1-4284-42dc-a470-a586121aa3f3",
+   "first_seen": 1795777997,
+   "img": "https://cloud.funda.nl/tiara-media/99e9606e-4654-4981-a148-cfd595711a05/24810d11-794a-4287-87df-744f73a1682d",
    "plaats": "dordrecht",
    "pogingen": 1,
-   "prijs": 1412,
-   "published": 1793166715,
+   "prijs": 1500,
+   "published": 1795748593,
    "seed": false,
    "site": "Huurportaal",
    "titel": "Appartement Te Huur",
-   "url": "https://huurportaal.nl/listings/appartement-te-huur-p17fc35"
+   "url": "https://huurportaal.nl/listings/appartement-te-huur-p0cd94e"
   },
   "https://huurportaal.nl/listings/appartement-te-huur-p5fe3aa": {
    "detail": true,
@@ -386,19 +386,6 @@
    "site": "Huurportaal",
    "titel": "Beverwijcksplaats 6D Dordrecht",
    "url": "https://huurportaal.nl/listings/beverwijcksplaats-6d-dordrecht-p71d8e5"
-  },
-  "https://huurportaal.nl/listings/huurwoning-dordrecht-p74f582": {
-   "detail": true,
-   "first_seen": 1793172497,
-   "img": "https://www.gapph.nl/images/woonruimte/tijdelijke-huurwoning-dordrecht-1925-20348-800.jpg",
-   "plaats": "dordrecht",
-   "pogingen": 1,
-   "prijs": 460,
-   "published": 1793166179,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Huurwoning Dordrecht",
-   "url": "https://huurportaal.nl/listings/huurwoning-dordrecht-p74f582"
   },
   "https://huurportaal.nl/listings/huurwoning-papendrecht-paf6e29": {
    "detail": true,
@@ -542,6 +529,19 @@
    "site": "Huurportaal",
    "titel": "Woning Te Huur Nieuwstraat 1C 3311Xr Dordrecht",
    "url": "https://huurportaal.nl/listings/woning-te-huur-nieuwstraat-1c-3311xr-dordrecht-p9719d4"
+  },
+  "https://huurportaal.nl/listings/woning-te-huur-voorstraat-207a-3311ep-dordrecht-p0fc2e8": {
+   "detail": true,
+   "first_seen": 1795778003,
+   "img": "https://d1zsattj8yq64o.cloudfront.net/media/22801908/.jpg",
+   "plaats": "dordrecht",
+   "pogingen": 1,
+   "prijs": 1500,
+   "published": 1795760844,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Woning Te Huur Voorstraat 207A 3311Ep Dordrecht",
+   "url": "https://huurportaal.nl/listings/woning-te-huur-voorstraat-207a-3311ep-dordrecht-p0fc2e8"
   }
  },
  "seen": {
@@ -606,6 +606,7 @@
   "https://huurportaal.nl/listings/apartment-for-rent-in-ring-20-3343-rh-hendrik-ido-ambacht-krommeweg-noord-p8286bd": 1792146878,
   "https://huurportaal.nl/listings/apartment-in-henegouwsestraat-ridderkerk-netherlands-p619c35": 1792146878,
   "https://huurportaal.nl/listings/appartement-te-huur-in-het-centrum-van-dordrecht-p61c39f": 1792490908,
+  "https://huurportaal.nl/listings/appartement-te-huur-p0cd94e": 1795778003,
   "https://huurportaal.nl/listings/appartement-te-huur-p158fdf": 1792683240,
   "https://huurportaal.nl/listings/appartement-te-huur-p17fc35": 1793172497,
   "https://huurportaal.nl/listings/appartement-te-huur-p382516": 1792146878,
@@ -661,6 +662,7 @@
   "https://huurportaal.nl/listings/woning-te-huur-p7dcba6": 1792146878,
   "https://huurportaal.nl/listings/woning-te-huur-pff44b3": 1792146878,
   "https://huurportaal.nl/listings/woning-te-huur-sisarijs-of-sarisgang-45b-3311ne-dordrecht-p9f48e5": 1792146878,
+  "https://huurportaal.nl/listings/woning-te-huur-voorstraat-207a-3311ep-dordrecht-p0fc2e8": 1795778003,
   "https://huurportaal.nl/listings/woonruimte-centrum-dordrecht-pa5de1e": 1792490908,
   "https://www.huurstunt.nl/appartement/huren/in/dordrecht/hooftstraat/gJkpk": 1793127255,
   "https://www.huurstunt.nl/appartement/huren/in/dordrecht/johan-de-wittstraat/g2nOW": 1792146878,
@@ -695,9 +697,9 @@
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 7,
-   "opgehaald": 7
+   "met_datum": 2,
+   "met_foto": 9,
+   "opgehaald": 9
   },
   "vb&t": {
    "fouten": 0,
