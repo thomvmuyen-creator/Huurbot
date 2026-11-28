@@ -3,9 +3,9 @@
   "Directwonen": 0,
   "HS Makelaars": 0,
   "Huurportaal": 0,
-  "Huurstunt": 93,
-  "Ikwilhuren.nu": 0,
-  "vb&t": 201
+  "Huurstunt": 94,
+  "Ikwilhuren.nu": 1,
+  "vb&t": 202
  },
  "listings": {
   "https://directwonen.nl/huurwoningen-huren/dordrecht/hellingen/kamer-522301": {
@@ -179,19 +179,6 @@
    "titel": "2 Room In The Heart Of Historic Dordrecht",
    "url": "https://huurportaal.nl/listings/2-room-in-the-heart-of-historic-dordrecht-p95cda5"
   },
-  "https://huurportaal.nl/listings/3-bedrooms-appartement-surface-area-79m2-p54c758": {
-   "detail": true,
-   "first_seen": 1793263954,
-   "img": "https://huurstunt.nl/rental-images-resize/416862a3-2cf9-408c-8046-bde3929c6e0e/01a17dfa-333d-7125-9c0b-247bc6deaa71/01a17dfa-333e-7047-94c8-40696ba84784.jpeg",
-   "plaats": "dordrecht",
-   "pogingen": 1,
-   "prijs": 1412,
-   "published": 1793254018,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "3 Bedrooms Appartement Surface Area 79M2",
-   "url": "https://huurportaal.nl/listings/3-bedrooms-appartement-surface-area-79m2-p54c758"
-  },
   "https://huurportaal.nl/listings/apartment-at-perengaarde-zuid-holland-hendrik-ido-ambacht-3344-ps-p7548a8": {
    "detail": true,
    "first_seen": 1795170714,
@@ -269,19 +256,6 @@
    "site": "Huurportaal",
    "titel": "Apartment At Schooldwarsstraat Zuid Holland Papendrecht 3351 At",
    "url": "https://huurportaal.nl/listings/apartment-at-schooldwarsstraat-zuid-holland-papendrecht-3351-at-pef0094"
-  },
-  "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-p3f0a98": {
-   "detail": true,
-   "first_seen": 1793263966,
-   "img": "https://cdn.realmark.cloud/marketsuite/media/projects/3448/publicPhotos/3c79146d-833b-42e3-8d31-97c7d19a0cdb/2e44c245-7fd1-4e08-b171-17076aa.webp",
-   "plaats": "papendrecht",
-   "pogingen": 1,
-   "prijs": 1225,
-   "published": 1793252368,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Apartment At Zonnedauw Zuid Holland Papendrecht 3353 Cz",
-   "url": "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-p3f0a98"
   },
   "https://huurportaal.nl/listings/apartment-at-zonnedauw-zuid-holland-papendrecht-3353-cz-pc85bf8": {
    "detail": true,
@@ -439,6 +413,19 @@
    "titel": "Huurwoning Ridderkerk",
    "url": "https://huurportaal.nl/listings/huurwoning-ridderkerk-p353951"
   },
+  "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb4dd57": {
+   "detail": true,
+   "first_seen": 1795862435,
+   "img": "https://www.gapph.nl/images/woonruimte/tijdelijke-huurwoning-ridderkerk-1941-20454-800.jpg",
+   "plaats": "ridderkerk",
+   "pogingen": 1,
+   "prijs": 625,
+   "published": 1795842694,
+   "seed": false,
+   "site": "Huurportaal",
+   "titel": "Huurwoning Ridderkerk",
+   "url": "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb4dd57"
+  },
   "https://huurportaal.nl/listings/leeuwarden-tesselschadestraat-1-a-p48d297": {
    "detail": true,
    "first_seen": 1794487417,
@@ -490,19 +477,6 @@
    "site": "Huurportaal",
    "titel": "Liv Residential Woning Van Beuningenhaven 79 2993Ej Barendrecht In Barendrecht Barendrecht",
    "url": "https://huurportaal.nl/listings/liv-residential-woning-van-beuningenhaven-79-2993ej-barendrecht-in-barendrecht-barendrecht-pc2deb4"
-  },
-  "https://huurportaal.nl/listings/mvgm-te-huur-adrianapolder-75-barendrecht-p91852d": {
-   "detail": true,
-   "first_seen": 1793263960,
-   "img": "https://ikwilhuren.nu/media/44/44a6ef70a8b019b0e6ffa578893c0ba9/1600/img-8122.jpg",
-   "plaats": "barendrecht",
-   "pogingen": 1,
-   "prijs": 1505,
-   "published": 1793258700,
-   "seed": false,
-   "site": "Huurportaal",
-   "titel": "Mvgm Te Huur Adrianapolder 75 Barendrecht",
-   "url": "https://huurportaal.nl/listings/mvgm-te-huur-adrianapolder-75-barendrecht-p91852d"
   },
   "https://huurportaal.nl/listings/per-direct-te-huur-pe8e744": {
    "detail": true,
@@ -655,6 +629,7 @@
   "https://huurportaal.nl/listings/huurwoning-papendrecht-paf6e29": 1794992715,
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-p353951": 1793339666,
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb262e8": 1792833977,
+  "https://huurportaal.nl/listings/huurwoning-ridderkerk-pb4dd57": 1795862435,
   "https://huurportaal.nl/listings/huurwoning-ridderkerk-pc14902": 1792146878,
   "https://huurportaal.nl/listings/jan-van-der-heydenstraat-17-3341bj-hendrik-ido-ambacht-p1013ef": 1792146878,
   "https://huurportaal.nl/listings/leeuwarden-tesselschadestraat-1-a-p48d297": 1794487417,
@@ -719,15 +694,15 @@
    "kaarten": 0
   },
   "Ikwilhuren.nu": {
-   "fouten": 0,
+   "fouten": 3,
    "in_plaatsen": 0,
-   "kaarten": 28
+   "kaarten": 0
   },
   "_details": {
    "fouten": {},
-   "met_datum": 0,
-   "met_foto": 7,
-   "opgehaald": 7
+   "met_datum": 1,
+   "met_foto": 8,
+   "opgehaald": 8
   },
   "vb&t": {
    "fouten": 0,
